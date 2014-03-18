@@ -1,0 +1,23 @@
+#ifndef CZAS_H
+#define CZAS_H
+
+#include <chrono>
+#include <ctime>
+#include <ratio>
+using namespace std::chrono;	   
+	   
+void Wez_czas(high_resolution_clock::time_point& t)
+{
+  t = high_resolution_clock::now();
+}
+
+void Opracuj_czas(high_resolution_clock::time_point& t1, high_resolution_clock::time_point& t2)
+{
+  duration<double> time_span = duration_cast<duration<double>>(t2 - t1);
+
+  cout << "It took me " << time_span.count() << " ms.";
+  cout << endl;
+}
+
+
+#endif
