@@ -1,0 +1,100 @@
+#ifndef CZAS_H
+#define CZAS_H
+
+/*!
+ * \file
+ * \brief Klasa Stoper
+ * Klasa ta umożliwia zdobywanie informacji o czasie działania konkretnego elementu programu, w przypadku
+ * zajęć PAMSI jest to długość wykonywania poszczególnych operacji. Klasa ta naturalnie współpracuje z 
+ * programem ./benchmark, gdyż wyeksportowane przez klasę Stoper dane są używane przez program ./benchmark
+ * do oceniania długości operacji. 
+ * 
+ * Klasa pozwala na obliczanie czasu w dwóch jednostkach:
+ * -> sekundach
+ * -> nanosekundach
+ * 
+ * Klasa posiada metody umożliwiające:
+ * -> Uruchomienie stopera
+ * -> Zakończenie działania stopera
+ * -> Pokazanie czasu w odpowiednich jednostkach
+ * -> Wyeksportowanie długości czasu działania algorytmu do pliku "Wynik_temp.txt", który
+ *    naturalnie współpracuje z programem ./benchmark.
+*/
+
+#include <time.h>
+#include <fstream>
+#include <iostream>
+
+using namespace std;
+
+class Stoper
+{
+   public:
+   timespec tS;
+   
+   // Konstruktor
+   Stoper() {tS.tv_sec = 0; tS.tv_nsec = 0;};
+   
+   // Metody
+   /*!
+    * Metoda służy do rozpoczęcia pracy stopera. Jej mechanizm polega na oznaczeniu w przekazywanej zmiennej
+    * aktualnego momentu czasu. Metoda przyjmuje jako argument strukturę timespec wyspecjalizowanej do obsługi 
+    * funkcji związanych z czasem. Operator 'inline' został użyty w celu możliwie najdokładnejszego zachowania
+    * momentu wywołania.
+    * 
+    * \param &tS - referencja na obiekt struktury timespec, zostaje w nim oznaczony aktualny moment.
+    */
+   inline void Start()  {clock_settime(CLOCK_PROCESS_CPUTIME_ID, &tS);};
+   
+   /*!
+    * Metoda służy do zakończenia pracy stopera. Jej mechanizm polega na oznaczeniu w przekazywanej zmiennej
+    * aktualnego momentu czasu. Metoda przyjmuje jako argument strukturę timespec wyspecjalizowanej do obsługi 
+    * funkcji związanych z czasem. Operator 'inline' został użyty w celu możliwie najdokładnejszego zachowania
+    * momentu wywołania.
+    * 
+    * \param &tS - referencja na obiekt struktury timespec, zostaje w nim oznaczony aktualny moment.
+    */
+   inline void Stop()   {clock_gettime(CLOCK_PROCESS_CPUTIME_ID, &tS);};
+   
+   /*!
+    * Metoda pomocnicza, służy do zwracania momentu czasu przechowywanego w strukturze tS w sekundach.
+    * 
+    * \param tS.tv_sec - zapisany moment w sekundach
+    * \return - odpowiedni moment w postaci liczby całkowitej
+    */
+   long int Pokaz_czas_s()  {return tS.tv_sec;};
+   
+   /*!
+    * Metoda pomocnicza, służy do zwracania momentu czasu przechowywanego w strukturze tS w nanosekundach.
+    * 
+    * \param tS.tv_sec - zapisany moment w nanosekundach
+    * \return - odpowiedni moment w postaci liczby całkowitej
+    */
+   long int Pokaz_czas_ns() {return tS.tv_nsec;};
+   
+   /*!
+    * Metoda umożliwia przesyłanie i wymianę danych z innymi programami. Celem stworzenia tej metody
+    * jest komunikacja z zewnętrznym programem ./benchmark służącym do oceniania efektywności algorytmu.
+    * Metoda tworzy zmienną plikową, która otwiera (lub tworzy, jeżeli nie istnieje) plik o nazwie "Wyniki_temp.txt".
+    * Następnie zapisuje w pliku otrzymany w wyniku działania funkcji 'clock_gettime' i 'clock_settime' czas
+    * działania algorytmu w nanosekundach [ns].
+    * 
+    * Metoda sprawdza poprawność otwarcia pliku. Dodatkowo w celu ochrony zapisanych wcześniej danych metoda
+    * jedynie dopisuje dane do pliku, nigdy ich nie kasuje.
+    */
+   void Eksport_wyniki() 
+   {
+      fstream plik;
+      plik.open("Wyniki_temp.txt", ios::out | ios::app);
+   
+      if(plik.good())
+	 plik << tS.tv_nsec << endl;
+      plik.close(); 
+   };
+   
+   
+};
+
+
+
+#endif

@@ -1,0 +1,101 @@
+\hypertarget{class_stoper}{\section{\-Dokumentacja klasy \-Stoper}
+\label{class_stoper}\index{\-Stoper@{\-Stoper}}
+}
+\subsection*{\-Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_stoper_a5cfc1f0da41e5ca2728e2d80b8da72b9}{\-Start} ()
+\item 
+void \hyperlink{class_stoper_a0890e704c10c35d858490eb68b04df7e}{\-Stop} ()
+\item 
+long int \hyperlink{class_stoper_a008a1c8f9f224d3dabb1406ecf89c734}{\-Pokaz\-\_\-czas\-\_\-s} ()
+\item 
+long int \hyperlink{class_stoper_a9e42054f1cf9f923b14cf30c13bf9fbb}{\-Pokaz\-\_\-czas\-\_\-ns} ()
+\item 
+void \hyperlink{class_stoper_ac7811b2e07e7a49d5c382fa272b0ef57}{\-Eksport\-\_\-wyniki} ()
+\end{DoxyCompactItemize}
+\subsection*{\-Atrybuty publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_stoper_a1a15fde3aa9a069e0d4829305721d6f0}{timespec {\bfseries t\-S}}\label{class_stoper_a1a15fde3aa9a069e0d4829305721d6f0}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Dokumentacja funkcji składowych}
+\hypertarget{class_stoper_ac7811b2e07e7a49d5c382fa272b0ef57}{\index{\-Stoper@{\-Stoper}!\-Eksport\-\_\-wyniki@{\-Eksport\-\_\-wyniki}}
+\index{\-Eksport\-\_\-wyniki@{\-Eksport\-\_\-wyniki}!Stoper@{\-Stoper}}
+\subsubsection[{\-Eksport\-\_\-wyniki}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Stoper\-::\-Eksport\-\_\-wyniki} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_stoper_ac7811b2e07e7a49d5c382fa272b0ef57}
+\-Metoda umożliwia przesyłanie i wymianę danych z innymi programami. \-Celem stworzenia tej metody jest komunikacja z zewnętrznym programem ./benchmark służącym do oceniania efektywności algorytmu. \-Metoda tworzy zmienną plikową, która otwiera (lub tworzy, jeżeli nie istnieje) plik o nazwie \char`\"{}\-Wyniki\-\_\-temp.\-txt\char`\"{}. \-Następnie zapisuje w pliku otrzymany w wyniku działania funkcji 'clock\-\_\-gettime' i 'clock\-\_\-settime' czas działania algorytmu w nanosekundach \mbox{[}ns\mbox{]}.
+
+\-Metoda sprawdza poprawność otwarcia pliku. \-Dodatkowo w celu ochrony zapisanych wcześniej danych metoda jedynie dopisuje dane do pliku, nigdy ich nie kasuje. \hypertarget{class_stoper_a9e42054f1cf9f923b14cf30c13bf9fbb}{\index{\-Stoper@{\-Stoper}!\-Pokaz\-\_\-czas\-\_\-ns@{\-Pokaz\-\_\-czas\-\_\-ns}}
+\index{\-Pokaz\-\_\-czas\-\_\-ns@{\-Pokaz\-\_\-czas\-\_\-ns}!Stoper@{\-Stoper}}
+\subsubsection[{\-Pokaz\-\_\-czas\-\_\-ns}]{\setlength{\rightskip}{0pt plus 5cm}long int {\bf \-Stoper\-::\-Pokaz\-\_\-czas\-\_\-ns} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_stoper_a9e42054f1cf9f923b14cf30c13bf9fbb}
+\-Metoda pomocnicza, służy do zwracania momentu czasu przechowywanego w strukturze t\-S w nanosekundach.
+
+
+\begin{DoxyParams}{\-Parametry}
+{\em t\-S.\-tv\-\_\-sec} & -\/ zapisany moment w nanosekundach \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Zwraca}
+-\/ odpowiedni moment w postaci liczby całkowitej 
+\end{DoxyReturn}
+\hypertarget{class_stoper_a008a1c8f9f224d3dabb1406ecf89c734}{\index{\-Stoper@{\-Stoper}!\-Pokaz\-\_\-czas\-\_\-s@{\-Pokaz\-\_\-czas\-\_\-s}}
+\index{\-Pokaz\-\_\-czas\-\_\-s@{\-Pokaz\-\_\-czas\-\_\-s}!Stoper@{\-Stoper}}
+\subsubsection[{\-Pokaz\-\_\-czas\-\_\-s}]{\setlength{\rightskip}{0pt plus 5cm}long int {\bf \-Stoper\-::\-Pokaz\-\_\-czas\-\_\-s} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_stoper_a008a1c8f9f224d3dabb1406ecf89c734}
+\-Metoda pomocnicza, służy do zwracania momentu czasu przechowywanego w strukturze t\-S w sekundach.
+
+
+\begin{DoxyParams}{\-Parametry}
+{\em t\-S.\-tv\-\_\-sec} & -\/ zapisany moment w sekundach \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Zwraca}
+-\/ odpowiedni moment w postaci liczby całkowitej 
+\end{DoxyReturn}
+\hypertarget{class_stoper_a5cfc1f0da41e5ca2728e2d80b8da72b9}{\index{\-Stoper@{\-Stoper}!\-Start@{\-Start}}
+\index{\-Start@{\-Start}!Stoper@{\-Stoper}}
+\subsubsection[{\-Start}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Stoper\-::\-Start} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_stoper_a5cfc1f0da41e5ca2728e2d80b8da72b9}
+\-Metoda służy do rozpoczęcia pracy stopera. \-Jej mechanizm polega na oznaczeniu w przekazywanej zmiennej aktualnego momentu czasu. \-Metoda przyjmuje jako argument strukturę timespec wyspecjalizowanej do obsługi funkcji związanych z czasem. \-Operator 'inline' został użyty w celu możliwie najdokładnejszego zachowania momentu wywołania.
+
+
+\begin{DoxyParams}{\-Parametry}
+{\em \&t\-S} & -\/ referencja na obiekt struktury timespec, zostaje w nim oznaczony aktualny moment. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_stoper_a0890e704c10c35d858490eb68b04df7e}{\index{\-Stoper@{\-Stoper}!\-Stop@{\-Stop}}
+\index{\-Stop@{\-Stop}!Stoper@{\-Stoper}}
+\subsubsection[{\-Stop}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Stoper\-::\-Stop} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_stoper_a0890e704c10c35d858490eb68b04df7e}
+\-Metoda służy do zakończenia pracy stopera. \-Jej mechanizm polega na oznaczeniu w przekazywanej zmiennej aktualnego momentu czasu. \-Metoda przyjmuje jako argument strukturę timespec wyspecjalizowanej do obsługi funkcji związanych z czasem. \-Operator 'inline' został użyty w celu możliwie najdokładnejszego zachowania momentu wywołania.
+
+
+\begin{DoxyParams}{\-Parametry}
+{\em \&t\-S} & -\/ referencja na obiekt struktury timespec, zostaje w nim oznaczony aktualny moment. \\
+\hline
+\end{DoxyParams}
+
+
+\-Dokumentacja dla tej klasy została wygenerowana z pliku\-:\begin{DoxyCompactItemize}
+\item 
+/home/krzysztof/\-Desktop/\-Workspace/\-Mnozenie\-\_\-tablic/inc/\hyperlink{czas_8h}{czas.\-h}\end{DoxyCompactItemize}

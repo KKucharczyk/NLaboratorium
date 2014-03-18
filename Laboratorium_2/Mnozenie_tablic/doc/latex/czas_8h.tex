@@ -1,0 +1,22 @@
+\hypertarget{czas_8h}{\section{\-Dokumentacja pliku /home/krzysztof/\-Desktop/\-Workspace/\-Mnozenie\-\_\-tablic/inc/czas.h}
+\label{czas_8h}\index{/home/krzysztof/\-Desktop/\-Workspace/\-Mnozenie\-\_\-tablic/inc/czas.\-h@{/home/krzysztof/\-Desktop/\-Workspace/\-Mnozenie\-\_\-tablic/inc/czas.\-h}}
+}
+
+
+\-Klasa \hyperlink{class_stoper}{\-Stoper} \-Klasa ta umożliwia zdobywanie informacji o czasie działania konkretnego elementu programu, w przypadku zajęć \-P\-A\-M\-S\-I jest to długość wykonywania poszczególnych operacji. \-Klasa ta naturalnie współpracuje z programem ./benchmark, gdyż wyeksportowane przez klasę \hyperlink{class_stoper}{\-Stoper} dane są używane przez program ./benchmark do oceniania długości operacji.  
+
+
+{\ttfamily \#include $<$time.\-h$>$}\*
+{\ttfamily \#include $<$fstream$>$}\*
+{\ttfamily \#include $<$iostream$>$}\*
+\subsection*{\-Komponenty}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_stoper}{\-Stoper}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Opis szczegółowy}
+\-Klasa \hyperlink{class_stoper}{\-Stoper} \-Klasa ta umożliwia zdobywanie informacji o czasie działania konkretnego elementu programu, w przypadku zajęć \-P\-A\-M\-S\-I jest to długość wykonywania poszczególnych operacji. \-Klasa ta naturalnie współpracuje z programem ./benchmark, gdyż wyeksportowane przez klasę \hyperlink{class_stoper}{\-Stoper} dane są używane przez program ./benchmark do oceniania długości operacji. \-Klasa pozwala na obliczanie czasu w dwóch jednostkach\-: -\/$>$ sekundach -\/$>$ nanosekundach
+
+\-Klasa posiada metody umożliwiające\-: -\/$>$ \-Uruchomienie stopera -\/$>$ \-Zakończenie działania stopera -\/$>$ \-Pokazanie czasu w odpowiednich jednostkach -\/$>$ \-Wyeksportowanie długości czasu działania algorytmu do pliku \char`\"{}\-Wynik\-\_\-temp.\-txt\char`\"{}, który naturalnie współpracuje z programem ./benchmark. 
