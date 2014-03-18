@@ -1,0 +1,24 @@
+# Krzysztof Kucharczyk
+# -----------------------
+#
+# Podstawowy makefile
+
+OBJS = main.o stos.o 
+CC = g++
+CFLAGS = -c -Wall -pedantic
+LFLAGS = -Wall -pedantic
+
+a.out: $(OBJS)
+	$(CC) $(LFLAGS) -o a.out $(OBJS)
+	
+element.o: element.cpp element.h 
+	$(CC) $(CFLAGS) -o element.o element.cpp
+	
+stos.o: stos.cpp stos.h element.h
+	$(CC) $(CFLAGS) -o stos.o stos.cpp
+	
+main.o: main.cpp stos.h element.h
+	$(CC) $(CFLAGS) -o main.o main.cpp 
+	
+clean:
+	\rm *.o

@@ -1,0 +1,53 @@
+#include "stos.h"
+
+void Stos::push(int Nowy)
+{
+  Element *wsk; 
+  
+  if(ilosc_elementow==0)
+  {
+    wsk = new Element(NULL, Nowy);
+    head = wsk;
+   
+  }
+ 
+  else
+  {
+    wsk = new Element(head, Nowy);
+    head = wsk;
+  }
+  
+   ilosc_elementow+=1;
+  
+}
+/*
+void Stos::pop()
+{
+  int nowa_ilosc = ilosc_elementow-1;
+  int *Wskaznik = new int[nowa_ilosc];
+
+  for(int i = 0; i < nowa_ilosc; i++)
+    Wskaznik[i] = Tablica[i];
+  
+  delete Tablica;
+  Tablica = Wskaznik;
+  ilosc_elementow = nowa_ilosc;
+}
+
+bool Stos::isEmpty()
+{
+  if(ilosc_elementow != 0)
+    return true;
+  return false;
+}
+*/
+void Stos::Show()
+{
+  return head->Wyswietl();
+}
+/*
+int Stos::size()
+{
+  return ilosc_elementow;
+}
+*/

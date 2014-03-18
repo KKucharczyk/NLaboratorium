@@ -1,0 +1,11 @@
+#include "element.h"
+
+void Element::SetNext(Element *Nowy)
+{
+  Next = Nowy;
+}
+
+void Element::SetDane(int Nowy)
+{
+  Dane = Nowy;
+}

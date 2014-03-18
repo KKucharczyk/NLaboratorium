@@ -1,0 +1,13 @@
+/*!
+
+\author Krzysztof Kucharczyk
+\date 15.03.2014
+\version 3
+
+Program modelujący zachowanie stosu na bazie tablicy dwówymiarowej. 
+
+Charakterystycznym elementem jest zwiększanie tablicy za każdym razem, gdy 
+tablica zostaje przepełniona oraz zwalniana za każdym usunięciem ze stosu 
+elementu.
+
+*/

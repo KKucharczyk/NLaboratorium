@@ -1,0 +1,57 @@
+#include "stos.h"
+
+void Stos::push(int Nowy)
+{
+  ilosc_elementow++;
+  if(ilosc_elementow < wielkosc_tablicy) 
+    Tablica[ilosc_elementow-1] = Nowy;
+  
+  else
+  {
+    int nowa_ilosc = 2*ilosc_elementow;      // Podwajanie
+    int *Wskaznik = new int[nowa_ilosc];
+    for(int i = 0; i < ilosc_elementow; i++)
+      Wskaznik[i] = Tablica[i];
+    
+    Wskaznik[ilosc_elementow-1] = Nowy;
+    delete Tablica;
+    Tablica = Wskaznik;
+    wielkosc_tablicy++;
+  }
+  
+}
+
+void Stos::pop()
+{
+  if(ilosc_elementow < 0.25*wielkosc_tablicy)
+  {
+    int nowy_rozmiar = 0.5 * wielkosc_tablicy;
+    int *Wskaznik = new int[nowy_rozmiar];
+    for(int i = 0; i < ilosc_elementow; i++)
+      Wskaznik[i] = Tablica[i];
+    Tablica = Wskaznik;
+    wielkosc_tablicy -= 0.5*wielkosc_tablicy;
+  }
+  ilosc_elementow = ilosc_elementow-1;
+}
+
+bool Stos::isEmpty()
+{
+  if(ilosc_elementow != 0)
+    return true;
+  return false;
+}
+
+void Stos::Show()
+{
+  for(int i = 0; i<ilosc_elementow; i++)
+    cout << Tablica[i] << endl;
+  cout << "\n############\n";
+  cout << "Wielkosc = " << wielkosc_tablicy << endl;
+  cout << "############\n";
+}
+
+int Stos::size()
+{
+  return ilosc_elementow;
+}

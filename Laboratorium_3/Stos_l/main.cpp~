@@ -1,0 +1,10 @@
+#include "stos.h"
+
+int main()
+{
+  Stos a;
+  a.push(2);
+  a.Show();
+ 
+  
+}

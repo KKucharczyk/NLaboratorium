@@ -1,0 +1,176 @@
+\hypertarget{class_stos}{\section{\-Dokumentacja klasy \-Stos}
+\label{class_stos}\index{\-Stos@{\-Stos}}
+}
+
+
+\-Modeluje pojęcie stosu.  
+
+
+
+
+{\ttfamily \#include $<$stos.\-h$>$}
+
+\subsection*{\-Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_stos_a7fed965e5a913950f4d213143bb1671f}{{\bfseries \-Stos} (int wielkosc)}\label{class_stos_a7fed965e5a913950f4d213143bb1671f}
+
+\item 
+void \hyperlink{class_stos_a918b4f40664e1637dd3ef8e7e9386b24}{push} (int \-Nowy)
+\begin{DoxyCompactList}\small\item\em \-Dodaje element na stos. \end{DoxyCompactList}\item 
+void \hyperlink{class_stos_a88b0da41b49ef4d4b63cfd4924665683}{pop} ()
+\begin{DoxyCompactList}\small\item\em \-Zdejmuje element ze stosu. \end{DoxyCompactList}\item 
+bool \hyperlink{class_stos_a328eb30ceb157893dead1a9fe17597b7}{is\-Empty} ()
+\begin{DoxyCompactList}\small\item\em \-Sprawdza, czy stos jest pusty. \end{DoxyCompactList}\item 
+int \hyperlink{class_stos_a696195d5125d9bbe6b491bc5985f9461}{size} ()
+\begin{DoxyCompactList}\small\item\em \-Zwraca ilość elementów na stosie. \end{DoxyCompactList}\item 
+void \hyperlink{class_stos_abfb03d80298013a2792bde2fd89c3863}{\-Show} ()
+\begin{DoxyCompactList}\small\item\em \-Wyświetla zawartość stosu. \end{DoxyCompactList}\item 
+int $\ast$ \hyperlink{class_stos_aa395f48db2ae1b92ac06c1eb566860df}{\-Pobierz\-\_\-dane} ()
+\begin{DoxyCompactList}\small\item\em \-Pobiera dane z pliku. \end{DoxyCompactList}\item 
+void \hyperlink{class_stos_a757f4fb37152efb0e8600ef45284a2a6}{\-Eksportuj\-\_\-dane} (double czas)
+\begin{DoxyCompactList}\small\item\em \-Umożliwia eksportowanie danych do pliku. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Atrybuty publiczne}
+\begin{DoxyCompactItemize}
+\item 
+int $\ast$ \hyperlink{class_stos_a75e8a31e075c93a0275d069842297081}{\-Tablica}
+\begin{DoxyCompactList}\small\item\em \-Wskaźnik na tablicę danych. \end{DoxyCompactList}\item 
+int \hyperlink{class_stos_a4dd9a9223af0b20cf7582c5ff5dab24a}{ilosc\-\_\-elementow}
+\item 
+int \hyperlink{class_stos_aa1acdee575ff6bd5fcd2778b2c0fd2df}{zakres}
+\begin{DoxyCompactList}\small\item\em \-Określa zakres pobierania danych. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{\-Opis szczegółowy}
+\-Modeluje pojęcie stosu. 
+
+\-Klasa moduluje pojęcie stosu jako konkretnej realizacji tablicy dynamicznej. \-Sytuacja przeciążenia stosu rozwiązana jest poprzez tworzenie nowych, o jeden element większych tablic dynamicznych. \-Analogicznie, zwalnianie pamięci następuje każdorazowo po usunięciu elementu. 
+
+\subsection{\-Dokumentacja funkcji składowych}
+\hypertarget{class_stos_a757f4fb37152efb0e8600ef45284a2a6}{\index{\-Stos@{\-Stos}!\-Eksportuj\-\_\-dane@{\-Eksportuj\-\_\-dane}}
+\index{\-Eksportuj\-\_\-dane@{\-Eksportuj\-\_\-dane}!Stos@{\-Stos}}
+\subsubsection[{\-Eksportuj\-\_\-dane}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Stos\-::\-Eksportuj\-\_\-dane} (
+\begin{DoxyParamCaption}
+\item[{double}]{czas}
+\end{DoxyParamCaption}
+)}}\label{class_stos_a757f4fb37152efb0e8600ef45284a2a6}
+
+
+\-Umożliwia eksportowanie danych do pliku. 
+
+\-Metoda umożliwia eksportowanie danych związanych z obliczaniem czasu działania algorytmu do pliku o nazwie \char`\"{}\-Wyniki\-\_\-temp.\-txt\char`\"{}.
+
+
+\begin{DoxyParams}[1]{\-Parametry}
+\mbox{\tt in}  & {\em czas} & -\/ długość wykonywania operacji w nanosekundach \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_stos_a328eb30ceb157893dead1a9fe17597b7}{\index{\-Stos@{\-Stos}!is\-Empty@{is\-Empty}}
+\index{is\-Empty@{is\-Empty}!Stos@{\-Stos}}
+\subsubsection[{is\-Empty}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Stos\-::is\-Empty} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_stos_a328eb30ceb157893dead1a9fe17597b7}
+
+
+\-Sprawdza, czy stos jest pusty. 
+
+\-Metoda określa, czy stos jest pusty. \-Zwraca 1 gdy stos jest pusty i 0 gdy nie pusty. \hypertarget{class_stos_aa395f48db2ae1b92ac06c1eb566860df}{\index{\-Stos@{\-Stos}!\-Pobierz\-\_\-dane@{\-Pobierz\-\_\-dane}}
+\index{\-Pobierz\-\_\-dane@{\-Pobierz\-\_\-dane}!Stos@{\-Stos}}
+\subsubsection[{\-Pobierz\-\_\-dane}]{\setlength{\rightskip}{0pt plus 5cm}int $\ast$ {\bf \-Stos\-::\-Pobierz\-\_\-dane} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_stos_aa395f48db2ae1b92ac06c1eb566860df}
+
+
+\-Pobiera dane z pliku. 
+
+\-Metoda pobiera z pliku \char`\"{}\-Zakres\-\_\-temp.\-txt\char`\"{} zmienną określającą ilość danych, następnie tworzy dynamiczną tablicę o wielkości równej zakresowi i ostatecznie otwiera plik \char`\"{}\-Dane\-\_\-testowe.\-txt\char`\"{}, z którego pobiera \char`\"{}zakres\char`\"{} danych. \-Wskaźnik na tablicę z danymi zostaje zwrócony.
+
+\begin{DoxyReturn}{\-Zwraca}
+\-Wskaźnik na tablicę z danymi 
+\end{DoxyReturn}
+\hypertarget{class_stos_a88b0da41b49ef4d4b63cfd4924665683}{\index{\-Stos@{\-Stos}!pop@{pop}}
+\index{pop@{pop}!Stos@{\-Stos}}
+\subsubsection[{pop}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Stos\-::pop} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_stos_a88b0da41b49ef4d4b63cfd4924665683}
+
+
+\-Zdejmuje element ze stosu. 
+
+\-Metoda zdejmuje element znajdujący się aktualnie na stosie. \-Tablica zostaje nadpisana nową, o 1 mniejszą tablicą, a stara zostaje zwolniona. \-Brak elementów do usunięcia zostaje wyszczególniony stosownym komunikatem. \hypertarget{class_stos_a918b4f40664e1637dd3ef8e7e9386b24}{\index{\-Stos@{\-Stos}!push@{push}}
+\index{push@{push}!Stos@{\-Stos}}
+\subsubsection[{push}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Stos\-::push} (
+\begin{DoxyParamCaption}
+\item[{int}]{\-Nowy}
+\end{DoxyParamCaption}
+)}}\label{class_stos_a918b4f40664e1637dd3ef8e7e9386b24}
+
+
+\-Dodaje element na stos. 
+
+\-Metoda służy do dodania elementu na szczyt stosu. \-W przypadku przepełnienia stosu tworzy nową, większa o 1 tablicę i przepisuje o niej dane, by ostatecznie dodać nowy element. \-Stara tablica zostaje zwolniona, a wskaźnik nadpisany.
+
+
+\begin{DoxyParams}[1]{\-Parametry}
+\mbox{\tt in}  & {\em \-Nowy} & -\/ element, który ma zostać dodany na szczyt stosu \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_stos_abfb03d80298013a2792bde2fd89c3863}{\index{\-Stos@{\-Stos}!\-Show@{\-Show}}
+\index{\-Show@{\-Show}!Stos@{\-Stos}}
+\subsubsection[{\-Show}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Stos\-::\-Show} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_stos_abfb03d80298013a2792bde2fd89c3863}
+
+
+\-Wyświetla zawartość stosu. 
+
+\-Metoda pomocnicza, umożliwiająca śledzenia zmian zachodzących na stosie poprzez wyświetlenie jego zawartości. \hypertarget{class_stos_a696195d5125d9bbe6b491bc5985f9461}{\index{\-Stos@{\-Stos}!size@{size}}
+\index{size@{size}!Stos@{\-Stos}}
+\subsubsection[{size}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Stos\-::size} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_stos_a696195d5125d9bbe6b491bc5985f9461}
+
+
+\-Zwraca ilość elementów na stosie. 
+
+\-Metoda zwraca aktualną ilość elementów na stosie.
+
+\begin{DoxyReturn}{\-Zwraca}
+\-Ilość elementów 
+\end{DoxyReturn}
+
+
+\subsection{\-Dokumentacja atrybutów składowych}
+\hypertarget{class_stos_a4dd9a9223af0b20cf7582c5ff5dab24a}{\index{\-Stos@{\-Stos}!ilosc\-\_\-elementow@{ilosc\-\_\-elementow}}
+\index{ilosc\-\_\-elementow@{ilosc\-\_\-elementow}!Stos@{\-Stos}}
+\subsubsection[{ilosc\-\_\-elementow}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Stos\-::ilosc\-\_\-elementow}}}\label{class_stos_a4dd9a9223af0b20cf7582c5ff5dab24a}
+\-Określa ilość elementów na stosie. \hypertarget{class_stos_a75e8a31e075c93a0275d069842297081}{\index{\-Stos@{\-Stos}!\-Tablica@{\-Tablica}}
+\index{\-Tablica@{\-Tablica}!Stos@{\-Stos}}
+\subsubsection[{\-Tablica}]{\setlength{\rightskip}{0pt plus 5cm}int$\ast$ {\bf \-Stos\-::\-Tablica}}}\label{class_stos_a75e8a31e075c93a0275d069842297081}
+
+
+\-Wskaźnik na tablicę danych. 
+
+\-Wskazuje na strukturę zawierającą dane i na której odbywają się wszelkie operacje. \hypertarget{class_stos_aa1acdee575ff6bd5fcd2778b2c0fd2df}{\index{\-Stos@{\-Stos}!zakres@{zakres}}
+\index{zakres@{zakres}!Stos@{\-Stos}}
+\subsubsection[{zakres}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Stos\-::zakres}}}\label{class_stos_aa1acdee575ff6bd5fcd2778b2c0fd2df}
+
+
+\-Określa zakres pobierania danych. 
+
+\-Wskazuje ile danych ma zostać pobranych z pliku z danymi. \-Innymi słowy, określa wielkość problemu, z jakim algorytm ma się uporać. 
+
+\-Dokumentacja dla tej klasy została wygenerowana z plików\-:\begin{DoxyCompactItemize}
+\item 
+/home/krzysztof/\-Desktop/\-P\-A\-M\-S\-I/\-Laboratorium\-\_\-3/\-Stos\-\_\-t1/inc/\hyperlink{stos_8h}{stos.\-h}\item 
+/home/krzysztof/\-Desktop/\-P\-A\-M\-S\-I/\-Laboratorium\-\_\-3/\-Stos\-\_\-t1/src/stos.\-cpp\end{DoxyCompactItemize}

@@ -1,0 +1,21 @@
+set title "Wykres wydajnosci algorytmow"
+set xlabel "Wielkosc problemy (ilosc danych)"
+set ylabel "Czas w [s]"
+set grid
+set key title "Legenda"
+
+set terminal late
+set output "Wykres1.tex"
+
+plot [10:1000] 'Wyniki1.csv' w lines smooth csplines title "Algorytm 1", 'Wyniki.csv' w lines smooth csplines title "Algorytm 2"
+
+set output
+set terminal X11
+
+set terminal late
+set output "Wykres2.tex"
+
+plot [10:200] 'Wyniki1.csv' w lines smooth csplines title "Algorytm 1", 'Wyniki.csv' w lines smooth csplines title "Algorytm 2"
+
+set output
+set terminal X11

@@ -1,0 +1,118 @@
+#ifndef STOS_H
+#define STOS_H
+
+#include <iostream>
+#include <fstream>
+#include <cstdlib>
+
+/*!
+ * \file stos.h
+ * \brief Plik nagłówkowy elementu stos
+ * 
+ * Plik zawiera definicje klasy Stos.
+ */
+
+using namespace std;
+
+/*! 
+ * \class Stos
+ * \brief Modeluje pojęcie stosu.
+ * 
+ * Klasa moduluje pojęcie stosu jako konkretnej realizacji tablicy dynamicznej.
+ * Sytuacja przeciążenia stosu rozwiązana jest poprzez tworzenie nowych, o jeden element większych
+ * tablic dynamicznych. Analogicznie, zwalnianie pamięci następuje każdorazowo po usunięciu elementu.
+ * 
+ */
+
+class Stos
+{
+public:
+   /*!
+    * \brief Wskaźnik na tablicę danych
+    * 
+    * Wskazuje na strukturę zawierającą dane i na której odbywają się wszelkie operacje.
+    */
+  int *Tablica;
+  
+  /*!
+   * \brief Określa ilość elementów na stosie
+   * 
+   * Określa ilość elementów na stosie.
+   */
+  int ilosc_elementow;
+  
+  /*!
+   * \brief Określa zakres pobierania danych
+   * 
+   * Wskazuje ile danych ma zostać pobranych z pliku z danymi. Innymi słowy, określa
+   * wielkość problemu, z jakim algorytm ma się uporać.
+   */
+  int zakres;
+  
+  // Konstruktory
+  Stos() {Tablica = NULL; ilosc_elementow = 0;}
+  Stos(int wielkosc) {Tablica = new int[wielkosc]; ilosc_elementow = 0;}
+  
+  // Metody
+  /*!
+   * \brief Dodaje element na stos
+   * 
+   * Metoda służy do dodania elementu na szczyt stosu. W przypadku przepełnienia stosu tworzy
+   * nową, większa o 1 tablicę i przepisuje o niej dane, by ostatecznie dodać nowy element. Stara 
+   * tablica zostaje zwolniona, a wskaźnik nadpisany.
+   * 
+   * \param[in] Nowy - element, który ma zostać dodany na szczyt stosu
+   */
+  void push(int  Nowy);
+  /*!
+   * \brief Zdejmuje element ze stosu
+   *
+   * Metoda zdejmuje element znajdujący się aktualnie na stosie. Tablica zostaje nadpisana nową,
+   * o 1 mniejszą tablicą, a stara zostaje zwolniona. Brak elementów do usunięcia zostaje 
+   * wyszczególniony stosownym komunikatem. 
+   */
+  void pop();
+  /*!
+   * \brief Sprawdza, czy stos jest pusty
+   * 
+   * Metoda określa, czy stos jest pusty. Zwraca 1 gdy stos jest pusty i 0 gdy nie pusty.
+   */
+  bool isEmpty();
+  /*!
+   * \brief Zwraca ilość elementów na stosie
+   * 
+   * Metoda zwraca aktualną ilość elementów na stosie.
+   * 
+   * \return Ilość elementów
+   */
+  int size();
+  /*!
+   * \brief Wyświetla zawartość stosu
+   * 
+   * Metoda pomocnicza, umożliwiająca śledzenia zmian zachodzących na stosie poprzez
+   * wyświetlenie jego zawartości.
+   */
+  void Show();
+  /*!
+   * \brief Pobiera dane z pliku
+   * 
+   * Metoda pobiera z pliku "Zakres_temp.txt" zmienną określającą ilość danych, następnie 
+   * tworzy dynamiczną tablicę o wielkości równej zakresowi i ostatecznie otwiera plik "Dane_testowe.txt",
+   * z którego pobiera "zakres" danych. Wskaźnik na tablicę z danymi zostaje zwrócony.
+   *
+   *\return Wskaźnik na tablicę z danymi
+   */
+  int* Pobierz_dane();
+  /*! 
+   * \brief Umożliwia eksportowanie danych do pliku
+   * 
+   * Metoda umożliwia eksportowanie danych związanych z obliczaniem czasu działania algorytmu do 
+   * pliku o nazwie "Wyniki_temp.txt". 
+   * 
+   * \param[in] czas - długość wykonywania operacji w nanosekundach
+  void Eksportuj_dane(double czas);
+  
+};
+
+
+#endif
