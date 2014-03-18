@@ -1,0 +1,171 @@
+/*!
+ * \file
+ * \brief Definicje metod klasy Tablica
+ * 
+ * Zawiera definicje metod klasy Tablica
+ */
+
+#include "tablica.h"
+
+/*!
+ * Otwiera plik o podanej nazwie w trybie edycji.
+ * 
+ * \param[in] nazwa_pliku - nazwa pliku, który ma zostać otawry w trybie odczytu.
+ * 
+ */
+
+void Tablica::Otworz_plik(string nazwa_pliku)
+{
+    plik.open(nazwa_pliku.c_str(), ios::in);
+}
+
+/*!
+ * Pobiera dane z wcześniej otwartego pliku do specjalnie stworzonej, dynamicznej tablicy.
+ * Wskaźnik do owej tablicy zostaje zwrócony. Metoda sprawdza poprawność pliku, tzn.
+ \verbatim
+ 
+  1   | n - ilość wierszy
+  2   | dane(1)
+  3   | dane(2)
+  .   | .
+  .   | .
+  .   | .
+  n+1 | dane(n-1)
+ 
+  , gdzie pierwsza kolumna to numeracja wierszy pliku, druga to zadane wartości.
+ 
+ \endverbatim
+ * 
+ * \return Zwraca wskaźnik typu int do utowrzonej tablicy z danymi.
+ * 
+ */
+
+int* Tablica::Pobierz_dane()
+{
+    // Sprawdzanie poprawności pliku
+    int ilosc_wierszy = 0;
+    int domyslna_ilosc;
+    int* Wsk;
+    plik >> domyslna_ilosc;
+    
+    for(int i = 0 ; !plik.eof(); i++)
+      if(plik.get() == '\n')
+	ilosc_wierszy++;
+    
+    if(domyslna_ilosc == ilosc_wierszy)
+    {
+     plik.clear();
+     plik.seekg(0, ios::beg);
+     plik.ignore();
+     
+     Wsk = new int[ilosc_wierszy];
+     
+     for(int i = 0; i < ilosc_wierszy+1; i++)
+     {
+      if(!plik.fail())
+	plik >> Wsk[i];
+      else
+      {
+	cout << "Blad: Niepoprawny znak w pliku." << endl;
+	return 0;
+      }
+     }
+    }
+    else
+      cerr << "Blad: Niepoprawny format pliku." << endl;
+    ilosc = ilosc_wierszy;
+    
+    
+    return Wsk;
+}
+
+/*!
+ * Zamyka wcześniej otworzony plik, uniemożliwiająć dostęp do informacji w nim zawartych.
+ */
+
+void Tablica::Zamknij_plik()
+{
+  plik.close(); 
+}
+
+/*!
+ * Metoda służy do przemnożenia wartości podanych w przesłanej na wejściu tabeli przez 2. Metoda
+ * przyjmuje wskaźnik do dynamicznie stworzonej tablicy z danymi.
+ * 
+ *\param[in] Tab - wskaźnik na istniejącą dynamiczną tablicę z danymi.
+ */
+ 
+void Tablica::Pomnoz(int* Tab)
+{
+  for(int i = 0; i < ilosc; i++)
+    Tab[i] *= 2;
+}
+
+void Tablica::Zamien_elementy(int *Tablica, int i, int j)
+{
+ int temp = 0;
+ temp = Tablica[i-1];
+ Tablica[i-1] = Tablica[j-1];
+ Tablica[j-1] = temp;
+}
+
+void Tablica::Wypisz(int *Tablica, int ilosc)
+{
+  for(int i = 0; i < ilosc; i++)
+    cout << Tablica[i] << endl; 
+  cout << "#####\n" ;
+}
+
+void Tablica::Wypisz2(int *Tablica)
+{
+  int ilosc = Tablica[0];
+  for(int i = 0; i <= ilosc-1; i++)
+    cout << Tablica[i] << endl; 
+  cout << "#####\n" ;
+}
+
+void Tablica::Porownaj(int *Tab1, int*Tab2, int ilosc)
+{
+  for(int i = 0; i < ilosc; i++)
+    if(Tab1[i] != Tab2[i])
+      cerr << "Blad: Pliki nie maja tej samej zawartosci." << endl; 
+}
+
+void Tablica::Odwroc_kolejnosc(int* Tab)
+{
+ int ilosc = this->ilosc; 
+ int *Wsk = new int[ilosc];
+ for(int i = 0; i < ilosc; i++)
+  Wsk[i] = Tab[i];
+
+ for(int i = 0; i < ilosc; i++)
+   Tab[i] = Wsk[ilosc-i-1];
+}
+ 
+ int* Tablica::Dodaj_element(int* Tablica, int e)
+ {
+   int ilosc = this->ilosc; 
+   int *Wsk = new int[ilosc+1];
+   
+   for(int i = 0; i < ilosc; i++)
+      Wsk[i] = Tablica[i];
+   
+   Wsk[ilosc] = e;
+   this->zmien_ilosc(ilosc+1);
+   
+   return Wsk;
+ }
+ 
+ int* Tablica::Dodaj_elementy(int *Tablica1, int* Tablica2)
+ {
+   int *Wsk = new int[(this->ilosc*2)+1];
+   Wsk[0] = ((this->ilosc)*2)+1;
+   
+   for(int i = 1; i <= this->ilosc; i++)
+     Wsk[i] = Tablica1[i-1];
+   
+   for(int i = (this->ilosc)+1; i <= (this->ilosc)*2+1; i++)
+     Wsk[i] = Tablica2[i-(this->ilosc)-1];
+   
+   return Wsk;
+ }

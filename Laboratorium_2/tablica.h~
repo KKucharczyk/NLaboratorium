@@ -1,0 +1,62 @@
+#ifndef TABLICA_H
+#define TABLICA_H
+
+/*!
+ * \file
+ * \brief Definicja klasy Tablica
+ * 
+ * Klasa Tablica to klasa umozliwiająca tworzenie obiektow
+ * przechowywujących zmienna plikową oraz ilość elementów 
+ * przechowywanych w dynamicznych tablicach. 
+*/
+
+#include <iostream>
+#include <fstream>
+#include <string>
+#include <ctime>
+using namespace std;
+
+
+
+class Tablica{
+public:  
+
+  int ilosc;
+  fstream plik;
+  
+  // Metody
+
+  int dlugosc(){return this->ilosc;};
+  void zmien_ilosc(int nowy) {ilosc = nowy;}
+  
+  void Otworz_plik(string nazwa_pliku);
+
+  void Zamknij_plik();
+
+  int* Pobierz_dane();
+  
+  void Wypisz(int *Tablica, int ilosc);
+  
+  void Wypisz2(int *Tablica);
+  
+  void Pomnoz(int* Tablica);
+  
+  void Zamien_elementy(int *Tablica, int i, int j);
+  
+  void Porownaj(int *Tab1, int*Tab2, int ilosc);
+  
+  void Odwroc_kolejnosc(int* Tab);
+  
+  int* Dodaj_element(int* Tablica, int e);
+  
+  int* Dodaj_elementy(int *Tablica1, int* Tablica2);
+  
+  // Przeładowania operatorów
+  
+  
+};
+
+
+
+
+#endif
