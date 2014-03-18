@@ -1,0 +1,21 @@
+# Krzysztof Kucharczyk
+# -----------------------
+#
+# Podstawowy makefile
+
+OBJS = main.o benchmark.o
+CC = g++
+CFLAGS = -c -Wall -pedantic
+LFLAGS = -Wall -pedantic
+
+a.out: $(OBJS)
+	$(CC) $(LFLAGS) -o a.out $(OBJS)
+	
+main.o: main.cpp benchmark.h chronoCzas.h
+	$(CC) $(CFLAGS) -o main.o main.cpp	
+
+benchmark.o: benchmark.cpp benchmark.h chronoCzas.h
+	$(CC) $(CFLAGS) -o benchmark.o benchmark.cpp
+	
+clean:
+	\rm *.o
