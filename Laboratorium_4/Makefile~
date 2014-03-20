@@ -3,7 +3,7 @@
 
 PROG=a
 
-OBJ=obj/main.o obj/sort.o obj/obiekt.o
+OBJ=obj/main.o obj/sort.o
 
 CPPFLAGS=-Wall -pedantic -Iinc -I/home/krzysztof/Deskopt/PAMSI/Laboratorium_4/inc -c
 LDFLAGS= -Wall -L/home/krzysztof/Deskopt/PAMSI/Laboratorium_4/obj
@@ -21,8 +21,5 @@ obj/main.o: src/main.cpp
 obj/sort.o: src/sort.cpp
 	g++ ${CPPFLAGS} -o $@ $^
 
-obj/obiekt.o: src/obiekt.cpp
-	g++ ${CPPFLAGS} -std=c++0x -o $@ $^
-	
 clean:
 	rm -f stos_t1 obj/*
