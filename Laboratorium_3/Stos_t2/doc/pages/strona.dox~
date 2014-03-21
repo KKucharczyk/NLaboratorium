@@ -1,0 +1,13 @@
+/*!
+\mainpage Stos za pomocą tablicy ver/2
+
+\author Krzysztof Kucharczyk
+\date 15.03.2014
+\version 3
+
+Program modelujący zachowanie stosu na bazie tablicy dwówymiarowej. 
+
+Charakterystycznym elementem jest zwiększanie tablicy dwukrotnie w momencie, gdy miałaby być przepełniona
+i zwalnianiu połowy miejsca, gdy ilość elementów wynosi 1/4 pojemności tablicy.
+
+*/

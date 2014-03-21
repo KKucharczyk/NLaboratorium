@@ -1,0 +1,10 @@
+/*!
+\mainpage Mnożenie tablic
+
+\author Krzysztof Kucharczyk
+\date 11.03.2014
+\version 2
+
+Program umożlwia operacje na specjalnych obiektach Obiekt, które składają się z wskaźnika i kilku przydatnych
+metod.
+*/

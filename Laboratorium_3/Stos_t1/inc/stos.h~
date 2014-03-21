@@ -110,6 +110,7 @@ public:
    * pliku o nazwie "Wyniki_temp.txt". 
    * 
    * \param[in] czas - długość wykonywania operacji w nanosekundach
+   */
   void Eksportuj_dane(double czas);
   
 };

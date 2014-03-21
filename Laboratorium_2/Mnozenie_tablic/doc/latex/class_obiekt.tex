@@ -1,42 +1,55 @@
 \hypertarget{class_obiekt}{\section{\-Dokumentacja klasy \-Obiekt}
 \label{class_obiekt}\index{\-Obiekt@{\-Obiekt}}
 }
+
+
+\-Klasa umożliwia tworzenie przydatnej struktury.  
+
+
+
+
+{\ttfamily \#include $<$obiekt.\-h$>$}
+
 \subsection*{\-Metody publiczne}
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{class_obiekt_ac8e27a872226e2b55c6f42c0677e5d00}{\-Obiekt} ()
-\item 
+\begin{DoxyCompactList}\small\item\em \-Inicjuje obiekt pustym wskaźnikiem. \end{DoxyCompactList}\item 
 \hyperlink{class_obiekt_a8e2e3537c41235fe165117c3a09b9669}{\-Obiekt} (int $\ast$\-Wskaznik)
-\item 
+\begin{DoxyCompactList}\small\item\em \-Inicjuje obiekt określonym wskaźnikiem. \end{DoxyCompactList}\item 
 \hyperlink{class_obiekt}{\-Obiekt} \hyperlink{class_obiekt_ae9b27f251c823ca866ae63479a901a7a}{operator+} (const \hyperlink{class_obiekt}{\-Obiekt} \&\-Nowy)
-\item 
+\begin{DoxyCompactList}\small\item\em \-Pozwala dodawać dwa obiekty. \end{DoxyCompactList}\item 
 \hyperlink{class_obiekt}{\-Obiekt} \& \hyperlink{class_obiekt_a75a7336fe08d7ba99ad507371470c33f}{operator=} (const \hyperlink{class_obiekt}{\-Obiekt} \&\-Nowy)
-\item 
+\begin{DoxyCompactList}\small\item\em \-Pozwala przypisywać jeden obiekt do drugiego. \end{DoxyCompactList}\item 
 bool \hyperlink{class_obiekt_a1dd7d24ba8cce83355da18a75c89deca}{operator==} (const \hyperlink{class_obiekt}{\-Obiekt} \&\-Nowy)
-\item 
+\begin{DoxyCompactList}\small\item\em \-Pozwala intuicyjnie porównywać obiekty. \end{DoxyCompactList}\item 
 void \hyperlink{class_obiekt_a59b1b7dcf398424366b132d5ae7ac087}{\-Show} ()
-\item 
+\begin{DoxyCompactList}\small\item\em \-Umożlwia zwizualizowanie elementów obiektu. \end{DoxyCompactList}\item 
 void \hyperlink{class_obiekt_a481091a905fc01050b9bf782502efabb}{\-Pobierz\-\_\-dane} (string nazwa\-\_\-pliku)
-\item 
+\begin{DoxyCompactList}\small\item\em \-Pobiera dane z określonego pliku. \end{DoxyCompactList}\item 
 void \hyperlink{class_obiekt_aae43ab1926c5c6ccd82d0908c33474da}{\-Pomnoz} (int mnoznik)
-\item 
+\begin{DoxyCompactList}\small\item\em \-Mnoży elemnty tablicy \-Obiektu. \end{DoxyCompactList}\item 
 void \hyperlink{class_obiekt_a3e8670b709172fc0a63df917f41c98cf}{\-Czy\-\_\-rowne} (const \hyperlink{class_obiekt}{\-Obiekt} \&\-Porownywany)
-\item 
+\begin{DoxyCompactList}\small\item\em \-Sprawdza, czy \-Obiekty są sobie równe. \end{DoxyCompactList}\item 
 void \hyperlink{class_obiekt_a46517777b9e80cc1ddc434d67922fe9a}{\-Zamien\-\_\-elementy} (int i, int j)
-\item 
+\begin{DoxyCompactList}\small\item\em \-Zamienia elementy o podanych indeksach. \end{DoxyCompactList}\item 
 void \hyperlink{class_obiekt_a28ec1565e960673b6f762c3488aa7ca6}{\-Odwroc\-\_\-kolejnosc} ()
-\item 
+\begin{DoxyCompactList}\small\item\em \-Odwraca kolejność tablicy. \end{DoxyCompactList}\item 
 void \hyperlink{class_obiekt_ac0f67824826a384077bc30e51552a9a7}{\-Dodaj\-\_\-element} (int element)
-\item 
+\begin{DoxyCompactList}\small\item\em \-Dodaje jeden element do tablicy. \end{DoxyCompactList}\item 
 void \hyperlink{class_obiekt_ae70037bf4b1f582c7a1e09c16314ac83}{\-Dodaj\-\_\-elementy} (\hyperlink{class_obiekt}{\-Obiekt} \&\-Nowy)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em \-Dodaje wiele elementów do tablicy. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{\-Atrybuty publiczne}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{class_obiekt_a877ac2b65043327767012c184067f269}{int $\ast$ {\bfseries \-Tablica}}\label{class_obiekt_a877ac2b65043327767012c184067f269}
+int $\ast$ \hyperlink{class_obiekt_a877ac2b65043327767012c184067f269}{\-Tablica}
+\begin{DoxyCompactList}\small\item\em \-Umożliwia tworzenie uniwersalnych tablicy. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
-\end{DoxyCompactItemize}
 
+\subsection{\-Opis szczegółowy}
+\-Klasa umożliwia tworzenie przydatnej struktury. 
+
+\-Klasa pozwala na tworzenie bardzo przydatnej, uniwersalnej struktury bardzo podatnej na wszelki modyfikacje (np. sortowanie). \-Jej najważniejszym elementem jest wskaźnik umozliwiający stworzenie dynamicznej tablicy. \-Dane w niej przechowywane mogą być w różnoraki sposób modyfikowane dzięki zaimplementowanym metodom. 
 
 \subsection{\-Dokumentacja konstruktora i destruktora}
 \hypertarget{class_obiekt_ac8e27a872226e2b55c6f42c0677e5d00}{\index{\-Obiekt@{\-Obiekt}!\-Obiekt@{\-Obiekt}}
@@ -46,21 +59,22 @@ void \hyperlink{class_obiekt_ae70037bf4b1f582c7a1e09c16314ac83}{\-Dodaj\-\_\-ele
 {}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_obiekt_ac8e27a872226e2b55c6f42c0677e5d00}
-\-Podstawowy konstruktor klasy, inicjuje pole \-Tablica wskaźnikiem \-N\-U\-L\-L. \hypertarget{class_obiekt_a8e2e3537c41235fe165117c3a09b9669}{\index{\-Obiekt@{\-Obiekt}!\-Obiekt@{\-Obiekt}}
+
+
+\-Inicjuje obiekt pustym wskaźnikiem. 
+
+\-Prosty konstruktor, jego zadanie ogranicza się do dezaktywowania wskaźnika, by w razie czego na nic nie pokazywał i nie wprowadzał w ewentualny błąd. \hypertarget{class_obiekt_a8e2e3537c41235fe165117c3a09b9669}{\index{\-Obiekt@{\-Obiekt}!\-Obiekt@{\-Obiekt}}
 \index{\-Obiekt@{\-Obiekt}!Obiekt@{\-Obiekt}}
 \subsubsection[{\-Obiekt}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Obiekt\-::\-Obiekt} (
 \begin{DoxyParamCaption}
 \item[{int $\ast$}]{\-Wskaznik}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_obiekt_a8e2e3537c41235fe165117c3a09b9669}
-\-Konstruktor pozwala na zainicjowanie obiektu klasy odpowiednim wskaźnikiem.
 
 
-\begin{DoxyParams}{\-Parametry}
-{\em \-Wskaznik} & -\/ wskaznik typu int wskazujący na kokretną strukturę. \-Zostaje przypisany do pola \-Tablica. \\
-\hline
-\end{DoxyParams}
+\-Inicjuje obiekt określonym wskaźnikiem. 
 
+\-Kontruktor pozwala zainicjować obiekt już istniejącą tablicą danych, dzięki czemu nie trzeba jej ponownie przepisywać. 
 
 \subsection{\-Dokumentacja funkcji składowych}
 \hypertarget{class_obiekt_a3e8670b709172fc0a63df917f41c98cf}{\index{\-Obiekt@{\-Obiekt}!\-Czy\-\_\-rowne@{\-Czy\-\_\-rowne}}
@@ -70,11 +84,15 @@ void \hyperlink{class_obiekt_ae70037bf4b1f582c7a1e09c16314ac83}{\-Dodaj\-\_\-ele
 \item[{const {\bf \-Obiekt} \&}]{\-Porownywany}
 \end{DoxyParamCaption}
 )}}\label{class_obiekt_a3e8670b709172fc0a63df917f41c98cf}
-\-Metoda analogiczna do operator ==. \-Pozwala na porównanie, czy dwa obiektu są sobie równe. \-W przeciwieństwie do wspomnianego przeładowania metoda ta nie reaguje, gdy dane są identyczne, a w przypadku różnych danych wyświetla stosowny komunikat.
 
 
-\begin{DoxyParams}{\-Parametry}
-{\em \-Porownywany} & -\/ obiekt, który podlega porownaniu. \-Nietykalny dzieki const. \\
+\-Sprawdza, czy \-Obiekty są sobie równe. 
+
+\-Metoda sprawdza, czy dwa obiekty są sobie równe. \-Milczy w przypaku optymistycznym, wyświetla stosowny komunikat w przypadku przeciwnym.
+
+
+\begin{DoxyParams}[1]{\-Parametry}
+\mbox{\tt in}  & {\em \-Porownywany} & \-Nazwa porównywanego obiektu \\
 \hline
 \end{DoxyParams}
 \hypertarget{class_obiekt_ac0f67824826a384077bc30e51552a9a7}{\index{\-Obiekt@{\-Obiekt}!\-Dodaj\-\_\-element@{\-Dodaj\-\_\-element}}
@@ -84,11 +102,15 @@ void \hyperlink{class_obiekt_ae70037bf4b1f582c7a1e09c16314ac83}{\-Dodaj\-\_\-ele
 \item[{int}]{element}
 \end{DoxyParamCaption}
 )}}\label{class_obiekt_ac0f67824826a384077bc30e51552a9a7}
-\-Metoda pozwala na dodanie elementu pobranego jako argument do \-Tablicy. \-Metoda działa na zasadzie skopiowania zawartości \-Tablicy do nowej, większej o jeden element tablicy. \-Ostatnie miejsce nowej tablicy wypełnia nowy element. \-Długość tablicy zostaje odpowiednio zaktualizowana.
 
 
-\begin{DoxyParams}{\-Parametry}
-{\em element} & -\/ element, który ma zostać dodany \\
+\-Dodaje jeden element do tablicy. 
+
+\-Metoda dodaje jeden element na koniec tablicy poprzez stworzenie nowej, o jeden większej tablicy, do której przepisywane są dane ze starej i dodawany nowy element na samym końcu. \-Stara tablica zostaje usunięta. \-Oczywiście element zerowy zostaje adekwatnie uaktualniony.
+
+
+\begin{DoxyParams}[1]{\-Parametry}
+\mbox{\tt in}  & {\em element} & \-Nowy element, który zostanie dodany na koniec tablicy \\
 \hline
 \end{DoxyParams}
 \hypertarget{class_obiekt_ae70037bf4b1f582c7a1e09c16314ac83}{\index{\-Obiekt@{\-Obiekt}!\-Dodaj\-\_\-elementy@{\-Dodaj\-\_\-elementy}}
@@ -98,11 +120,15 @@ void \hyperlink{class_obiekt_ae70037bf4b1f582c7a1e09c16314ac83}{\-Dodaj\-\_\-ele
 \item[{{\bf \-Obiekt} \&}]{\-Nowy}
 \end{DoxyParamCaption}
 )}}\label{class_obiekt_ae70037bf4b1f582c7a1e09c16314ac83}
-\-Metoda umożliwia dodanie dwóch obiektów do siebie w sensie dołączenia jednej \-Tablicy do drugiej. \-Metoda za argument przybiera \hyperlink{class_obiekt}{\-Obiekt}, który ma zostać dodany. \-Długość \-Tablicy zostaje odpowiednio zaktualizowany.
+
+
+\-Dodaje wiele elementów do tablicy. 
+
+\-Metoda umożliwia dodanie dużej ilości elementów na koniec istniejącej w obiekcie tablicy. \-Działa na zasadzie stworzenia nowej, większej tablicy i umieszczeniu w niej elementów obu tablic. \-Stara tablica zostaje zwolniona, a indeks zerowy uaktualniony.
 
 
 \begin{DoxyParams}{\-Parametry}
-{\em \-Nowy} & -\/ obiekt, który ma zostać dopisany \\
+{\em \-Nowy} & \hyperlink{class_obiekt}{\-Obiekt} \hyperlink{class_obiekt}{\-Obiekt}, którego tablica zostaje wpisana na koniec istniejącej tablicy w \-Obiekcie. \\
 \hline
 \end{DoxyParams}
 \hypertarget{class_obiekt_a28ec1565e960673b6f762c3488aa7ca6}{\index{\-Obiekt@{\-Obiekt}!\-Odwroc\-\_\-kolejnosc@{\-Odwroc\-\_\-kolejnosc}}
@@ -112,75 +138,73 @@ void \hyperlink{class_obiekt_ae70037bf4b1f582c7a1e09c16314ac83}{\-Dodaj\-\_\-ele
 {}
 \end{DoxyParamCaption}
 )}}\label{class_obiekt_a28ec1565e960673b6f762c3488aa7ca6}
-\-Metoda pozwala odwrócić kolejność elementów w \-Tablicy. \hypertarget{class_obiekt_ae9b27f251c823ca866ae63479a901a7a}{\index{\-Obiekt@{\-Obiekt}!operator+@{operator+}}
+
+
+\-Odwraca kolejność tablicy. 
+
+\-Metoda powoduje inwersję elementów tablicy. \-Oczywiście element zerowy zostaje na miejscu. \hypertarget{class_obiekt_ae9b27f251c823ca866ae63479a901a7a}{\index{\-Obiekt@{\-Obiekt}!operator+@{operator+}}
 \index{operator+@{operator+}!Obiekt@{\-Obiekt}}
 \subsubsection[{operator+}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Obiekt} \-Obiekt\-::operator+ (
 \begin{DoxyParamCaption}
 \item[{const {\bf \-Obiekt} \&}]{\-Nowy}
 \end{DoxyParamCaption}
 )}}\label{class_obiekt_ae9b27f251c823ca866ae63479a901a7a}
-\-Przeciążenie operatora +. \-Pozwala na wykonywania intuicyjnych operacji dodawania dwóch obiektów klasy poprzez dołączenie jednej tablicy do drugiej. \-Tablica dodawana na końcu jest argumentem przeładowania, modyfikator const chroni jego zawartość.
 
 
-\begin{DoxyParams}{\-Parametry}
-{\em \-Nowy} & -\/ obiekt klasy obiekt, który zostaje dodany do obiektu po lewej stronie znaku +. \-Niezmienność zapewniona const'em. \\
-\hline
-\end{DoxyParams}
-\hypertarget{class_obiekt_a75a7336fe08d7ba99ad507371470c33f}{\index{\-Obiekt@{\-Obiekt}!operator=@{operator=}}
+\-Pozwala dodawać dwa obiekty. 
+
+\-Przeciążenie to pozwala dodawać tablicę jednego obiektu do końca tablicy drugiego obiektu. \-Dzięki modyfikatorowi const obiekt dodawany ma zapewnioną nietykalność. \hypertarget{class_obiekt_a75a7336fe08d7ba99ad507371470c33f}{\index{\-Obiekt@{\-Obiekt}!operator=@{operator=}}
 \index{operator=@{operator=}!Obiekt@{\-Obiekt}}
 \subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Obiekt} \& \-Obiekt\-::operator= (
 \begin{DoxyParamCaption}
 \item[{const {\bf \-Obiekt} \&}]{\-Nowy}
 \end{DoxyParamCaption}
 )}}\label{class_obiekt_a75a7336fe08d7ba99ad507371470c33f}
-\-Przeciążenie operatora =. \-Umożliwia podstawienie parametrów jednego obiektu do drugiego. \hyperlink{class_obiekt}{\-Obiekt} przypisywany ma modyfikator const chroniący jego zawartość.
 
 
-\begin{DoxyParams}{\-Parametry}
-{\em \-Nowy} & -\/ obiekt klasy obiekt, który zostaje przepisany do obiektu po lewej stronie znaku =. \-Niezmienność zapewniona const'em. \\
-\hline
-\end{DoxyParams}
-\hypertarget{class_obiekt_a1dd7d24ba8cce83355da18a75c89deca}{\index{\-Obiekt@{\-Obiekt}!operator==@{operator==}}
+\-Pozwala przypisywać jeden obiekt do drugiego. 
+
+\-Przeciążenie umożliwia w prosty sposób przypisanie wartości jednego obiektu do drugiego. \hyperlink{class_obiekt}{\-Obiekt}, który jest przepisywany jest nietykalny dzięki modyfikatorowi const. \hypertarget{class_obiekt_a1dd7d24ba8cce83355da18a75c89deca}{\index{\-Obiekt@{\-Obiekt}!operator==@{operator==}}
 \index{operator==@{operator==}!Obiekt@{\-Obiekt}}
 \subsubsection[{operator==}]{\setlength{\rightskip}{0pt plus 5cm}bool \-Obiekt\-::operator== (
 \begin{DoxyParamCaption}
 \item[{const {\bf \-Obiekt} \&}]{\-Nowy}
 \end{DoxyParamCaption}
 )}}\label{class_obiekt_a1dd7d24ba8cce83355da18a75c89deca}
-\-Przeciążenie operatora ==. \-Pozwala na porównywanie zawartości dwóch obiektów i zwrócenie wyniku porównywania w postaci bool (prawda/fałsz). \hyperlink{class_obiekt}{\-Obiekt} porównywany ma modyfikator const chroniący jego zawartość.
 
 
-\begin{DoxyParams}{\-Parametry}
-{\em \-Nowy} & -\/ obiekt klasy obiekt, który zostaje porównany do obiektu po lewej stronie operatora ==. \-Const zapewnia nietykalność argumentu. \\
-\hline
-\end{DoxyParams}
-\hypertarget{class_obiekt_a481091a905fc01050b9bf782502efabb}{\index{\-Obiekt@{\-Obiekt}!\-Pobierz\-\_\-dane@{\-Pobierz\-\_\-dane}}
+\-Pozwala intuicyjnie porównywać obiekty. 
+
+\-Przeciążenie umożliwia intuicyjne porównywanie dwóch elementów. \-Zwracana jest jedna z dwóch wartości\-: \par
+
+\begin{DoxyItemize}
+\item 1 -\/ gdy oba obiekty są identyczne, \par
+
+\item 0 -\/ gdy oba obiekty są różne. 
+\end{DoxyItemize}\hypertarget{class_obiekt_a481091a905fc01050b9bf782502efabb}{\index{\-Obiekt@{\-Obiekt}!\-Pobierz\-\_\-dane@{\-Pobierz\-\_\-dane}}
 \index{\-Pobierz\-\_\-dane@{\-Pobierz\-\_\-dane}!Obiekt@{\-Obiekt}}
 \subsubsection[{\-Pobierz\-\_\-dane}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Obiekt\-::\-Pobierz\-\_\-dane} (
 \begin{DoxyParamCaption}
 \item[{string}]{nazwa\-\_\-pliku}
 \end{DoxyParamCaption}
 )}}\label{class_obiekt_a481091a905fc01050b9bf782502efabb}
-\-Metoda umożliwiająca wypełnienie \-Tablicy obiektu elementami z pliku o nazwie podanej jako argument. \-Metoda sprawdza poprawność pliku, tj. czy format pliku mieści się w następującym\-: \begin{DoxyVerb}
+
+
+\-Pobiera dane z określonego pliku. 
+
+\-Metoda umożliwia pobranie danych pliku o określonej nazwie. \-Plik jest sprawdzany pod względem swojego formatu, tj. czy zachowany jest następujący układ\-: \begin{DoxyVerb}
+   * indeks
+   * 1.     	       | ilość elementów
+   * 2.     	       | element_1
+   * 3.    	       | element_2
+   * .
+   * .
+   * .
+   * ilość_elementów+1 | element ilość_elementów-1
+   * \end{DoxyVerb}
  
-  1   | n - ilość wierszy
-  2   | dane(1)
-  3   | dane(2)
-  .   | .
-  .   | .
-  .   | .
-  n+1 | dane(n-1)
- 
-  , gdzie pierwsza kolumna to numeracja wierszy pliku, druga to zadane wartości.
- 
- \end{DoxyVerb}
-
-
-\-Dodatkowo metoda sprawdza czy otworzono plik i czy dane mają logiczny sens.
-
-
-\begin{DoxyParams}{\-Parametry}
-{\em nazwa\-\_\-pliku} & -\/ nazwa pliku, z którego powinny zostać pobrane dane. \\
+\begin{DoxyParams}[1]{\-Parametry}
+\mbox{\tt in}  & {\em nazwa\-\_\-pliku} & \-Zawiera nazwę pliku, z którego pobierane są dane \\
 \hline
 \end{DoxyParams}
 \hypertarget{class_obiekt_aae43ab1926c5c6ccd82d0908c33474da}{\index{\-Obiekt@{\-Obiekt}!\-Pomnoz@{\-Pomnoz}}
@@ -190,11 +214,15 @@ void \hyperlink{class_obiekt_ae70037bf4b1f582c7a1e09c16314ac83}{\-Dodaj\-\_\-ele
 \item[{int}]{mnoznik}
 \end{DoxyParamCaption}
 )}}\label{class_obiekt_aae43ab1926c5c6ccd82d0908c33474da}
-\-Metoda mnoży wszystkie elementy \-Tablicy przez wartość podaną jako argument.
 
 
-\begin{DoxyParams}{\-Parametry}
-{\em mnoznik} & -\/ wartość, przez jaką mają być pomnożone wszystkie elementy \-Tablicy. \\
+\-Mnoży elemnty tablicy \-Obiektu. 
+
+\-Metoda służy do multiplikowania elementów tablicy przez określoną liczbę.
+
+
+\begin{DoxyParams}[1]{\-Parametry}
+\mbox{\tt in}  & {\em mnoznik} & \-Wartość, o jaką mają zostać pomnożone elementy \\
 \hline
 \end{DoxyParams}
 \hypertarget{class_obiekt_a59b1b7dcf398424366b132d5ae7ac087}{\index{\-Obiekt@{\-Obiekt}!\-Show@{\-Show}}
@@ -204,7 +232,11 @@ void \hyperlink{class_obiekt_ae70037bf4b1f582c7a1e09c16314ac83}{\-Dodaj\-\_\-ele
 {}
 \end{DoxyParamCaption}
 )}}\label{class_obiekt_a59b1b7dcf398424366b132d5ae7ac087}
-\-Metoda pomocnicza umożliwiająca wyświetlenie zawartości \-Tablicy konkretnego obiektu. \hypertarget{class_obiekt_a46517777b9e80cc1ddc434d67922fe9a}{\index{\-Obiekt@{\-Obiekt}!\-Zamien\-\_\-elementy@{\-Zamien\-\_\-elementy}}
+
+
+\-Umożlwia zwizualizowanie elementów obiektu. 
+
+\-Metoda pozwala wypisać całą zawartość obiektu (z wyjątkiem elementu zerowego, tj. długośvi tablicy). \hypertarget{class_obiekt_a46517777b9e80cc1ddc434d67922fe9a}{\index{\-Obiekt@{\-Obiekt}!\-Zamien\-\_\-elementy@{\-Zamien\-\_\-elementy}}
 \index{\-Zamien\-\_\-elementy@{\-Zamien\-\_\-elementy}!Obiekt@{\-Obiekt}}
 \subsubsection[{\-Zamien\-\_\-elementy}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Obiekt\-::\-Zamien\-\_\-elementy} (
 \begin{DoxyParamCaption}
@@ -212,25 +244,32 @@ void \hyperlink{class_obiekt_ae70037bf4b1f582c7a1e09c16314ac83}{\-Dodaj\-\_\-ele
 \item[{int}]{j}
 \end{DoxyParamCaption}
 )}}\label{class_obiekt_a46517777b9e80cc1ddc434d67922fe9a}
-\-Metoda ta umozliwia zamiane miejscami dwoch elementow \-Tablicy. \-Jako argumenty przyjmuje indeksy dwóch elementów. \-Warto również zaznaczyć, że argumenty muszą być z zakresu \begin{DoxyVerb}
-    1 - n
-    
-    -> n - ilość elementów
-   \end{DoxyVerb}
 
 
-ze względu na konkretną budowę tablic.
+\-Zamienia elementy o podanych indeksach. 
+
+\-Metoda zamienia miejscami elementy tablicy o podanych indeksach. \-Jedynym ograniczeniem jest indeks zerowy, który zawiera informację o długości tablicy. \-Jego zmiana jest niemożliwa, o tym także poinformuje program w razie ewentualnego błędu.
 
 
-\begin{DoxyParams}{\-Parametry}
-{\em i} & -\/ indeks pierwszego elementu do zamiany \\
+\begin{DoxyParams}[1]{\-Parametry}
+\mbox{\tt in}  & {\em i} & \-Indeks pierwszego elementu \\
 \hline
-{\em j} & -\/ indeks drugiego elementu do wymiany \\
+\mbox{\tt in}  & {\em j} & \-Indeks drugiego elementu \\
 \hline
 \end{DoxyParams}
 
 
+\subsection{\-Dokumentacja atrybutów składowych}
+\hypertarget{class_obiekt_a877ac2b65043327767012c184067f269}{\index{\-Obiekt@{\-Obiekt}!\-Tablica@{\-Tablica}}
+\index{\-Tablica@{\-Tablica}!Obiekt@{\-Obiekt}}
+\subsubsection[{\-Tablica}]{\setlength{\rightskip}{0pt plus 5cm}int$\ast$ {\bf \-Obiekt\-::\-Tablica}}}\label{class_obiekt_a877ac2b65043327767012c184067f269}
+
+
+\-Umożliwia tworzenie uniwersalnych tablicy. 
+
+\-Pole pozwala na tworzenie uniwersalnych tablic o zdefiniowanych przez użytkownika wielkościach. \-Pole to jest podstawowym polem klasy. 
+
 \-Dokumentacja dla tej klasy została wygenerowana z plików\-:\begin{DoxyCompactItemize}
 \item 
-/home/krzysztof/\-Desktop/\-Workspace/\-Mnozenie\-\_\-tablic/inc/obiekt.\-h\item 
-/home/krzysztof/\-Desktop/\-Workspace/\-Mnozenie\-\_\-tablic/src/obiekt.\-cpp\end{DoxyCompactItemize}
+/home/krzysztof/\-Desktop/\-P\-A\-M\-S\-I/\-Laboratorium/\-Laboratorium\-\_\-2/\-Mnozenie\-\_\-tablic/inc/\hyperlink{obiekt_8h}{obiekt.\-h}\item 
+/home/krzysztof/\-Desktop/\-P\-A\-M\-S\-I/\-Laboratorium/\-Laboratorium\-\_\-2/\-Mnozenie\-\_\-tablic/src/obiekt.\-cpp\end{DoxyCompactItemize}

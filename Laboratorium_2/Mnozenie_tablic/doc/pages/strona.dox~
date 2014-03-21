@@ -1,27 +1,10 @@
 /*!
-   \mainpage Prosty program bazowy
-   
-   \author Krzysztof Kucharczyk
-   \date 10.03.2014
-   \version 6
-   
-   Program służy do operowania na obiektach klasy Obiekt, które umożliwiają pracę na tablicach.
-   Dzięki wykorzystaniu budowy obiektowej program posiada zwartą strukturę.
-   
-   \section etykieta-wazne-cechy Najwazniejsze cechy
-   
-   Program działa na zasadzie tworzenia obiektów i zawartych w nich tablic dynamicznych. Prosta
-   implementacja klas i metod pozwala na sprawne i intuicyjne operowanie dostarczonymi zasobami.
-   Dodatkowo program wyposażony jest w moduł umożliwiający komunikację z programem ./benchmark, 
-   skupionym na obliczaniu efektywności tworzonych algorytmów.
-   
-   \section etykieta-mozliwosci Funkcjonalność programu
-   
-   Program pozwala na tworzenie obiektów oraz operacje pomiaru czasu konkretnych elementów kodu. Do 
-   najważniejszych możliwości programu można zaliczyć:
-   
-   -> pobieranie danych z plików tekstowych o określonym formacie
-   -> wykonywanie operacji na obiektach (w przyszłości sortowanie)
-   -> wyświetlanie danych zawartych w obiektach
-   -> zaimplementowane przeciążenia umożliwiające intuicyjne korzystanie z zasobów
-   */
+\mainpage Generator liczb losowych
+
+\author Krzysztof Kucharczyk
+\date 10.03.2014
+\version 2
+
+Program umożliwiający tworzenie losowych danych i zawieranie ich w pliku o określonej nazwie.
+
+*/
