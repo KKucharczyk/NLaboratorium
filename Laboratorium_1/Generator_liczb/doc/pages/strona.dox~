@@ -1,0 +1,10 @@
+/*!
+\mainpage Stos za pomocą tablicy
+
+\author Krzysztof Kucharczyk
+\date 10.03.2014
+\version 2
+
+Program umożliwiający tworzenie losowych danych i zawieranie ich w pliku o określonej nazwie.
+
+*/

@@ -1,0 +1,11 @@
+#include "generator.h"
+
+int main(int argc, char* argv[])
+{
+   Generator Alpha;
+   
+   Alpha.Opcje(argc, argv);
+   cout << Alpha.nazwa << endl << Alpha.zakres << endl << Alpha.ilosc_liczb << endl;
+   Alpha.Generuj_dane();
+   Alpha.Zapisz_do_pliku();
+}

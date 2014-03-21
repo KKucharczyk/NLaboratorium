@@ -1,0 +1,30 @@
+\documentclass[a4paper,12pt]{report}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[MeX]{polski}
+\usepackage[polish]{babel}
+\usepackage[latin2]{inputenc}
+\usepackage{graphicx}\usepackage{epstopdf}
+\usepackage[T1]{fontenc}
+\usepackage{setspace}
+
+\begin{document}
+
+{\raggedleft{}Krzysztof Kucharczyk\\
+	      200401\\
+	      Wydział Elektroniki\\
+	      Kierunek AiR\\
+	      Zajęcia czw. 10:00-12:35\\
+}
+
+\begin{doublespace}
+	\begin{center} \textbf{{\large Sprawozdanie z laboratorium 4}}\\
+	Sortowanie algorytmami quicksort, heapsort i mergesort	
+\end{center}
+\end{doublespace}
+\subsection{Opis teoretyczny}
+ 
+
+
+\end{document}

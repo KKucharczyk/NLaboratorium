@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>Generator_liczb: Plik źródłowy /home/krzysztof/Desktop/PAMSI/Laboratorium/Laboratorium_1/Generator_liczb/inc/generator.h</title>
+
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+
+</head>
+<body>
+<div id="top"><!-- do not remove this div! -->
+
+
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  
+  
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Generator_liczb
+   
+   </div>
+   
+  </td>
+  
+  
+  
+ </tr>
+ </tbody>
+</table>
+</div>
+
+<!-- Wygenerowano przez Doxygen 1.7.6.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
+      <li><a href="annotated.html"><span>Klasy</span></a></li>
+      <li class="current"><a href="files.html"><span>Pliki</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Szukaj" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;plików</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="header">
+  <div class="headertitle">
+<div class="title">/home/krzysztof/Desktop/PAMSI/Laboratorium/Laboratorium_1/Generator_liczb/inc/generator.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="generator_8h.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#ifndef GENERATOR_H</span>
+<a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define GENERATOR_H</span>
+<a name="l00003"></a>00003 <span class="preprocessor"></span>
+<a name="l00011"></a>00011 <span class="preprocessor">#include &lt;iostream&gt;</span>
+<a name="l00012"></a>00012 <span class="preprocessor">#include &lt;fstream&gt;</span>
+<a name="l00013"></a>00013 <span class="preprocessor">#include &lt;cstdlib&gt;</span>
+<a name="l00014"></a>00014 <span class="preprocessor">#include &lt;string&gt;</span>
+<a name="l00015"></a>00015 
+<a name="l00016"></a>00016 <span class="keyword">using namespace </span>std;
+<a name="l00017"></a>00017 
+<a name="l00026"></a><a class="code" href="class_generator.html">00026</a> <span class="keyword">class </span><a class="code" href="class_generator.html" title="Klasa umożliwia generowanie plików z losowymi liczbami.">Generator</a>{
+<a name="l00027"></a>00027 <span class="keyword">public</span>:
+<a name="l00033"></a><a class="code" href="class_generator.html#afea06b61eed9b34cd983ab81f57f9d65">00033</a>    <span class="keywordtype">int</span> *<a class="code" href="class_generator.html#afea06b61eed9b34cd983ab81f57f9d65" title="Wskaźnik na tablice z danymi.">Wskaznik</a>;
+<a name="l00039"></a><a class="code" href="class_generator.html#a51417dbd6cecb8850e95fab3072f2992">00039</a>    <span class="keywordtype">int</span> <a class="code" href="class_generator.html#a51417dbd6cecb8850e95fab3072f2992" title="Przechowuje żądaną ilość liczb.">ilosc_liczb</a>;
+<a name="l00045"></a><a class="code" href="class_generator.html#aad1c837275dd1ee921eabf25118cb2a9">00045</a>    <span class="keywordtype">int</span> <a class="code" href="class_generator.html#aad1c837275dd1ee921eabf25118cb2a9" title="Przechowuje zakres, w jakim losowane są liczby.">zakres</a>;
+<a name="l00051"></a><a class="code" href="class_generator.html#a1078fe2b2f7b36489d24020e8d454b34">00051</a>    <span class="keywordtype">string</span> <a class="code" href="class_generator.html#a1078fe2b2f7b36489d24020e8d454b34" title="Zawiera nazwę pliku wyjściowego.">nazwa</a>;
+<a name="l00052"></a>00052    
+<a name="l00062"></a>00062    <span class="keywordtype">void</span> Opcje(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>* argv[]);
+<a name="l00069"></a>00069    <span class="keywordtype">void</span> Generuj_dane();
+<a name="l00076"></a>00076    <span class="keywordtype">void</span> Zapisz_do_pliku();
+<a name="l00077"></a>00077    
+<a name="l00078"></a>00078 };
+<a name="l00079"></a>00079 
+<a name="l00080"></a>00080 <span class="preprocessor">#endif</span>
+</pre></div></div><!-- contents -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Klasy</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Pliki</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funkcje</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Zmienne</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+
+
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano Fri Mar 21 2014 11:46:44 dla Generator_liczb programem &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.7.6.1
+</small></address>
+
+</body>
+</html>

@@ -1,0 +1,115 @@
+\hypertarget{class_generator}{\section{\-Dokumentacja klasy \-Generator}
+\label{class_generator}\index{\-Generator@{\-Generator}}
+}
+
+
+\-Klasa umożliwia generowanie plików z losowymi liczbami.  
+
+
+
+
+{\ttfamily \#include $<$generator.\-h$>$}
+
+\subsection*{\-Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_generator_a413249832b5c3e5a8540447ec86b213b}{\-Opcje} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em \-Umożliwia komunikację z programem z command line'a. \end{DoxyCompactList}\item 
+void \hyperlink{class_generator_a6be92197273a36ae62a04ab9de172634}{\-Generuj\-\_\-dane} ()
+\begin{DoxyCompactList}\small\item\em \-Generuje dane na podstawie podanych opcji. \end{DoxyCompactList}\item 
+void \hyperlink{class_generator_a3ba9c49d0bd275d62ea7800ba9c29f3d}{\-Zapisz\-\_\-do\-\_\-pliku} ()
+\begin{DoxyCompactList}\small\item\em \-Zapisuje wyniki do pliku. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Atrybuty publiczne}
+\begin{DoxyCompactItemize}
+\item 
+int $\ast$ \hyperlink{class_generator_afea06b61eed9b34cd983ab81f57f9d65}{\-Wskaznik}
+\begin{DoxyCompactList}\small\item\em \-Wskaźnik na tablice z danymi. \end{DoxyCompactList}\item 
+int \hyperlink{class_generator_a51417dbd6cecb8850e95fab3072f2992}{ilosc\-\_\-liczb}
+\begin{DoxyCompactList}\small\item\em \-Przechowuje żądaną ilość liczb. \end{DoxyCompactList}\item 
+int \hyperlink{class_generator_aad1c837275dd1ee921eabf25118cb2a9}{zakres}
+\begin{DoxyCompactList}\small\item\em \-Przechowuje zakres, w jakim losowane są liczby. \end{DoxyCompactList}\item 
+string \hyperlink{class_generator_a1078fe2b2f7b36489d24020e8d454b34}{nazwa}
+\begin{DoxyCompactList}\small\item\em \-Zawiera nazwę pliku wyjściowego. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{\-Opis szczegółowy}
+\-Klasa umożliwia generowanie plików z losowymi liczbami. 
+
+\-Klasa pozwala na szybkie stworzenie pliku o dowolnej nazwie zawierającego określoną ilość liczb wylosowanych z konkretnego zakresu. 
+
+\subsection{\-Dokumentacja funkcji składowych}
+\hypertarget{class_generator_a6be92197273a36ae62a04ab9de172634}{\index{\-Generator@{\-Generator}!\-Generuj\-\_\-dane@{\-Generuj\-\_\-dane}}
+\index{\-Generuj\-\_\-dane@{\-Generuj\-\_\-dane}!Generator@{\-Generator}}
+\subsubsection[{\-Generuj\-\_\-dane}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Generator\-::\-Generuj\-\_\-dane} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_generator_a6be92197273a36ae62a04ab9de172634}
+
+
+\-Generuje dane na podstawie podanych opcji. 
+
+\-Metoda tworzy dynamiczną tablicę, by następnie wypełnić ją określoną ilością danych z określonego przedziału. \hypertarget{class_generator_a413249832b5c3e5a8540447ec86b213b}{\index{\-Generator@{\-Generator}!\-Opcje@{\-Opcje}}
+\index{\-Opcje@{\-Opcje}!Generator@{\-Generator}}
+\subsubsection[{\-Opcje}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Generator\-::\-Opcje} (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}}\label{class_generator_a413249832b5c3e5a8540447ec86b213b}
+
+
+\-Umożliwia komunikację z programem z command line'a. 
+
+\-Metoda umożliwia ustawianie opcji działania programu za pośrednictwem command line'a. \-Dostępne opcje to\-:\par
+ -\/o \mbox{[}nazwa\-\_\-pliku\mbox{]} -\/ określa nazwę pliku, do którego mają zostać wygenerowane dane \par
+ -\/z \mbox{[}liczba\mbox{]} -\/ określa górną granicę wartości losowanych liczba \par
+ -\/a \mbox{[}liczba\mbox{]} -\/ określa ilość liczb, jakie mają zaostać stworzone \par
+ \hypertarget{class_generator_a3ba9c49d0bd275d62ea7800ba9c29f3d}{\index{\-Generator@{\-Generator}!\-Zapisz\-\_\-do\-\_\-pliku@{\-Zapisz\-\_\-do\-\_\-pliku}}
+\index{\-Zapisz\-\_\-do\-\_\-pliku@{\-Zapisz\-\_\-do\-\_\-pliku}!Generator@{\-Generator}}
+\subsubsection[{\-Zapisz\-\_\-do\-\_\-pliku}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Generator\-::\-Zapisz\-\_\-do\-\_\-pliku} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_generator_a3ba9c49d0bd275d62ea7800ba9c29f3d}
+
+
+\-Zapisuje wyniki do pliku. 
+
+\-Metoda zapisuje wygenerowane dane do pliku, którego nazwa określona została na podstawie metody \-Opcje. \-Wrażliwość programów na ostatni endl została wyeliminowana dzięki odpowiednim warunkom. 
+
+\subsection{\-Dokumentacja atrybutów składowych}
+\hypertarget{class_generator_a51417dbd6cecb8850e95fab3072f2992}{\index{\-Generator@{\-Generator}!ilosc\-\_\-liczb@{ilosc\-\_\-liczb}}
+\index{ilosc\-\_\-liczb@{ilosc\-\_\-liczb}!Generator@{\-Generator}}
+\subsubsection[{ilosc\-\_\-liczb}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Generator\-::ilosc\-\_\-liczb}}}\label{class_generator_a51417dbd6cecb8850e95fab3072f2992}
+
+
+\-Przechowuje żądaną ilość liczb. 
+
+\-Pole przechowuje informacje o żądanej ilości liczb, jakie mają zostać wygenerowane. \hypertarget{class_generator_a1078fe2b2f7b36489d24020e8d454b34}{\index{\-Generator@{\-Generator}!nazwa@{nazwa}}
+\index{nazwa@{nazwa}!Generator@{\-Generator}}
+\subsubsection[{nazwa}]{\setlength{\rightskip}{0pt plus 5cm}string {\bf \-Generator\-::nazwa}}}\label{class_generator_a1078fe2b2f7b36489d24020e8d454b34}
+
+
+\-Zawiera nazwę pliku wyjściowego. 
+
+\-Pole przechowuje nazwę pliku, do którego powinny zostać zapisane wyniki pracy programu. \hypertarget{class_generator_afea06b61eed9b34cd983ab81f57f9d65}{\index{\-Generator@{\-Generator}!\-Wskaznik@{\-Wskaznik}}
+\index{\-Wskaznik@{\-Wskaznik}!Generator@{\-Generator}}
+\subsubsection[{\-Wskaznik}]{\setlength{\rightskip}{0pt plus 5cm}int$\ast$ {\bf \-Generator\-::\-Wskaznik}}}\label{class_generator_afea06b61eed9b34cd983ab81f57f9d65}
+
+
+\-Wskaźnik na tablice z danymi. 
+
+\-Pole służy do stworzenia dynamicznej tablicy, w której zostaną umieszczone wygenerowane dane. \hypertarget{class_generator_aad1c837275dd1ee921eabf25118cb2a9}{\index{\-Generator@{\-Generator}!zakres@{zakres}}
+\index{zakres@{zakres}!Generator@{\-Generator}}
+\subsubsection[{zakres}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Generator\-::zakres}}}\label{class_generator_aad1c837275dd1ee921eabf25118cb2a9}
+
+
+\-Przechowuje zakres, w jakim losowane są liczby. 
+
+\-Pole przechowuje granicę, do której mogą zostać losowane wartości. 
+
+\-Dokumentacja dla tej klasy została wygenerowana z plików\-:\begin{DoxyCompactItemize}
+\item 
+/home/krzysztof/\-Desktop/\-P\-A\-M\-S\-I/\-Laboratorium/\-Laboratorium\-\_\-1/\-Generator\-\_\-liczb/inc/\hyperlink{generator_8h}{generator.\-h}\item 
+/home/krzysztof/\-Desktop/\-P\-A\-M\-S\-I/\-Laboratorium/\-Laboratorium\-\_\-1/\-Generator\-\_\-liczb/src/generator.\-cpp\end{DoxyCompactItemize}
