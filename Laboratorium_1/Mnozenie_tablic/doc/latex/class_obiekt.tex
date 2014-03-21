@@ -1,0 +1,154 @@
+\hypertarget{class_obiekt}{\section{\-Dokumentacja klasy \-Obiekt}
+\label{class_obiekt}\index{\-Obiekt@{\-Obiekt}}
+}
+
+
+\-Klasa umożliwia tworzenie przydatnej struktury.  
+
+
+
+
+{\ttfamily \#include $<$obiekt.\-h$>$}
+
+\subsection*{\-Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_obiekt_ac8e27a872226e2b55c6f42c0677e5d00}{\-Obiekt} ()
+\begin{DoxyCompactList}\small\item\em \-Inicjuje obiekt pustym wskaźnikiem. \end{DoxyCompactList}\item 
+\hyperlink{class_obiekt_a8e2e3537c41235fe165117c3a09b9669}{\-Obiekt} (int $\ast$\-Wskaznik)
+\begin{DoxyCompactList}\small\item\em \-Inicjuje obiekt określonym wskaźnikiem. \end{DoxyCompactList}\item 
+void \hyperlink{class_obiekt_a59b1b7dcf398424366b132d5ae7ac087}{\-Show} ()
+\begin{DoxyCompactList}\small\item\em \-Wyświetla zawartość obiektu. \end{DoxyCompactList}\item 
+void \hyperlink{class_obiekt_a481091a905fc01050b9bf782502efabb}{\-Pobierz\-\_\-dane} (string nazwa\-\_\-pliku)
+\begin{DoxyCompactList}\small\item\em \-Pobiera dane z określonego pliku. \end{DoxyCompactList}\item 
+void \hyperlink{class_obiekt_aae43ab1926c5c6ccd82d0908c33474da}{\-Pomnoz} (int mnoznik)
+\begin{DoxyCompactList}\small\item\em \-Mnoży elemnty tablicy \-Obiektu. \end{DoxyCompactList}\item 
+void \hyperlink{class_obiekt_a3e8670b709172fc0a63df917f41c98cf}{\-Czy\-\_\-rowne} (const \hyperlink{class_obiekt}{\-Obiekt} \&\-Porownywany)
+\begin{DoxyCompactList}\small\item\em \-Sprawdza, czy \-Obiekty są sobie równe. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Atrybuty publiczne}
+\begin{DoxyCompactItemize}
+\item 
+int $\ast$ \hyperlink{class_obiekt_a877ac2b65043327767012c184067f269}{\-Tablica}
+\begin{DoxyCompactList}\small\item\em \-Umożliwia tworzenie uniwersalnych tablicy. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{\-Opis szczegółowy}
+\-Klasa umożliwia tworzenie przydatnej struktury. 
+
+\-Klasa pozwala na tworzenie bardzo przydatnej, uniwersalnej struktury bardzo podatnej na wszelki modyfikacje (np. sortowanie). \-Jej najważniejszym elementem jest wskaźnik umozliwiający stworzenie dynamicznej tablicy. \-Dane w niej przechowywane mogą być w różnoraki sposób modyfikowane dzięki zaimplementowanym metodom. 
+
+\subsection{\-Dokumentacja konstruktora i destruktora}
+\hypertarget{class_obiekt_ac8e27a872226e2b55c6f42c0677e5d00}{\index{\-Obiekt@{\-Obiekt}!\-Obiekt@{\-Obiekt}}
+\index{\-Obiekt@{\-Obiekt}!Obiekt@{\-Obiekt}}
+\subsubsection[{\-Obiekt}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Obiekt\-::\-Obiekt} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_obiekt_ac8e27a872226e2b55c6f42c0677e5d00}
+
+
+\-Inicjuje obiekt pustym wskaźnikiem. 
+
+\-Prosty konstruktor, jego zadanie ogranicza się do dezaktywowania wskaźnika, by w razie czego na nic nie pokazywał i nie wprowadzał w ewentualny błąd. \hypertarget{class_obiekt_a8e2e3537c41235fe165117c3a09b9669}{\index{\-Obiekt@{\-Obiekt}!\-Obiekt@{\-Obiekt}}
+\index{\-Obiekt@{\-Obiekt}!Obiekt@{\-Obiekt}}
+\subsubsection[{\-Obiekt}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Obiekt\-::\-Obiekt} (
+\begin{DoxyParamCaption}
+\item[{int $\ast$}]{\-Wskaznik}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_obiekt_a8e2e3537c41235fe165117c3a09b9669}
+
+
+\-Inicjuje obiekt określonym wskaźnikiem. 
+
+\-Kontruktor pozwala zainicjować obiekt już istniejącą tablicą danych, dzięki czemu nie trzeba jej ponownie przepisywać. 
+
+\subsection{\-Dokumentacja funkcji składowych}
+\hypertarget{class_obiekt_a3e8670b709172fc0a63df917f41c98cf}{\index{\-Obiekt@{\-Obiekt}!\-Czy\-\_\-rowne@{\-Czy\-\_\-rowne}}
+\index{\-Czy\-\_\-rowne@{\-Czy\-\_\-rowne}!Obiekt@{\-Obiekt}}
+\subsubsection[{\-Czy\-\_\-rowne}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Obiekt\-::\-Czy\-\_\-rowne} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Obiekt} \&}]{\-Porownywany}
+\end{DoxyParamCaption}
+)}}\label{class_obiekt_a3e8670b709172fc0a63df917f41c98cf}
+
+
+\-Sprawdza, czy \-Obiekty są sobie równe. 
+
+\-Metoda sprawdza, czy dwa obiekty są sobie równe. \-Milczy w przypaku optymistycznym, wyświetla stosowny komunikat w przypadku przeciwnym.
+
+
+\begin{DoxyParams}[1]{\-Parametry}
+\mbox{\tt in}  & {\em \-Porownywany} & \-Nazwa porównywanego obiektu \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_obiekt_a481091a905fc01050b9bf782502efabb}{\index{\-Obiekt@{\-Obiekt}!\-Pobierz\-\_\-dane@{\-Pobierz\-\_\-dane}}
+\index{\-Pobierz\-\_\-dane@{\-Pobierz\-\_\-dane}!Obiekt@{\-Obiekt}}
+\subsubsection[{\-Pobierz\-\_\-dane}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Obiekt\-::\-Pobierz\-\_\-dane} (
+\begin{DoxyParamCaption}
+\item[{string}]{nazwa\-\_\-pliku}
+\end{DoxyParamCaption}
+)}}\label{class_obiekt_a481091a905fc01050b9bf782502efabb}
+
+
+\-Pobiera dane z określonego pliku. 
+
+\-Metoda umożliwia pobranie danych pliku o określonej nazwie. \-Plik jest sprawdzany pod względem swojego formatu, tj. czy zachowany jest następujący układ\-: \begin{DoxyVerb}
+   * indeks
+   * 1.     	       | ilość elementów
+   * 2.     	       | element_1
+   * 3.    	       | element_2
+   * .
+   * .
+   * .
+   * ilość_elementów+1 | element ilość_elementów-1
+   * \end{DoxyVerb}
+ 
+\begin{DoxyParams}[1]{\-Parametry}
+\mbox{\tt in}  & {\em nazwa\-\_\-pliku} & \-Zawiera nazwę pliku, z którego pobierane są dane \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_obiekt_aae43ab1926c5c6ccd82d0908c33474da}{\index{\-Obiekt@{\-Obiekt}!\-Pomnoz@{\-Pomnoz}}
+\index{\-Pomnoz@{\-Pomnoz}!Obiekt@{\-Obiekt}}
+\subsubsection[{\-Pomnoz}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Obiekt\-::\-Pomnoz} (
+\begin{DoxyParamCaption}
+\item[{int}]{mnoznik}
+\end{DoxyParamCaption}
+)}}\label{class_obiekt_aae43ab1926c5c6ccd82d0908c33474da}
+
+
+\-Mnoży elemnty tablicy \-Obiektu. 
+
+\-Metoda służy do multiplikowania elementów tablicy przez określoną liczbę.
+
+
+\begin{DoxyParams}[1]{\-Parametry}
+\mbox{\tt in}  & {\em mnoznik} & \-Wartość, o jaką mają zostać pomnożone elementy \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_obiekt_a59b1b7dcf398424366b132d5ae7ac087}{\index{\-Obiekt@{\-Obiekt}!\-Show@{\-Show}}
+\index{\-Show@{\-Show}!Obiekt@{\-Obiekt}}
+\subsubsection[{\-Show}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Obiekt\-::\-Show} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_obiekt_a59b1b7dcf398424366b132d5ae7ac087}
+
+
+\-Wyświetla zawartość obiektu. 
+
+\-Metoda służy do wyświetlenia zawartości tablicy \-Obiektu. \-Jest ona stworzona do kontrolowania działnia tablicy i nie ma żadnego znaczenia dla algorytmów. 
+
+\subsection{\-Dokumentacja atrybutów składowych}
+\hypertarget{class_obiekt_a877ac2b65043327767012c184067f269}{\index{\-Obiekt@{\-Obiekt}!\-Tablica@{\-Tablica}}
+\index{\-Tablica@{\-Tablica}!Obiekt@{\-Obiekt}}
+\subsubsection[{\-Tablica}]{\setlength{\rightskip}{0pt plus 5cm}int$\ast$ {\bf \-Obiekt\-::\-Tablica}}}\label{class_obiekt_a877ac2b65043327767012c184067f269}
+
+
+\-Umożliwia tworzenie uniwersalnych tablicy. 
+
+\-Pole pozwala na tworzenie uniwersalnych tablic o zdefiniowanych przez użytkownika wielkościach. \-Pole to jest podstawowym polem klasy. 
+
+\-Dokumentacja dla tej klasy została wygenerowana z plików\-:\begin{DoxyCompactItemize}
+\item 
+/home/krzysztof/\-Desktop/\-P\-A\-M\-S\-I/\-Laboratorium/\-Laboratorium\-\_\-1/\-Mnozenie\-\_\-tablic/inc/\hyperlink{obiekt_8h}{obiekt.\-h}\item 
+/home/krzysztof/\-Desktop/\-P\-A\-M\-S\-I/\-Laboratorium/\-Laboratorium\-\_\-1/\-Mnozenie\-\_\-tablic/src/obiekt.\-cpp\end{DoxyCompactItemize}

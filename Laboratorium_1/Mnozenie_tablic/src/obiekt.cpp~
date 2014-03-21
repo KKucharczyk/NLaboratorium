@@ -80,7 +80,7 @@ void Obiekt::Czy_rowne(const Obiekt &Porownywany)
    {
       for(int i = 1; i < Tablica[0]; i++)
 	 if(Tablica[i] != Porownywany.Tablica[i])
-	    bool = false;
+	    wynik = false;
 	 
       if(wynik == true)
 	 cout << "Rowne!\n";

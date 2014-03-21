@@ -19,7 +19,7 @@ obj/main.o: src/main.cpp
 	g++ ${CPPFLAGS} -o $@ $^ -lrt -std=c++0x
 	
 obj/obiekt.o: src/obiekt.cpp
-	g++ ${CPPFLAGS} -o $@ $^ -lrt -std=c++0x
+	g++ ${CPPFLAGS} -o $@ $^ -lrt
 
 clean:
 	rm -f program obj/*

@@ -1,0 +1,157 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>Mnozenie_tablic_1: Plik źródłowy /home/krzysztof/Desktop/PAMSI/Laboratorium/Laboratorium_1/Mnozenie_tablic/inc/chrono.h</title>
+
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+
+</head>
+<body>
+<div id="top"><!-- do not remove this div! -->
+
+
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  
+  
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Mnozenie_tablic_1
+   
+   </div>
+   
+  </td>
+  
+  
+  
+ </tr>
+ </tbody>
+</table>
+</div>
+
+<!-- Wygenerowano przez Doxygen 1.7.6.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
+      <li><a href="annotated.html"><span>Klasy</span></a></li>
+      <li class="current"><a href="files.html"><span>Pliki</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Szukaj" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;plików</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="header">
+  <div class="headertitle">
+<div class="title">/home/krzysztof/Desktop/PAMSI/Laboratorium/Laboratorium_1/Mnozenie_tablic/inc/chrono.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="chrono_8h.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#ifndef CHRONO_H</span>
+<a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define CHRONO_H</span>
+<a name="l00003"></a>00003 <span class="preprocessor"></span>
+<a name="l00011"></a>00011 <span class="preprocessor">#include &lt;chrono&gt;</span>
+<a name="l00012"></a>00012 
+<a name="l00013"></a>00013 <span class="keyword">using namespace </span>std::chrono;
+<a name="l00014"></a>00014 
+<a name="l00015"></a>00015 <span class="keyword">namespace </span>Pomiar
+<a name="l00016"></a>00016 {
+<a name="l00017"></a>00017    <span class="keyword">typedef</span> std::chrono::high_resolution_clock clock;
+<a name="l00018"></a>00018    <span class="keyword">typedef</span> std::chrono::microseconds microseconds;
+<a name="l00019"></a>00019    <span class="keyword">typedef</span> std::chrono::milliseconds milliseconds;
+<a name="l00020"></a>00020    <span class="keyword">typedef</span> std::chrono::nanoseconds nanoseconds;
+<a name="l00021"></a>00021  
+<a name="l00022"></a>00022    clock::time_point now(){<span class="keywordflow">return</span> clock::now();}
+<a name="l00023"></a>00023  
+<a name="l00024"></a>00024    microseconds intervalUs(<span class="keyword">const</span> clock::time_point&amp; t1, <span class="keyword">const</span> clock::time_point&amp; t0)
+<a name="l00025"></a>00025    {
+<a name="l00026"></a>00026       <span class="keywordflow">return</span> std::chrono::duration_cast&lt;microseconds&gt;(t1 - t0);
+<a name="l00027"></a>00027    }
+<a name="l00028"></a>00028  
+<a name="l00029"></a>00029    milliseconds intervalMs(<span class="keyword">const</span> clock::time_point&amp; t1,<span class="keyword">const</span> clock::time_point&amp; t0)
+<a name="l00030"></a>00030    {
+<a name="l00031"></a>00031       <span class="keywordflow">return</span> std::chrono::duration_cast&lt;milliseconds&gt;(t1 - t0);
+<a name="l00032"></a>00032    }
+<a name="l00033"></a>00033  
+<a name="l00034"></a>00034    nanoseconds intervalNs(<span class="keyword">const</span> clock::time_point&amp; t1,<span class="keyword">const</span> clock::time_point&amp; t0)
+<a name="l00035"></a>00035    {
+<a name="l00036"></a>00036       <span class="keywordflow">return</span> std::chrono::duration_cast&lt;nanoseconds&gt;(t1 - t0);
+<a name="l00037"></a>00037    }
+<a name="l00038"></a>00038  
+<a name="l00050"></a><a class="code" href="class_pomiar_1_1_chrono.html">00050</a>    <span class="keyword">class </span><a class="code" href="class_pomiar_1_1_chrono.html" title="Stworzona do pomiarów czasu.">Chrono</a>
+<a name="l00051"></a>00051    {
+<a name="l00057"></a>00057       clock::time_point start_;
+<a name="l00058"></a>00058    <span class="keyword">public</span>:
+<a name="l00065"></a><a class="code" href="class_pomiar_1_1_chrono.html#a2abf3698fb974851c874747006bc1704">00065</a>       <a class="code" href="class_pomiar_1_1_chrono.html#a2abf3698fb974851c874747006bc1704" title="Konstruktor rozpoczynający pomiar czasu.">Chrono</a>() : start_(clock::now()){}
+<a name="l00071"></a><a class="code" href="class_pomiar_1_1_chrono.html#aa21c2b5c1e13e8f004af76472b0e81fc">00071</a>       clock::time_point <a class="code" href="class_pomiar_1_1_chrono.html#aa21c2b5c1e13e8f004af76472b0e81fc" title="Resetuje zegar.">restart</a>() { start_ = clock::now(); <span class="keywordflow">return</span> start_;}
+<a name="l00078"></a><a class="code" href="class_pomiar_1_1_chrono.html#a58f1b51571c6ce87d173639ff03f3664">00078</a>       microseconds <a class="code" href="class_pomiar_1_1_chrono.html#a58f1b51571c6ce87d173639ff03f3664" title="Zwraca czas działania w mikrosekundach.">elapsedUs</a>()    { <span class="keywordflow">return</span> intervalUs(now(), start_);}
+<a name="l00085"></a><a class="code" href="class_pomiar_1_1_chrono.html#a5f52e691a6319f46ee7db3bd5263541a">00085</a>       milliseconds <a class="code" href="class_pomiar_1_1_chrono.html#a5f52e691a6319f46ee7db3bd5263541a" title="Zwraca czas działania w milisekundach.">elapsedMs</a>()    { <span class="keywordflow">return</span> intervalMs(now(), start_);}
+<a name="l00092"></a><a class="code" href="class_pomiar_1_1_chrono.html#ae0c2f8399cce3432c979a405ba0a7cc0">00092</a>       nanoseconds <a class="code" href="class_pomiar_1_1_chrono.html#ae0c2f8399cce3432c979a405ba0a7cc0" title="Zwraca czas działania w nanosekundach.">elapsedNs</a>()    { <span class="keywordflow">return</span> intervalNs(now(), start_);}
+<a name="l00101"></a><a class="code" href="class_pomiar_1_1_chrono.html#a0d2a729f4887e8a1eae57007908baf23">00101</a>       <span class="keywordtype">void</span> Eksportuj_dane(<span class="keywordtype">double</span> czas)
+<a name="l00102"></a>00102       {
+<a name="l00103"></a>00103          fstream plik;
+<a name="l00104"></a>00104          plik.open(<span class="stringliteral">&quot;Wyniki_temp.txt&quot;</span>, ios::out | ios::app);
+<a name="l00105"></a>00105          plik &lt;&lt; czas &lt;&lt; endl;
+<a name="l00106"></a>00106          plik.close(); 
+<a name="l00107"></a>00107       }
+<a name="l00108"></a>00108    };
+<a name="l00109"></a>00109  
+<a name="l00110"></a>00110 } 
+<a name="l00111"></a>00111 
+<a name="l00112"></a>00112 <span class="preprocessor">#endif</span>
+</pre></div></div><!-- contents -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Klasy</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Pliki</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funkcje</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Zmienne</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+
+
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano Sat Mar 22 2014 00:57:38 dla Mnozenie_tablic_1 programem &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.7.6.1
+</small></address>
+
+</body>
+</html>

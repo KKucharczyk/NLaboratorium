@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>Mnozenie_tablic_1: Mnożenie tablic</title>
+<title>Mnozenie_tablic_1: Plik źródłowy /home/krzysztof/Desktop/PAMSI/Laboratorium/Laboratorium_1/Mnozenie_tablic/inc/obiekt.h</title>
 
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
@@ -46,9 +46,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
 </script>
   <div id="navrow1" class="tabs">
     <ul class="tablist">
-      <li class="current"><a href="index.html"><span>Strona&#160;główna</span></a></li>
+      <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
       <li><a href="annotated.html"><span>Klasy</span></a></li>
-      <li><a href="files.html"><span>Pliki</span></a></li>
+      <li class="current"><a href="files.html"><span>Pliki</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -67,17 +67,44 @@ var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
       </li>
     </ul>
   </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;plików</span></a></li>
+    </ul>
+  </div>
 </div>
 <div class="header">
   <div class="headertitle">
-<div class="title">Mnożenie tablic </div>  </div>
+<div class="title">/home/krzysztof/Desktop/PAMSI/Laboratorium/Laboratorium_1/Mnozenie_tablic/inc/obiekt.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><dl class="author"><dt><b>Autor:</b></dt><dd>Krzysztof Kucharczyk </dd></dl>
-<dl class="date"><dt><b>Data:</b></dt><dd>11.03.2014 </dd></dl>
-<dl class="version"><dt><b>Wersja:</b></dt><dd>2</dd></dl>
-<p>Program umożlwia operacje na specjalnych obiektach <a class="el" href="class_obiekt.html" title="Klasa umożliwia tworzenie przydatnej struktury.">Obiekt</a>, które składają się z wskaźnika i kilku przydatnych metod. </p>
-</div></div><!-- contents -->
+<a href="obiekt_8h.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#ifndef OBIEKT_H</span>
+<a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define OBIEKT_H</span>
+<a name="l00003"></a>00003 <span class="preprocessor"></span>
+<a name="l00011"></a>00011 <span class="preprocessor">#include &lt;cstdlib&gt;</span>
+<a name="l00012"></a>00012 <span class="preprocessor">#include &lt;iostream&gt;</span>
+<a name="l00013"></a>00013 <span class="preprocessor">#include &lt;fstream&gt;</span>
+<a name="l00014"></a>00014 <span class="preprocessor">#include &lt;string&gt;</span>
+<a name="l00015"></a>00015 
+<a name="l00016"></a>00016 <span class="keyword">using namespace </span>std;
+<a name="l00017"></a>00017 
+<a name="l00028"></a><a class="code" href="class_obiekt.html">00028</a> <span class="keyword">class </span><a class="code" href="class_obiekt.html" title="Klasa umożliwia tworzenie przydatnej struktury.">Obiekt</a>{
+<a name="l00029"></a>00029 <span class="keyword">public</span>:
+<a name="l00036"></a><a class="code" href="class_obiekt.html#a877ac2b65043327767012c184067f269">00036</a>   <span class="keywordtype">int</span> *<a class="code" href="class_obiekt.html#a877ac2b65043327767012c184067f269" title="Umożliwia tworzenie uniwersalnych tablicy.">Tablica</a>;
+<a name="l00037"></a>00037   
+<a name="l00038"></a>00038   <span class="comment">// Konstruktory</span>
+<a name="l00039"></a>00039   <span class="comment">// ---------------</span>
+<a name="l00046"></a><a class="code" href="class_obiekt.html#ac8e27a872226e2b55c6f42c0677e5d00">00046</a> <span class="comment"></span>  <a class="code" href="class_obiekt.html#ac8e27a872226e2b55c6f42c0677e5d00" title="Inicjuje obiekt pustym wskaźnikiem.">Obiekt</a>()              {Tablica = NULL;}
+<a name="l00053"></a><a class="code" href="class_obiekt.html#a8e2e3537c41235fe165117c3a09b9669">00053</a>   <a class="code" href="class_obiekt.html#a8e2e3537c41235fe165117c3a09b9669" title="Inicjuje obiekt określonym wskaźnikiem.">Obiekt</a>(<span class="keywordtype">int</span> *Wskaznik) {Tablica = Wskaznik;}
+<a name="l00054"></a>00054   
+<a name="l00062"></a>00062   <span class="keywordtype">void</span> Show();
+<a name="l00080"></a>00080   <span class="keywordtype">void</span> Pobierz_dane(<span class="keywordtype">string</span> nazwa_pliku);
+<a name="l00088"></a>00088   <span class="keywordtype">void</span> Pomnoz(<span class="keywordtype">int</span> mnoznik);
+<a name="l00097"></a>00097   <span class="keywordtype">void</span> Czy_rowne(<span class="keyword">const</span> <a class="code" href="class_obiekt.html" title="Klasa umożliwia tworzenie przydatnej struktury.">Obiekt</a> &amp;Porownywany);
+<a name="l00098"></a>00098 };
+<a name="l00099"></a>00099 
+<a name="l00100"></a>00100 <span class="preprocessor">#endif</span>
+</pre></div></div><!-- contents -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"

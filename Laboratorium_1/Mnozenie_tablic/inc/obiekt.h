@@ -52,6 +52,13 @@ public:
    */
   Obiekt(int *Wskaznik) {Tablica = Wskaznik;}
   
+  /*!
+   * \brief Wyświetla zawartość obiektu
+   * 
+   * Metoda służy do wyświetlenia zawartości tablicy Obiektu. Jest ona stworzona do kontrolowania działnia
+   * tablicy i nie ma żadnego znaczenia dla algorytmów.
+   * 
+   */
   void Show();
   /*!
    * \brief Pobiera dane z określonego pliku
