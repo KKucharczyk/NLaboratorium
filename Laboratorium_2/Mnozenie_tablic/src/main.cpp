@@ -1,9 +1,10 @@
 #include "obiekt.h"
-#include "czas.h"
+#include "chrono.h"
 
 int main()
 {
-   Stoper Czas;
+   using namespace Pomiar;
+   
    string nazwa = "Dane_testowe/Dane1.txt";
    string nazwa2 = "Dane_testowe/Dane2.txt";
 
@@ -12,10 +13,9 @@ int main()
    A.Pobierz_dane(nazwa);
    B.Pobierz_dane(nazwa2);
   
-   Czas.Start();
+   Chrono Time;
    A.Pomnoz(3);
-   Czas.Stop();
-   
-   Czas.Eksport_wyniki();
-   
+   Time.Eksportuj_dane(Time.elapsedNs().count());
+
+
 }

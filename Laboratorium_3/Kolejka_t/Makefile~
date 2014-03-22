@@ -15,7 +15,7 @@ $(PROG):$(OBJ)
 	g++ ${LDFLAGS} -o $(PROG) $(OBJ) -lrt
 
 obj/main.o: src/main.cpp
-	g++ ${CPPFLAGS} -o $@ $^ -std=c++0x
+	g++ ${CPPFLAGS} -o $@ $^ -std:c++0x
 	
 obj/kolejka.o: src/kolejka.cpp
 	g++ ${CPPFLAGS} -o $@ $^

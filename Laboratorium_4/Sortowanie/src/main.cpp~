@@ -7,7 +7,6 @@ int main()
    Obiekt A;
    string nazwa = "Dane_testowe.txt";
    A.Pobierz_dane(nazwa);
-   A.Show();
 
    Sort Obiekt_sortujacy;
    Obiekt_sortujacy.Zapisz_dane(A);

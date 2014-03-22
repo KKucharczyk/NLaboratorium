@@ -4,16 +4,5 @@
 int main()
 {
    Stos A;
-   cout << A.isEmpty() << endl;
-   A.push(2);
-   A.push(2);
-   A.push(2);
-   A.push(2);
-   A.push(2);
-   cout << A.isEmpty() << endl;
-   A.pop();
-   A.pop();
-   cout << A.size() << endl;
-   
    
 }

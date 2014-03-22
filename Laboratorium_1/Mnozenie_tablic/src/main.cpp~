@@ -11,7 +11,7 @@ int main()
    Obiekt A, B;
    A.Pobierz_dane(nazwa);
    
-   Stoper Time;
-   A.Pomnoz(999);
+   Chrono Time;
+   A.Pomnoz(3);
    Time.Eksportuj_dane(Time.elapsedNs().count());
 }

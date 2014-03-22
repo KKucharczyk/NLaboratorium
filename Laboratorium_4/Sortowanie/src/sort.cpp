@@ -41,9 +41,10 @@ void Sort::Wizualizuj_zmiany(const Obiekt Obiekt)
    for(int i = 1; i < Obiekt.Tablica[0]+1; i++)
       cout << i << ". " << Zapisane_dane[i] << "    " << Obiekt.Tablica[i] << endl; 
 }
-
+/*
 void Sort::MergeSort(Obiekt& Obiekt)
 {
+   
    if(Obiekt.Tablica[0] > 1)
    {
       Obiekt *Tab_l = new Obiekt[(Obiekt.Tablica[0])/2];
@@ -63,7 +64,7 @@ void Sort::MergeSort(Obiekt& Obiekt)
       cerr << "\nError: Nie mozna sortowac jednoelementowej tablicy.\n";
     
 }
-
+*/
 /*
  * 
  * 

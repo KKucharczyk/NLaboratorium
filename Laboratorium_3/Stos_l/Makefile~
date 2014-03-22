@@ -16,7 +16,7 @@ $(PROG):$(OBJ)
 
 
 obj/main.o: src/main.cpp
-	g++ ${CPPFLAGS} -o $@ $^ -std=c++0x
+	g++ ${CPPFLAGS} -o $@ $^
 	
 obj/stos.o: src/stos.cpp
 	g++ ${CPPFLAGS} -o $@ $^

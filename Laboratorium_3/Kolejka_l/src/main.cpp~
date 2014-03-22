@@ -4,17 +4,5 @@
 int main()
 {
    Kolejka A;
-   A.enqueue(1);
-   A.enqueue(15);
-   
-   A.enqueue(15);
-   
-   A.enqueue(15);
-   A.dequeue();
-   
-   A.enqueue(15);
-   cout << A.size() << endl;
-   
-   A.Show();
    
 }

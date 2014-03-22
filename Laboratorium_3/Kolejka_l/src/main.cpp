@@ -1,5 +1,5 @@
 #include "kolejka.h"
-#include "czas.h"
+#include "chrono.h"
 
 int main()
 {
