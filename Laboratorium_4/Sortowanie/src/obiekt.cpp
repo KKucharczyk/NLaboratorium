@@ -127,7 +127,7 @@ void Obiekt::Czy_rowne(const Obiekt &Porownywany)
 
 void Obiekt::Zamien_elementy(int i, int j)
 {
-    if(i != 0 && j != 0)
+    if(i != 0 || j != 0)
     {
       int Temp;
       Temp = Tablica[i];

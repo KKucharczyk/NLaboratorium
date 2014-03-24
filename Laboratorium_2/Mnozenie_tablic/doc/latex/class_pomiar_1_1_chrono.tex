@@ -1,0 +1,134 @@
+\hypertarget{class_pomiar_1_1_chrono}{\section{\-Dokumentacja klasy \-Pomiar\-:\-:\-Chrono}
+\label{class_pomiar_1_1_chrono}\index{\-Pomiar\-::\-Chrono@{\-Pomiar\-::\-Chrono}}
+}
+
+
+\-Stworzona do pomiarów czasu.  
+
+
+
+
+{\ttfamily \#include $<$chrono.\-h$>$}
+
+\subsection*{\-Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_pomiar_1_1_chrono_a2abf3698fb974851c874747006bc1704}{\-Chrono} ()
+\begin{DoxyCompactList}\small\item\em \-Konstruktor rozpoczynający pomiar czasu. \end{DoxyCompactList}\item 
+clock\-::time\-\_\-point \hyperlink{class_pomiar_1_1_chrono_aa21c2b5c1e13e8f004af76472b0e81fc}{restart} ()
+\begin{DoxyCompactList}\small\item\em \-Resetuje zegar. \end{DoxyCompactList}\item 
+microseconds \hyperlink{class_pomiar_1_1_chrono_a58f1b51571c6ce87d173639ff03f3664}{elapsed\-Us} ()
+\begin{DoxyCompactList}\small\item\em \-Zwraca czas działania w mikrosekundach. \end{DoxyCompactList}\item 
+milliseconds \hyperlink{class_pomiar_1_1_chrono_a5f52e691a6319f46ee7db3bd5263541a}{elapsed\-Ms} ()
+\begin{DoxyCompactList}\small\item\em \-Zwraca czas działania w milisekundach. \end{DoxyCompactList}\item 
+nanoseconds \hyperlink{class_pomiar_1_1_chrono_ae0c2f8399cce3432c979a405ba0a7cc0}{elapsed\-Ns} ()
+\begin{DoxyCompactList}\small\item\em \-Zwraca czas działania w nanosekundach. \end{DoxyCompactList}\item 
+void \hyperlink{class_pomiar_1_1_chrono_a0d2a729f4887e8a1eae57007908baf23}{\-Eksportuj\-\_\-dane} (double czas)
+\begin{DoxyCompactList}\small\item\em \-Eksportuje dane do pliku. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{\-Opis szczegółowy}
+\-Stworzona do pomiarów czasu. 
+
+\-Klasa służy do mierzenia czasu wykonywania metod. \-Możliwe jest uzyskanie czasu działania w\-:\par
+
+\begin{DoxyItemize}
+\item milisekundach, \par
+
+\item mikrosekundach, \par
+
+\item nanosekundach. \par
+ \-Dodatkowo klasa umożliwia zapisywanie wyników pracy do plików o nazwie \char`\"{}\-Wyniki\-\_\-temp.\-txt\char`\"{}, które analizowane są przez program do bechmarku. 
+\end{DoxyItemize}
+
+\subsection{\-Dokumentacja konstruktora i destruktora}
+\hypertarget{class_pomiar_1_1_chrono_a2abf3698fb974851c874747006bc1704}{\index{\-Pomiar\-::\-Chrono@{\-Pomiar\-::\-Chrono}!\-Chrono@{\-Chrono}}
+\index{\-Chrono@{\-Chrono}!Pomiar::Chrono@{\-Pomiar\-::\-Chrono}}
+\subsubsection[{\-Chrono}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Pomiar\-::\-Chrono\-::\-Chrono} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_pomiar_1_1_chrono_a2abf3698fb974851c874747006bc1704}
+
+
+\-Konstruktor rozpoczynający pomiar czasu. 
+
+\-Konstruktor pozwala w prosty sposób rozpocząć pomiar czasu, tj. poprzez zdefiniowanie obiektu klasy \hyperlink{class_pomiar_1_1_chrono}{\-Chrono}. 
+
+\subsection{\-Dokumentacja funkcji składowych}
+\hypertarget{class_pomiar_1_1_chrono_a0d2a729f4887e8a1eae57007908baf23}{\index{\-Pomiar\-::\-Chrono@{\-Pomiar\-::\-Chrono}!\-Eksportuj\-\_\-dane@{\-Eksportuj\-\_\-dane}}
+\index{\-Eksportuj\-\_\-dane@{\-Eksportuj\-\_\-dane}!Pomiar::Chrono@{\-Pomiar\-::\-Chrono}}
+\subsubsection[{\-Eksportuj\-\_\-dane}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Pomiar\-::\-Chrono\-::\-Eksportuj\-\_\-dane} (
+\begin{DoxyParamCaption}
+\item[{double}]{czas}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_pomiar_1_1_chrono_a0d2a729f4887e8a1eae57007908baf23}
+
+
+\-Eksportuje dane do pliku. 
+
+\-Metoda umożliwia zapisanie upływu czasu fragmentu kodu do pliku o nazwie \char`\"{}\-Wyniki\-\_\-temp.\-txt\char`\"{}. \-Pomiary są dopisywane, dzięki czemu dane nie są tracone.
+
+
+\begin{DoxyParams}[1]{\-Parametry}
+\mbox{\tt in}  & {\em czas} & \-Czas, który ma zostać zapisany \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_pomiar_1_1_chrono_a5f52e691a6319f46ee7db3bd5263541a}{\index{\-Pomiar\-::\-Chrono@{\-Pomiar\-::\-Chrono}!elapsed\-Ms@{elapsed\-Ms}}
+\index{elapsed\-Ms@{elapsed\-Ms}!Pomiar::Chrono@{\-Pomiar\-::\-Chrono}}
+\subsubsection[{elapsed\-Ms}]{\setlength{\rightskip}{0pt plus 5cm}milliseconds {\bf \-Pomiar\-::\-Chrono\-::elapsed\-Ms} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_pomiar_1_1_chrono_a5f52e691a6319f46ee7db3bd5263541a}
+
+
+\-Zwraca czas działania w milisekundach. 
+
+\-Metoda zwraca czas działania konkretnego fragmentu kodu w milisekundach. \begin{DoxyReturn}{\-Zwraca}
+\-Zwraca czas w milisekundach 
+\end{DoxyReturn}
+\hypertarget{class_pomiar_1_1_chrono_ae0c2f8399cce3432c979a405ba0a7cc0}{\index{\-Pomiar\-::\-Chrono@{\-Pomiar\-::\-Chrono}!elapsed\-Ns@{elapsed\-Ns}}
+\index{elapsed\-Ns@{elapsed\-Ns}!Pomiar::Chrono@{\-Pomiar\-::\-Chrono}}
+\subsubsection[{elapsed\-Ns}]{\setlength{\rightskip}{0pt plus 5cm}nanoseconds {\bf \-Pomiar\-::\-Chrono\-::elapsed\-Ns} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_pomiar_1_1_chrono_ae0c2f8399cce3432c979a405ba0a7cc0}
+
+
+\-Zwraca czas działania w nanosekundach. 
+
+\-Metoda zwraca czas działania konkretnego fragmentu kodu w nanosekundach. \begin{DoxyReturn}{\-Zwraca}
+\-Zwraca czas w nanosekundach 
+\end{DoxyReturn}
+\hypertarget{class_pomiar_1_1_chrono_a58f1b51571c6ce87d173639ff03f3664}{\index{\-Pomiar\-::\-Chrono@{\-Pomiar\-::\-Chrono}!elapsed\-Us@{elapsed\-Us}}
+\index{elapsed\-Us@{elapsed\-Us}!Pomiar::Chrono@{\-Pomiar\-::\-Chrono}}
+\subsubsection[{elapsed\-Us}]{\setlength{\rightskip}{0pt plus 5cm}microseconds {\bf \-Pomiar\-::\-Chrono\-::elapsed\-Us} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_pomiar_1_1_chrono_a58f1b51571c6ce87d173639ff03f3664}
+
+
+\-Zwraca czas działania w mikrosekundach. 
+
+\-Metoda zwraca czas działania konkretnego fragmentu kodu w mikrosekundach. \begin{DoxyReturn}{\-Zwraca}
+\-Zwraca czas w mikrosekundach 
+\end{DoxyReturn}
+\hypertarget{class_pomiar_1_1_chrono_aa21c2b5c1e13e8f004af76472b0e81fc}{\index{\-Pomiar\-::\-Chrono@{\-Pomiar\-::\-Chrono}!restart@{restart}}
+\index{restart@{restart}!Pomiar::Chrono@{\-Pomiar\-::\-Chrono}}
+\subsubsection[{restart}]{\setlength{\rightskip}{0pt plus 5cm}clock\-::time\-\_\-point {\bf \-Pomiar\-::\-Chrono\-::restart} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_pomiar_1_1_chrono_aa21c2b5c1e13e8f004af76472b0e81fc}
+
+
+\-Resetuje zegar. 
+
+\-Metoda resetuje i załącza ponownie pomiar. 
+
+\-Dokumentacja dla tej klasy została wygenerowana z pliku\-:\begin{DoxyCompactItemize}
+\item 
+/home/krzysztof/\-Desktop/\-P\-A\-M\-S\-I/\-Laboratorium/\-Laboratorium\-\_\-2/\-Mnozenie\-\_\-tablic/inc/\hyperlink{chrono_8h}{chrono.\-h}\end{DoxyCompactItemize}

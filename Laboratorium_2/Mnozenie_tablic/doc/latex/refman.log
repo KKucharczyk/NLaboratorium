@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2014.3.2)  21 MAR 2014 12:19
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2014.3.2)  23 MAR 2014 23:33
 entering extended mode
  %&-line parsing enabled.
 **refman
@@ -1037,7 +1037,13 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
  [1
 
 ]
-Underfull \hbox (badness 8094) in paragraph at lines 27--27
+Underfull \hbox (badness 8094) in paragraph at lines 37--37
+ [][] [][][]\T1/phv/m/n/10 -Dokumentacja pli-ku /home/krzysztof/-Desktop/-P-A-M
+-S-I/-Laboratorium/- 
+ []
+
+
+Underfull \hbox (badness 8094) in paragraph at lines 39--39
  [][] [][][]\T1/phv/m/n/10 -Dokumentacja pli-ku /home/krzysztof/-Desktop/-P-A-M
 -S-I/-Laboratorium/- 
  []
@@ -1096,13 +1102,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--3
 orium-_-2/-Mnozenie-_- 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--4
+ [][] \T1/phv/m/n/10 /home/krzysztof/-Desktop/-P-A-M-S-I/-Laboratorium/-Laborat
+orium-_-2/-Mnozenie-_- 
+ []
+
 ) [5] [6
 
 ]
 Rozdzia\PlPrIeC {\l } 4.
-(./class_obiekt.tex
+(./class_pomiar_1_1_chrono.tex
 LaTeX Font Info:    Try loading font information for T1+pcr on input line 11.
- (/usr/share/texmf-texlive/tex/latex/psnfss/t1pcr.fd
+
+(/usr/share/texmf-texlive/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 )
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <12> not available
@@ -1123,25 +1136,34 @@ LaTeX Font Info:    Font shape `T1/phv/m/it' in size <9> not available
 LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
 (Font)              scaled to size 8.09995pt on input line 17.
  [7]
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 61.
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 51.
 
 (/usr/share/texmf-texlive/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
 
 LaTeX Font Warning: Font shape `OT1/pcr/bc/n' undefined
-(Font)              using `OT1/pcr/m/n' instead on input line 61.
+(Font)              using `OT1/pcr/m/n' instead on input line 51.
 
 LaTeX Font Info:    Font shape `OT1/phv/bc/it' in size <10> not available
-(Font)              Font shape `OT1/phv/bc/sl' tried instead on input line 72.
+(Font)              Font shape `OT1/phv/bc/sl' tried instead on input line 65.
 LaTeX Font Info:    Font shape `OT1/phv/bc/sl' will be
-(Font)              scaled to size 8.99994pt on input line 72.
-[8]
+(Font)              scaled to size 8.99994pt on input line 65.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 95.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 74.
 LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
-(Font)              scaled to size 8.99994pt on input line 95.
+(Font)              scaled to size 8.99994pt on input line 74.
 
+Underfull \vbox (badness 10000) detected at line 76
+ []
+
+[8]
+Underfull \hbox (badness 10000) in paragraph at lines 134--134
+[]\T1/phv/m/n/10 /home/krzysztof/-Desktop/-P-A-M-S-I/-Laboratorium/-Laboratoriu
+m-_-2/-Mnozenie-_-
+ []
+
+) (./class_obiekt.tex [9] [10]
 Overfull \hbox (3.27756pt too wide) in paragraph at lines 95--95
  \T1/phv/m/sl/10 Porownywany|
  []
@@ -1158,18 +1180,21 @@ Underfull \vbox (badness 10000) detected at line 115
 Underfull \vbox (badness 10000) detected at line 133
  []
 
-[9]
+
+Underfull \vbox (badness 1122) has occurred while \output is active []
+
+ [11]
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 (Font)              scaled to size 7.19995pt on input line 195.
 
 Underfull \vbox (badness 10000) detected at line 209
  []
 
-
+[12]
 Underfull \vbox (badness 10000) detected at line 227
  []
 
-[10]
+
 Underfull \vbox (badness 10000) detected at line 259
  []
 
@@ -1185,29 +1210,41 @@ Underfull \hbox (badness 10000) in paragraph at lines 275--275
 m-_-2/-Mnozenie-_-
  []
 
-) [11] [12
+) [13] [14
 
 ]
 Rozdzia\PlPrIeC {\l } 5.
-(./obiekt_8h.tex
+(./chrono_8h.tex
 Overfull \hbox (24.428pt too wide) in paragraph at lines 3--3
 []\OT1/phv/bc/n/14.4 -Dokumentacja pli-ku /home/krzysztof/-Desktop/-P-A-M-S-I/-
 Laboratorium/-
  []
 
-) (./refman.ind) [13] (./refman.aux)
+
+Underfull \hbox (badness 772) in paragraph at lines 38--39
+[]\T1/phv/m/n/10 microseconds \T1/phv/b/n/10 -Pomiar-::interval-Us \T1/phv/m/n/
+10 (const clock-::time-_-point &t1, const clock-
+ []
+
+) (./obiekt_8h.tex [15]
+Overfull \hbox (24.428pt too wide) in paragraph at lines 3--3
+[]\OT1/phv/bc/n/14.4 -Dokumentacja pli-ku /home/krzysztof/-Desktop/-P-A-M-S-I/-
+Laboratorium/-
+ []
+
+) (./refman.ind) [16] (./refman.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 10047 strings out of 493848
- 136895 string characters out of 1152824
- 241560 words of memory out of 3000000
- 13013 multiletter control sequences out of 15000+50000
+ 10116 strings out of 493848
+ 139083 string characters out of 1152824
+ 241534 words of memory out of 3000000
+ 13042 multiletter control sequences out of 15000+50000
  62600 words of font info for 80 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
- 41i,13n,58p,627b,490s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 41i,13n,58p,627b,498s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/share/texmf-texlive/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-texli
 ve/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-texlive/fonts/ty
 pe1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-texlive/fonts/type1/urw/cou
@@ -1216,9 +1253,9 @@ rier/ucrr8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/helvetic/uhvb8a.pfb><
 -texlive/fonts/type1/urw/helvetic/uhvbo8ac.pfb></usr/share/texmf-texlive/fonts/
 type1/urw/helvetic/uhvr8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/helveti
 c/uhvro8a.pfb>
-Output written on refman.pdf (17 pages, 134636 bytes).
+Output written on refman.pdf (20 pages, 156618 bytes).
 PDF statistics:
- 325 PDF objects out of 1000 (max. 8388607)
- 69 named destinations out of 1000 (max. 500000)
- 225 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 440 PDF objects out of 1000 (max. 8388607)
+ 105 named destinations out of 1000 (max. 500000)
+ 321 words of extra memory for PDF output out of 10000 (max. 10000000)
 

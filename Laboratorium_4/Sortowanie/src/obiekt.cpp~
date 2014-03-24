@@ -87,7 +87,7 @@ void Obiekt::Pobierz_dane(string nazwa_pliku)
 	 for(int i = 1; i < domyslna_ilosc+1; i++)
 	 {
 	    if(!plik.fail())
-	       plik >> Tablica[i]
+	       plik >> Tablica[i];
 	    else
 	    {
 	       cerr << "\nError: Bledna wartosc w pliku.\n";
@@ -127,7 +127,7 @@ void Obiekt::Czy_rowne(const Obiekt &Porownywany)
 
 void Obiekt::Zamien_elementy(int i, int j)
 {
-    if(i != 0 && j != 0)
+    if(i != 0 || j != 0)
     {
       int Temp;
       Temp = Tablica[i];

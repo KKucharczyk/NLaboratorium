@@ -1,4 +1,4 @@
-\hypertarget{class_sort}{\section{\-Sort \-Class \-Reference}
+\hypertarget{class_sort}{\section{\-Dokumentacja klasy \-Sort}
 \label{class_sort}\index{\-Sort@{\-Sort}}
 }
 
@@ -10,7 +10,7 @@
 
 {\ttfamily \#include $<$sort.\-h$>$}
 
-\subsection*{\-Public \-Member \-Functions}
+\subsection*{\-Metody publiczne}
 \begin{DoxyCompactItemize}
 \item 
 void \hyperlink{class_sort_a54aa136bc24c37b9805621245eaab424}{\-Zapisz\-\_\-dane} (const \hyperlink{class_obiekt}{\-Obiekt} \hyperlink{class_obiekt}{\-Obiekt})
@@ -19,22 +19,119 @@ void \hyperlink{class_sort_ad1b1944c3335052502a9e8713057f764}{\-Wizualizuj\-\_\-
 \begin{DoxyCompactList}\small\item\em \-Pokazuje zmiany w przystępnej formie. \end{DoxyCompactList}\item 
 void \hyperlink{class_sort_a99988d3b0122b194cdf0491f5d2cd968}{\-Quick\-Sort} (\hyperlink{class_obiekt}{\-Obiekt} \&\hyperlink{class_obiekt}{\-Obiekt}, int pierwszy, int ostatni)
 \begin{DoxyCompactList}\small\item\em \-Sortowanie elementów metodą \-Quicksort. \end{DoxyCompactList}\item 
-\hypertarget{class_sort_ab254fad5c26f6b47e766854ac70a4b2b}{void {\bfseries \-Merge\-Sort} (\hyperlink{class_obiekt}{\-Obiekt} \&\hyperlink{class_obiekt}{\-Obiekt})}\label{class_sort_ab254fad5c26f6b47e766854ac70a4b2b}
-
-\end{DoxyCompactItemize}
-\subsection*{\-Public \-Attributes}
+void \hyperlink{class_sort_a209a4cb0cc0015eaaabaa6b06bd9941e}{\-Struktura\-Kopca} (\hyperlink{class_obiekt}{\-Obiekt} \&\hyperlink{class_obiekt}{\-Obiekt}, int id, int hs)
+\begin{DoxyCompactList}\small\item\em \-Tworzy strukturę kopca. \end{DoxyCompactList}\item 
+void \hyperlink{class_sort_a3a4fbb23052f77aa5470f7ed2b016b20}{\-Buduj\-Kopiec} (\hyperlink{class_obiekt}{\-Obiekt} \&\hyperlink{class_obiekt}{\-Obiekt}, int hs)
+\begin{DoxyCompactList}\small\item\em \-Tworzy kopiec binarny z tablicy danych. \end{DoxyCompactList}\item 
+void \hyperlink{class_sort_a3277f2254bc78a16e7e85a278c322a8a}{\-Heap\-Sort} (\hyperlink{class_obiekt}{\-Obiekt} \&\hyperlink{class_obiekt}{\-Obiekt})
+\begin{DoxyCompactList}\small\item\em \-Sortowanie tablicy metodą kopcową \end{DoxyCompactList}\item 
+void \hyperlink{class_sort_a28ad6588d4dc4476d2733ca886106a02}{\-Merge} (\hyperlink{class_obiekt}{\-Obiekt} \&\hyperlink{class_obiekt}{\-Obiekt}, int poczatek, int koniec, int srodek)
+\begin{DoxyCompactList}\small\item\em \-Dzieli tablicę \-Obiektu na dwie części. \end{DoxyCompactList}\item 
+void \hyperlink{class_sort_adcff6c89311454b862df617e8d8e6dfd}{\-Merge\-Sort} (\hyperlink{class_obiekt}{\-Obiekt} \&\hyperlink{class_obiekt}{\-Obiekt}, int poczatek, int koniec)
+\begin{DoxyCompactList}\small\item\em \-Sortuje tablicę obiektu za pomocą algorytmu sortowania przez scalanie. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Atrybuty publiczne}
 \begin{DoxyCompactItemize}
 \item 
 int $\ast$ \hyperlink{class_sort_a6cb891a8e545fdb636d10bec406fef32}{\-Zapisane\-\_\-dane}
 \begin{DoxyCompactList}\small\item\em \-Zapisuje dane z obiektu \hyperlink{class_obiekt}{\-Obiekt}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
-\subsection{\-Detailed \-Description}
+\subsection{\-Opis szczegółowy}
 \-Umożliwia sortowanie tablic. 
 
 \-Klasa służy do sortowania tablic zawartych w obiektach klasy \hyperlink{class_obiekt}{\-Obiekt}. \-Posiada metody umozliwiające zarówno sortowanie elementów tablic różnymi algorytmami o różnej wydajności, jak i zapisać aktualne dane z obiektu i przedstawić zestawienie danych (przed sortowanie, po sortowaniu). 
 
-\subsection{\-Member \-Function \-Documentation}
+\subsection{\-Dokumentacja funkcji składowych}
+\hypertarget{class_sort_a3a4fbb23052f77aa5470f7ed2b016b20}{\index{\-Sort@{\-Sort}!\-Buduj\-Kopiec@{\-Buduj\-Kopiec}}
+\index{\-Buduj\-Kopiec@{\-Buduj\-Kopiec}!Sort@{\-Sort}}
+\subsubsection[{\-Buduj\-Kopiec}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Sort\-::\-Buduj\-Kopiec} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Obiekt} \&}]{\-Obiekt, }
+\item[{int}]{hs}
+\end{DoxyParamCaption}
+)}}\label{class_sort_a3a4fbb23052f77aa5470f7ed2b016b20}
+
+
+\-Tworzy kopiec binarny z tablicy danych. 
+
+\-Metoda pozwala stworzyć kopiec z określonego elementu \hyperlink{class_obiekt}{\-Obiekt}. \-Inicjuje metodę \-Struktura\-Kopca i za jej pomocą, dla określonych elementów, zmienia tablicę w pre-\/posortowany kopiec, którego struktura umożliwia działanie algorytmowi sortowania kopcowego, w wypadku tego programu jest to \-Heap\-Sort.
+
+
+\begin{DoxyParams}[1]{\-Parametry}
+\mbox{\tt in}  & {\em \hyperlink{class_obiekt}{\-Obiekt}} & \hyperlink{class_obiekt}{\-Obiekt}, którego tablica ma zostać posortowana \\
+\hline
+\mbox{\tt in}  & {\em hs} & \-Licznik określający ilość przebiegów sortowania, pochodzi z metody \-Heap\-Sort \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_sort_a3277f2254bc78a16e7e85a278c322a8a}{\index{\-Sort@{\-Sort}!\-Heap\-Sort@{\-Heap\-Sort}}
+\index{\-Heap\-Sort@{\-Heap\-Sort}!Sort@{\-Sort}}
+\subsubsection[{\-Heap\-Sort}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Sort\-::\-Heap\-Sort} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Obiekt} \&}]{\-Obiekt}
+\end{DoxyParamCaption}
+)}}\label{class_sort_a3277f2254bc78a16e7e85a278c322a8a}
+
+
+\-Sortowanie tablicy metodą kopcową 
+
+\-Metoda umożliwia posortowanie tablicy \-Obiektu za pomocą algorytmu sortowania kopcowego (ang. \-Heap\-Sort). \-Algorytm działa na zasadzie ustawiania największego elementu sortowanej tablicy (korzenia) na pierwszym miejscu posortowanych elementów, następnie jego stare miejsce zostaje zastąpione elementem z najniższej gałęzi. \-Dzięki metodzie naprawiania, struktura kopca zostaje naprawiona i na szczycie ponownie zostaje umieszczony największy element, który z korzenia wędruje na drugie miejsce posortowanej tablicy, etc. \-Dzięki temu tablica wypełnia się posortowanymi liczbami w kolejności malejącej (najpierw liczby największe) potem mniejsze.
+
+
+\begin{DoxyParams}[1]{\-Parametry}
+\mbox{\tt in}  & {\em \hyperlink{class_obiekt}{\-Obiekt}} & \hyperlink{class_obiekt}{\-Obiekt}, którego tablica ma zostać posortowana \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_sort_a28ad6588d4dc4476d2733ca886106a02}{\index{\-Sort@{\-Sort}!\-Merge@{\-Merge}}
+\index{\-Merge@{\-Merge}!Sort@{\-Sort}}
+\subsubsection[{\-Merge}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Sort\-::\-Merge} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Obiekt} \&}]{\-Obiekt, }
+\item[{int}]{poczatek, }
+\item[{int}]{koniec, }
+\item[{int}]{srodek}
+\end{DoxyParamCaption}
+)}}\label{class_sort_a28ad6588d4dc4476d2733ca886106a02}
+
+
+\-Dzieli tablicę \-Obiektu na dwie części. 
+
+\-Metoda jest pomocniczą metodą algorytmu sortowania przez scalanie. \-Jej rolą jest podział tablicy \-Obiektu na dwie równe części.
+
+
+\begin{DoxyParams}[1]{\-Parametry}
+\mbox{\tt in}  & {\em \hyperlink{class_obiekt}{\-Obiekt}} & \hyperlink{class_obiekt}{\-Obiekt}, którego tablica ma zostać posortowana \\
+\hline
+\mbox{\tt in}  & {\em low} & \-Określa początek tablicy \\
+\hline
+\mbox{\tt in}  & {\em high} & \-Określa koniec tablicy \\
+\hline
+\mbox{\tt in}  & {\em mid} & \-Określa środek tablicy \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_sort_adcff6c89311454b862df617e8d8e6dfd}{\index{\-Sort@{\-Sort}!\-Merge\-Sort@{\-Merge\-Sort}}
+\index{\-Merge\-Sort@{\-Merge\-Sort}!Sort@{\-Sort}}
+\subsubsection[{\-Merge\-Sort}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Sort\-::\-Merge\-Sort} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Obiekt} \&}]{\-Obiekt, }
+\item[{int}]{poczatek, }
+\item[{int}]{koniec}
+\end{DoxyParamCaption}
+)}}\label{class_sort_adcff6c89311454b862df617e8d8e6dfd}
+
+
+\-Sortuje tablicę obiektu za pomocą algorytmu sortowania przez scalanie. 
+
+\-Metoda umożliwia posortowanie tablicy obiektu \hyperlink{class_obiekt}{\-Obiekt} poprzez zastosowanie rekurencyjnego algorytmu sortowania przez scalanie (ang. \-Merge sort). \-Metoda ta ogranicza się do rekurencyjnego wywoływania siebie i metody \-Merge. \-Tablica przeznaczona do sortowania jest dzielona aż do oporu lub jednego pozostałego elementu, a następnie, mając posortowane kawałki, łączy części w jedną, posortowaną, wynikową tablicę.
+
+
+\begin{DoxyParams}[1]{\-Parametry}
+\mbox{\tt in}  & {\em \hyperlink{class_obiekt}{\-Obiekt}} & \hyperlink{class_obiekt}{\-Obiekt}, którego tablica ma zostać posortowana \\
+\hline
+\mbox{\tt in}  & {\em low} & \-Określa początek stosowania algorytmu (tablicy) \\
+\hline
+\mbox{\tt in}  & {\em high} & \-Określa konec stosowania algorytmu (tablicy) \\
+\hline
+\end{DoxyParams}
 \hypertarget{class_sort_a99988d3b0122b194cdf0491f5d2cd968}{\index{\-Sort@{\-Sort}!\-Quick\-Sort@{\-Quick\-Sort}}
 \index{\-Quick\-Sort@{\-Quick\-Sort}!Sort@{\-Sort}}
 \subsubsection[{\-Quick\-Sort}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Sort\-::\-Quick\-Sort} (
@@ -51,12 +148,36 @@ int $\ast$ \hyperlink{class_sort_a6cb891a8e545fdb636d10bec406fef32}{\-Zapisane\-
 \-Metoda służy do sortowanie elementów tablicy obiektu przesyłanej jako argument metody. \-Algorytm sortowania szybkiego (ang. quicksort) polega na dzieleniu tablicy na podtablice zgodnie z określonym kryterium (tzw. punkt osiowy), jedna tablica tworzona jest z mniejszych od elementu osiowego elementu, druga z większych od elementu osiowego elemntów. \-Następnie rekurencyjnie powtarzane jest dzielenie tablic na podtablice aż do tablic jednoelemntowych.
 
 
-\begin{DoxyParams}{\-Parameters}
+\begin{DoxyParams}{\-Parametry}
 {\em \hyperlink{class_obiekt}{\-Obiekt}} & \hyperlink{class_obiekt}{\-Obiekt}, którego tablica ma zostać posortowana \\
 \hline
 {\em pierwszy} & \-Indeks pierwszego elementu, od którego ma się rozpocząć sortowanie \\
 \hline
 {\em ostatni} & \-Indeks ostatniego elementu, który ogranicza sortowanie \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_sort_a209a4cb0cc0015eaaabaa6b06bd9941e}{\index{\-Sort@{\-Sort}!\-Struktura\-Kopca@{\-Struktura\-Kopca}}
+\index{\-Struktura\-Kopca@{\-Struktura\-Kopca}!Sort@{\-Sort}}
+\subsubsection[{\-Struktura\-Kopca}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Sort\-::\-Struktura\-Kopca} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Obiekt} \&}]{\-Obiekt, }
+\item[{int}]{id, }
+\item[{int}]{hs}
+\end{DoxyParamCaption}
+)}}\label{class_sort_a209a4cb0cc0015eaaabaa6b06bd9941e}
+
+
+\-Tworzy strukturę kopca. 
+
+\-Metoda tworzy strukturę kopca binarnego z przesyłanej jako argument tablicy obiektu \hyperlink{class_obiekt}{\-Obiekt}. \-Dzięki rozdzielaniu części określonej jako id na korzeń i dwójkę potomstwa, możliwe jest szybkie rejestrowanie, czy struktura kopca jest w pełni zachowana. \-W przypadku dowolnych niezgodności, kopiec zostaje szybko naprawiony.
+
+
+\begin{DoxyParams}[1]{\-Parametry}
+\mbox{\tt in}  & {\em \hyperlink{class_obiekt}{\-Obiekt}} & \hyperlink{class_obiekt}{\-Obiekt}, którego tablica ma zostać posortowana \\
+\hline
+\mbox{\tt in}  & {\em id} & \-Numer elementu, który wraz z potomstwem ma być badany \\
+\hline
+\mbox{\tt in}  & {\em hs} & \-Licznik określający ilość przebiegów sortowania, pochodzi z metody \-Heap\-Sort \\
 \hline
 \end{DoxyParams}
 \hypertarget{class_sort_ad1b1944c3335052502a9e8713057f764}{\index{\-Sort@{\-Sort}!\-Wizualizuj\-\_\-zmiany@{\-Wizualizuj\-\_\-zmiany}}
@@ -73,7 +194,7 @@ int $\ast$ \hyperlink{class_sort_a6cb891a8e545fdb636d10bec406fef32}{\-Zapisane\-
 \-Metoda wyświetla dane w postaci dwóch kolumn\-: lewa odpowiada za dane nie posortowane, prawa za posortowane. \-Wszystkie elementy są indeksowane. \-Służy tylko i wyłącznie w celu wizualizacji i nie ma żadnego praktycznego znaczenia w ujęciu algorytmów sortowania. \-Tablica z której pobierane są dane pozostaje nie naruszona dzięki modyfikatorowi const.
 
 
-\begin{DoxyParams}{\-Parameters}
+\begin{DoxyParams}{\-Parametry}
 {\em \hyperlink{class_obiekt}{\-Obiekt}} & \hyperlink{class_obiekt}{\-Obiekt} z którego mają zostać przepisane dane \\
 \hline
 \end{DoxyParams}
@@ -91,13 +212,13 @@ int $\ast$ \hyperlink{class_sort_a6cb891a8e545fdb636d10bec406fef32}{\-Zapisane\-
 \-Zadanie metody jest przepisanie elementów z obiektu \hyperlink{class_obiekt}{\-Obiekt} do wewnŧrznej tablicy, aby później możliwe było przystępne przedstawienie owych danych i łatwiejsza lokalizacja błędów. \-Tablica z której pobierane są dane pozostaje nie naruszona dzięki modyfikatorowi const.
 
 
-\begin{DoxyParams}{\-Parameters}
+\begin{DoxyParams}{\-Parametry}
 {\em \hyperlink{class_obiekt}{\-Obiekt}} & \hyperlink{class_obiekt}{\-Obiekt} z którego mają zostać przepisane dane \\
 \hline
 \end{DoxyParams}
 
 
-\subsection{\-Member \-Data \-Documentation}
+\subsection{\-Dokumentacja atrybutów składowych}
 \hypertarget{class_sort_a6cb891a8e545fdb636d10bec406fef32}{\index{\-Sort@{\-Sort}!\-Zapisane\-\_\-dane@{\-Zapisane\-\_\-dane}}
 \index{\-Zapisane\-\_\-dane@{\-Zapisane\-\_\-dane}!Sort@{\-Sort}}
 \subsubsection[{\-Zapisane\-\_\-dane}]{\setlength{\rightskip}{0pt plus 5cm}int$\ast$ {\bf \-Sort\-::\-Zapisane\-\_\-dane}}}\label{class_sort_a6cb891a8e545fdb636d10bec406fef32}
@@ -107,7 +228,7 @@ int $\ast$ \hyperlink{class_sort_a6cb891a8e545fdb636d10bec406fef32}{\-Zapisane\-
 
 \-Pole służy przy wizualizacji zmian zachodzących w tablicach obiektów. \-Nie ma żadnego praktycznego znaczenia w ujęciu sortowania elementów. 
 
-\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\-Dokumentacja dla tej klasy została wygenerowana z plików\-:\begin{DoxyCompactItemize}
 \item 
 /home/krzysztof/\-Desktop/\-P\-A\-M\-S\-I/\-Laboratorium/\-Laboratorium\-\_\-4/\-Sortowanie/inc/\hyperlink{sort_8h}{sort.\-h}\item 
 /home/krzysztof/\-Desktop/\-P\-A\-M\-S\-I/\-Laboratorium/\-Laboratorium\-\_\-4/\-Sortowanie/src/sort.\-cpp\end{DoxyCompactItemize}
