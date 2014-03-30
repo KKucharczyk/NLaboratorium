@@ -1,0 +1,143 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>Lab4: Plik źródłowy /home/krzysztof/Desktop/PAMSI/Laboratorium/Laboratorium_4/Sortowanie/inc/obiekt.h</title>
+
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+
+</head>
+<body>
+<div id="top"><!-- do not remove this div! -->
+
+
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  
+  
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Lab4
+   
+   </div>
+   
+  </td>
+  
+  
+  
+ </tr>
+ </tbody>
+</table>
+</div>
+
+<!-- Wygenerowano przez Doxygen 1.7.6.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
+      <li><a href="annotated.html"><span>Klasy</span></a></li>
+      <li class="current"><a href="files.html"><span>Pliki</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Szukaj" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;plików</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="header">
+  <div class="headertitle">
+<div class="title">/home/krzysztof/Desktop/PAMSI/Laboratorium/Laboratorium_4/Sortowanie/inc/obiekt.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="obiekt_8h.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#ifndef OBIEKT_H</span>
+<a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define OBIEKT_H</span>
+<a name="l00003"></a>00003 <span class="preprocessor"></span>
+<a name="l00011"></a>00011 <span class="preprocessor">#include &lt;cstdlib&gt;</span>
+<a name="l00012"></a>00012 <span class="preprocessor">#include &lt;iostream&gt;</span>
+<a name="l00013"></a>00013 <span class="preprocessor">#include &lt;fstream&gt;</span>
+<a name="l00014"></a>00014 <span class="preprocessor">#include &lt;string&gt;</span>
+<a name="l00015"></a>00015 
+<a name="l00016"></a>00016 <span class="keyword">using namespace </span>std;
+<a name="l00017"></a>00017 
+<a name="l00028"></a><a class="code" href="class_obiekt.html">00028</a> <span class="keyword">class </span><a class="code" href="class_obiekt.html" title="Klasa umożliwia tworzenie przydatnej struktury.">Obiekt</a>{
+<a name="l00029"></a>00029 <span class="keyword">public</span>:
+<a name="l00036"></a><a class="code" href="class_obiekt.html#a877ac2b65043327767012c184067f269">00036</a>   <span class="keywordtype">int</span> *<a class="code" href="class_obiekt.html#a877ac2b65043327767012c184067f269" title="Umożliwia tworzenie uniwersalnych tablicy.">Tablica</a>;
+<a name="l00037"></a>00037   
+<a name="l00038"></a>00038   <span class="comment">// Konstruktory</span>
+<a name="l00039"></a>00039   <span class="comment">// ---------------</span>
+<a name="l00046"></a><a class="code" href="class_obiekt.html#ac8e27a872226e2b55c6f42c0677e5d00">00046</a> <span class="comment"></span>  <a class="code" href="class_obiekt.html#ac8e27a872226e2b55c6f42c0677e5d00" title="Inicjuje obiekt pustym wskaźnikiem.">Obiekt</a>()              {Tablica = NULL;}
+<a name="l00053"></a><a class="code" href="class_obiekt.html#a8e2e3537c41235fe165117c3a09b9669">00053</a>   <a class="code" href="class_obiekt.html#a8e2e3537c41235fe165117c3a09b9669" title="Inicjuje obiekt określonym wskaźnikiem.">Obiekt</a>(<span class="keywordtype">int</span> *Wskaznik) {Tablica = Wskaznik;}
+<a name="l00054"></a>00054   
+<a name="l00055"></a>00055   <span class="comment">// Przeciążenia operatorów</span>
+<a name="l00056"></a>00056   <span class="comment">// --------------------------</span>
+<a name="l00063"></a>00063 <span class="comment"></span>  <a class="code" href="class_obiekt.html" title="Klasa umożliwia tworzenie przydatnej struktury.">Obiekt</a>   operator +  (<span class="keyword">const</span> <a class="code" href="class_obiekt.html" title="Klasa umożliwia tworzenie przydatnej struktury.">Obiekt</a> &amp;Nowy);
+<a name="l00070"></a>00070   <a class="code" href="class_obiekt.html" title="Klasa umożliwia tworzenie przydatnej struktury.">Obiekt</a> &amp; operator =  (<span class="keyword">const</span> <a class="code" href="class_obiekt.html" title="Klasa umożliwia tworzenie przydatnej struktury.">Obiekt</a> &amp;Nowy);
+<a name="l00078"></a>00078   <span class="keywordtype">bool</span> operator == (<span class="keyword">const</span> <a class="code" href="class_obiekt.html" title="Klasa umożliwia tworzenie przydatnej struktury.">Obiekt</a> &amp;Nowy);
+<a name="l00079"></a>00079   
+<a name="l00080"></a>00080   <span class="comment">// Metody</span>
+<a name="l00081"></a>00081   <span class="comment">// ----------------</span>
+<a name="l00087"></a>00087 <span class="comment"></span>  <span class="keywordtype">void</span> Show();
+<a name="l00105"></a>00105   <span class="keywordtype">void</span> Pobierz_dane(<span class="keywordtype">string</span> nazwa_pliku);
+<a name="l00113"></a>00113   <span class="keywordtype">void</span> Pomnoz(<span class="keywordtype">int</span> mnoznik);
+<a name="l00122"></a>00122   <span class="keywordtype">void</span> Czy_rowne(<span class="keyword">const</span> <a class="code" href="class_obiekt.html" title="Klasa umożliwia tworzenie przydatnej struktury.">Obiekt</a> &amp;Porownywany);
+<a name="l00133"></a>00133   <span class="keywordtype">void</span> Zamien_elementy(<span class="keywordtype">int</span> i, <span class="keywordtype">int</span> j);
+<a name="l00139"></a>00139   <span class="keywordtype">void</span> Odwroc_kolejnosc();
+<a name="l00149"></a>00149   <span class="keywordtype">void</span> Dodaj_element(<span class="keywordtype">int</span> element);
+<a name="l00159"></a>00159   <span class="keywordtype">void</span> Dodaj_elementy(<a class="code" href="class_obiekt.html" title="Klasa umożliwia tworzenie przydatnej struktury.">Obiekt</a> &amp;Nowy);
+<a name="l00160"></a>00160 };
+<a name="l00161"></a>00161 
+<a name="l00162"></a>00162 <span class="preprocessor">#endif</span>
+</pre></div></div><!-- contents -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Klasy</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Pliki</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funkcje</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Zmienne</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+
+
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano Sun Mar 23 2014 23:35:34 dla Lab4 programem &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.7.6.1
+</small></address>
+
+</body>
+</html>
