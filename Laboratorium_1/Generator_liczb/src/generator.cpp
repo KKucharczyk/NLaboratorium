@@ -41,11 +41,7 @@ void Generator::Generuj_dane()
    
    Wskaznik = new int[ilosc_liczb];
    for(int i = 0; i < ilosc_liczb; i++)
-   {
       Wskaznik[i] = rand()%zakres+1;
-      cout << Wskaznik[i] << endl;
-      
-   }
 }
 
 void Generator::Zapisz_do_pliku()

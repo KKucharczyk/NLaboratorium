@@ -60,8 +60,6 @@ void Generator::Zapisz_do_pliku()
 	 plik << Wskaznik[i];
       else
 	 plik << Wskaznik[i] << endl;
-      
-     
    }
    plik.close();
 }

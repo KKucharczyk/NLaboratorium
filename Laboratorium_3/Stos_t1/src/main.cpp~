@@ -1,6 +1,8 @@
 #include "stos.h"
 #include "chrono.h"
 
+using namespace Pomiar;
+
 int main(int argc, char* argv[])
 {
    // Tworzenie elementu stosu
@@ -8,6 +10,10 @@ int main(int argc, char* argv[])
 
    int *Dane = A.Pobierz_dane();
    
+   cout << "Zakres: " << A.zakres << endl;
+   
+   Chrono Time;
    for(int i = 0; i < A.zakres; i++)
       A.push(Dane[i]);
+   Time.Eksportuj_dane(Time.elapsedNs().count());
 }

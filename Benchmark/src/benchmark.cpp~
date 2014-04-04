@@ -21,7 +21,17 @@ void Benchmark::Testuj_program()
    plik.close();
    
    for(int i = 0; i < ilosc_petli; i++)
+   {
       system(nazwa_programu.c_str());
+      if(i == 0.25*ilosc_petli)
+	 cout << "...25%\n";
+      if(i == 0.50*ilosc_petli)
+	 cout << "...50%\n";
+      if(i == 0.75*ilosc_petli)
+	 cout << "...75%\n";
+      if(i == 0.99*ilosc_petli)
+	 cout << "...100% - Done.\n";
+   }
    
    unlink("Zakres_temp.txt");
 }
@@ -31,8 +41,8 @@ void Benchmark::Opracuj_dane()
    fstream plik;
    
    plik.open("Wyniki.csv", ios::out | ios::app);
-   plik << wielkosc_problemu << "," << ilosc_petli \
-	<< "," << sredni_czas_trwania << endl;  
+   plik << wielkosc_problemu << " "  \
+	 << sredni_czas_trwania << endl;  
 }
 
 int Benchmark::Opcje(int argc, char **argv)

@@ -1,0 +1,32 @@
+#include "tablica.h"
+
+int main()
+{
+   ;
+   
+}
+
+
+
+
+/*
+ * Klucz -> String
+ * 
+ * 
+ * 
+ * 
+ */
+
+
+
+/*
+ * 
+ * Następne zajęcia:
+ * 
+ * BINARY SPACE PARTITION (BSP)
+ * BAZY DANYCH, GRAFY
+ * DRZEWA (RED BLACK, BINARNE), 
+ * TABLICA HASZUJĄCA "HASH TABLE, HASHING TABLE", 
+ * SŁOWNIKI, MAPY, TABLICE ASOCJACYJNE
+ * 
+ */
