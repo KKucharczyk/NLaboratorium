@@ -62,15 +62,17 @@ szybciej rośnie w górę, przez co okazuje się być gorszym algorytmem. Z kole
 algorytm 2 (zwiększający dwukrotnie wielkość tablicy) jest niemalże niewidoczny,
 gdyż znajduje się bardzo blisko osi rzędnych, czyli nie wymaga dużego
 czasu, aby uporać się ze sporą ilością danych. \\Dla prostszej analizy wstawiłem
-wykresy dla trzech zakresów (100, 1000 oraz 10000 danych).
+wykresy dla trzech zakresów (Umożliwia to obiektywne ocenie który z algorytmów jest wydajniejszy. Poprzez
+zaobserwowanie wydajności rozumiem zauważenie, który z algorytmów wolniej pnie się do góry wykresu, czyli
+potrzebuje mniej czasu na rozwiązanie danego problemu).
 \begin{center}
 \begin{figure}[h]
 	\begin{center}
-		\includegraphics[scale=0.4]{dla_300.png}
+		\includegraphics[scale=0.4]{Eksperyment.png}
 	\end{center}
 \end{figure}
-\includegraphics[scale=0.4]{dla_1000.png}
-\includegraphics[scale=0.4]{dla_10000.png}
+\includegraphics[scale=0.4]{Eksperyment-1.png}
+\includegraphics[scale=0.4]{Eksperyment-2.png}
 \end{center}
 
 \section{Wnioski}
@@ -80,12 +82,11 @@ tablicy przy jej przepełnieniu i zwalniający gdy jedna-czwarta jest zajęta
 jest o wiele bardziej wydajniejszym i efektywniejszym stosem. Wykres tego algorytmu 
 idący niemalże przy osi z pewnością za tym przemawia. Drugi algorytm również
 spełnia swoje zadanie, jednak prędko pnie się ku górze, co przemawia na jego 
-niekorzyść. \\
-Jednak w początkowej fazie działania algorytmów (pierwszy wykres) widać jasno, iż
-efektywniejszym algorytmem jest pierwszy algorytm. Wynika z tego, iż algorytm pierwszy
-działa efektywniej dla małej ilości danych. Wynika to z prostego faktu, iż
-złożoność kwadratowa, jaką sobą reprezentuje, z początku rośnie wolniej od złożoności
-log(n) reprezetowanej przez drugi algorytm.\\
+niekorzyść - oznacza to o wiele dłuższy czas działania dla takiego samego zestawu
+danych jak dla algorytmu drugiego, co jest wyraźnie odczuwalne podczas testowania
+algorytmów.\\
+
+
 Próbując odpowiedzieć na pytanie: "Dlaczego akurat drugi algorytm jest lepszy?"
 myślę, że zajmowanie nowego kawałka pamięci dla każdego nowego elementu i
 zwalnianie jej musi być bardzo obliczenio-chłonne, a przez to o wiele wolniejsze.
