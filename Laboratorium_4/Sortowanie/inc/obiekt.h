@@ -34,7 +34,13 @@ public:
    * Pole to jest podstawowym polem klasy.
    */
   int *Tablica;
-  
+  /*!
+   * \brief Określa wielkość problemu
+   * 
+   * Zmienna określa ile danych ma zostać poddanych działaniu algorytmu. Jest kompatybilna z programem 
+   * ./benchmark.
+   */
+  int zakres;
   // Konstruktory
   // ---------------
    /*!

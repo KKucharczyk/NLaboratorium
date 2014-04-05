@@ -57,6 +57,12 @@ void Obiekt::Show()
 void Obiekt::Pobierz_dane(string nazwa_pliku)
 {
     fstream plik;
+    plik.open("Zakres_temp.txt", ios::in | ios::out);
+    plik >> this->zakres;
+    
+    plik.close();
+    
+    
     plik.open(nazwa_pliku.c_str(), ios::in | ios::out);
     
     if(plik.good())
@@ -84,10 +90,15 @@ void Obiekt::Pobierz_dane(string nazwa_pliku)
 	 plik.seekg(1, ios::beg);
 	 plik.ignore();
 	 
-	 for(int i = 1; i < domyslna_ilosc+1; i++)
+	 int dummy; 
+	 plik >> dummy;
+	 for(int i = 0; i < zakres; i++)
 	 {
 	    if(!plik.fail())
+	    {
 	       plik >> Tablica[i];
+	       //cout << i+1 << ". " << Tablica[i] << endl;
+	    }
 	    else
 	    {
 	       cerr << "\nError: Bledna wartosc w pliku.\n";

@@ -1,0 +1,6 @@
+./benchmark -i ./a -l 200 -p 10
+./benchmark -i ./a -l 200 -p 100
+./benchmark -i ./a -l 200 -p 1000
+./benchmark -i ./a -l 200 -p 10000
+./benchmark -i ./a -l 200 -p 100000
+./benchmark -i ./a -l 200 -p 1000000

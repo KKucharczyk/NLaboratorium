@@ -1,42 +1,40 @@
-\documentclass[a4paper,12pt]{report}
+\documentclass[a4paper,12pt]{article}
 
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[MeX]{polski}
 \usepackage[polish]{babel}
-\usepackage[latin2]{inputenc}
-\usepackage{graphicx}\usepackage{epstopdf}
+\usepackage{graphicx}
 \usepackage[T1]{fontenc}
-\usepackage{setspace}
+\usepackage{amssymb, amsmath}
 
 \begin{document}
-{\raggedleft{}Krzysztof Kucharczyk}\\200401\\Wydział Elektroniki\\Kierunek AiR\\Zajęcia czw. 10:00-12:35\\
+{\raggedleft{}Krzysztof Kucharczyk}\\200401\\Wydział Elektroniki\\Kierunek AiR\\Zajęcia czw. 10:00-12:35
 
-\begin{doublespace}
-\begin{center} \textbf{{\large Sprawozdanie z laboratorium 4}}\\Sortowanie algorytmami quicksort, heapsort i mergesort	
+\begin{center} 
+	\textbf{{\large Sprawozdanie z laboratorium 4}}\\Sortowanie algorytmami quicksort, heapsort i mergesort	
 \end{center}
-\end{doublespace}
+
 \section{Opis teoretyczny}
 
 Przedmiotem zajęć było stworzenie trzech algorytmów służących do sortowania danych. W moim projekcie posłużyłem się stworzoną podczas pierwszych i drugich 
-laboratoriów strukturą danych Obiekt, gdyż wydała mi się najbardziej odpowiednia do celów sortowania (dynamiczna tablica w konwencji: zerowy element - dlugosc 
-tablicy, reszta elementów - dane, a także metody ułatwiające pracę z algorytmami sortowania, m.in. Obiekt::Zamien elementy(i,j)). Dwa algorytmy, które stworzyłem
+laboratoriów strukturą danych Obiekt (dokumentacja na githubie), gdyż wydała mi się najbardziej odpowiednia do celów sortowania (dynamiczna tablica w konwencji: zerowy element - dlugosc tablicy, reszta elementów - dane, a także metody ułatwiające pracę z algorytmami sortowania, m.in. Obiekt::Zamien elementy(i,j)). Dwa algorytmy, które stworzyłem
 są określane jako algorytmy: "Dziel i zwyciężaj", co rozumiem jako dzielenie skomplikowanego problemu na mniejsze podproblemy, które zostają rozwiązane, a następnie
 łączy się te mniejsze rozwiązania, by w efekcie otrzymać rozwiązanie pierwotnego, skomplikowanego problemu. Algorytm sortowania kopcowego działa na zasadzie 
 inteligentnej, samonaprawiającej się struktury, która jednak nie dzieli problemu, a sukcesywnie go zmniejsza. Wszystkie algorytmy zostały przeze mnie opisane, ich 
-dokumentacja znajduje się w folderze Laboratorium_4/doc/latex.
+dokumentacja znajduje się w folderze Laboratorium\_4/doc/latex.
 
-\subsubsection{Algorytm sortowania szybkiego (Quicksort)}
+\subsection{Algorytm sortowania szybkiego (Quicksort)}
 
 Algorytm ten został przeze mnie zaimplementowany na zajęciach. Jest to algorytm działający na zasadzie "Dziel i zwyciężaj". Zasada działania tego algorytmu operia się
-na dzieleniu tablicy elementów na dwie części, elementy większe od pewnego znacznika oraz elementy mniejsze od pewnego znacznika. Następnie oba te podciągi zostają
+na dzieleniu tablicy elementów na dwie części, elementy większe od pewnego znacznika oraz elementy mniejsze od pewnego znacznika (fachowo nazywanego piwotem). Następnie oba te podciągi zostają
 rekurencyjnie uporządkowane rosnąco, by ostatecznie złączyć je w jedną, w pełni posortowaną tablicę danych. 
 
 Złożoność obliczeniowa tego algorytmu waha się: \\
-- W przypadku optymistycznym wynosi ona: \[n ln n\] jest więc efektywnym algorytmem \\
-- W przypadku pesymistycznym wynosi ona:\[ n^2 \] więc jego efektywność jest porównywalna z dość prymitywnym algorytmem sortowania bąbelkowego
+- W przypadku optymistycznym wynosi : \begin{equation*}n ln n \end{equation*} jest więc efektywnym algorytmem \\
+- W przypadku pesymistycznym wynosi :\[ n^2 \] więc jego efektywność jest porównywalna z dość prymitywnym algorytmem sortowania bąbelkowego
 
-\subsubsection{Algorytm sortowania kopcowego (Heapsort)}
+\subsection{Algorytm sortowania kopcowego (Heapsort)}
 
 Działanie tego algorytmu mogę podzielić na dwie części: \\
 1. Stworzenie struktury kopca binarnego w tablicy danych\\
@@ -47,7 +45,7 @@ po poprzednim przerzuceniu największej wartości do już posortowanej tablicy.
 
 Złożoność obliczeniowa tego algorytmu wynosi: \[n ln n\] więc jest to algorytm efektywny i wydajny.
 
-\subsubsection{Algorytm sortowania przez scalanie (Mergesort)}
+\subsection{Algorytm sortowania przez scalanie (Mergesort)}
 
 Algorytm ten działa na zasadzie: dziel i zwyciężaj, gdyż dzieli on tablicę danych przeznaczoną do sortowania na co raz mniejsze tablice, aż do pozostawienia jednego
 lub zera argumentów. Przy okazji sub-tablice zostają posortowane względem siebie. Ostatecznie sub-tablice zostają połączone/scalone i w rezultacie powstaje posortowana, pierwotna tablica z danymi. 
@@ -62,6 +60,8 @@ Przetestowałem wszystkie trzy algorytmy, by sprawdzić, który z nich w najskr�
 {\raggedleft{}1000,1000,128672 dla QuickSortu} \\
 1000,1000,298637 dla HeapSortu \\
 1000,1000,1,79599e+06 dla MergeSortu \\
+
+
 Wszystkie zamieszczone dane są wyrażone w nanosekundach. Pierwsza kolumna - wielkość problemu, druga kolumna - ilość pętli, trzecia kolumna - czas wykonania operacji
 sortowania (pominąłem operacje związane z tworzeniem kopców, inicjowaniem pamięci, itp).
 

@@ -8,7 +8,7 @@ int main()
 {
    Obiekt A;
    string nazwa = "Dane_testowe.txt";
-   A.Pobierz_dane(nazwa);
+   //A.Pobierz_dane(nazwa);
 /*
    Sort Obiekt_sortujacy;
    Obiekt_sortujacy.Zapisz_dane(A);
@@ -24,7 +24,7 @@ int main()
    Obiekt_sortujacy2.HeapSort(A);
    Time2.Eksportuj_dane(Time2.elapsedNs().count());
    //Obiekt_sortujacy2.Wizualizuj_zmiany(A);
-  */
+   */
    Sort Obiekt_sortujacy3;
    A.Pobierz_dane(nazwa);
    Obiekt_sortujacy3.Zapisz_dane(A);
