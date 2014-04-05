@@ -32,7 +32,7 @@ rekurencyjnie uporządkowane rosnąco, by ostatecznie złączyć je w jedną, w 
 
 Złożoność obliczeniowa tego algorytmu waha się: \\
 - W przypadku optymistycznym wynosi : \begin{equation*}n ln n \end{equation*} jest więc efektywnym algorytmem \\
-- W przypadku pesymistycznym wynosi :\[ n^2 \] więc jego efektywność jest porównywalna z dość prymitywnym algorytmem sortowania bąbelkowego
+- W przypadku pesymistycznym wynosi : \begin{equation*} n^2 \end{equation*} więc jego efektywność jest porównywalna z dość prymitywnym algorytmem sortowania bąbelkowego
 
 \subsection{Algorytm sortowania kopcowego (Heapsort)}
 
@@ -54,16 +54,17 @@ Złożoność obliczeniowa tego algorytmu również wynosi \[ n ln n\] więc pod
 
 \section{Testowanie algorytmów}
 
-Przetestowałem wszystkie trzy algorytmy, by sprawdzić, który z nich w najskrótszym czasie rozwiąże zadany przeze mnie problem. Do tego celu wykorzystałem program
-./benchmark ustawiony na 1000 pętli oraz wielkość problemu równą 1000 danym do posortowania. Otrzymałem wyniki:\\
+Przetestowałem stworzone algorytmy dla kolejno 10, 100, 1 000, 10 000, 100 000, 1 000 000 danych. Każdy pomiar został wykonany 200 razy, po czym został wyliczony 
+średni czas działania funkcji sortującej. Czas zmierzony został z dokładnością do nanosekund. Do wszystkich pomiarów wykorzystałem stworzony wcześniej program
+./benchmark (znajduje się w repozytorium wraz z dokumentacją) oraz specjalnie stworzony skrypt umożliwiający zautomatyzowanie pomiarów. Otrzymane wyniki zebrałem
+w postaci zamieszczonego niżej wykresu.
 
-{\raggedleft{}1000,1000,128672 dla QuickSortu} \\
-1000,1000,298637 dla HeapSortu \\
-1000,1000,1,79599e+06 dla MergeSortu \\
+\begin{center}
+	\begin{figure}[h]
+		\includegraphics[scale = 0.4]{Eksperyment.png}
+	\end{figure}
+\end{center}
 
-
-Wszystkie zamieszczone dane są wyrażone w nanosekundach. Pierwsza kolumna - wielkość problemu, druga kolumna - ilość pętli, trzecia kolumna - czas wykonania operacji
-sortowania (pominąłem operacje związane z tworzeniem kopców, inicjowaniem pamięci, itp).
 
 \section{Wnioski}
 Uzyskane przeze mnie wyniki jednoznacznie określają, iż najlepiej z problemem poradził sobie algorytm szybkiego sortowania. Jest on najwydajniejszym algorytmem, mimo

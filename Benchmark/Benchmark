@@ -1,6 +1,14 @@
+echo "Rozpoczęcie testów"
+echo "Test 1: Ilość danych: 10, ilość pętli: 200"
 ./benchmark -i ./a -l 200 -p 10
+echo "Test 2: Ilość danych: 100, ilość pętli: 200"
 ./benchmark -i ./a -l 200 -p 100
+echo "Test 3: Ilość danych: 1000, ilość pętli: 200"
 ./benchmark -i ./a -l 200 -p 1000
+echo "Test 4: Ilość danych: 10000, ilość pętli: 200"
 ./benchmark -i ./a -l 200 -p 10000
+echo "Test 5: Ilość danych: 100000, ilość pętli: 200"
 ./benchmark -i ./a -l 200 -p 100000
+echo "Test 6: Ilość danych: 1000000, ilość pętli: 200"
 ./benchmark -i ./a -l 200 -p 1000000
+echo "Zakończono testowanie."\a

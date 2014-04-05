@@ -39,7 +39,7 @@ void Sort::Zapisz_dane(const Obiekt Obiekt)
 void Sort::Wizualizuj_zmiany(const Obiekt Obiekt)
 {
    cout << "\nTablica przed i po:\n\n";
-   for(int i = 1; i < Obiekt.Tablica[0]+1; i++)
+   for(int i = 1; i < Obiekt.zakres+1; i++)
       cout << i << ". " << Zapisane_dane[i] << "    " << Obiekt.Tablica[i] << endl; 
 }
 
