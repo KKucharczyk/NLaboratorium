@@ -1,0 +1,18 @@
+#ifndef ELEMENT_H
+#define ELEMENT_H
+
+#include <csting>
+
+class Element
+{
+public:
+   string wartosc;
+   int klucz;
+   
+   
+   
+   
+};
+
+
+#endif

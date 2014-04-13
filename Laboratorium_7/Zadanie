@@ -1,0 +1,6 @@
+Porównać trzy implementacje (czas odczytu z tabl. asocjacyjnej):
+- tablica asocjacyjna na listach/vectorach
+- drzewo binarne
+- tablica haszująca
+
+Zakres danych: N = {100, 1000, 10000, 10^6}

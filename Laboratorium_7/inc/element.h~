@@ -1,0 +1,14 @@
+#ifndef ELEMENT_H
+#define ELEMENT_H
+
+class Element
+{
+public:
+   int wartosc;
+   int klucz;
+   
+   Element(int k, int w) {klucz = k; wartosc = w;}
+};
+
+
+#endif

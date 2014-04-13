@@ -8,7 +8,7 @@
  *
  * Plik zawiera definicję szablonu klasy Tablica.
 */
-#include "wpis.h"
+#include "Wpis.h"
 #include <iostream>
 #include <string>
 
@@ -77,7 +77,7 @@ public:
    {
     	unsigned int h=key[0];
     	for (unsigned int i=0; i< key.size();i++)
-    		h= (h<< 4)+key[i];
+	 h = (h << 4) + key[i];
     	return h % ROZMIAR;
     }
 };
@@ -86,7 +86,7 @@ template<typename K , typename V>
 void Tablica<K,V>::Dodaj(Wpis<K,V> wpis)
 {
    int pozycja = Hash_String(wpis.key);
-   Tab[pozycja] = wpis;
+   Tablica[pozycja] = wpis;
    zmienna++;
 }
 
@@ -95,7 +95,7 @@ template<typename K , typename V>
 void Tablica<K,V>::Usun(K key)
 {
    int pozycja = Hash_String(key);
-   Tab[pozycja].wart=NULL;
+   Tablica[pozycja].wart=NULL;
    zmienna--;
 }
 
@@ -103,19 +103,19 @@ template<typename K , typename V>
 V Tablica<K,V>::Pobierz(K key)
 {
    int pozycja = Hash_String(key);
-   return *Tab[pozycja].wart;
+   return *Tablica[pozycja].wart;
 }
 
 template <typename K, typename V>
 V& Tablica<K,V>::operator[]( K key)
 {
    int hash = Hash_String(key);
-   if (Tab[hash].key == key)
-      return *Tab[hash].wart;
-   Tab[hash].key = key;
-   Tab[hash].wart = new V;
-   *Tab[hash].wart = 0;
-   return *Tab[hash].wart;
+   if (Tablica[hash].key == key)
+      return *Tablica[hash].wart;
+   Tablica[hash].key = key;
+   Tablica[hash].wart = new V;
+   *Tablica[hash].wart = 0;
+   return *Tablica[hash].wart;
 }
 
 #endif

@@ -1,32 +1,12 @@
-#include "tablica.h"
+#include <iostream>
+#include "Tablica.h"
+
+using namespace std;
+template<typename K, typename V>
+
+int Tablica<K,V>::zmienna = 0;
 
 int main()
 {
-   ;
-   
+   Tablica <string , int> Tab;
 }
-
-
-
-
-/*
- * Klucz -> String
- * Nie ma sprawozdania, tylko kod + dokumentacja
- * 
- * 
- * 
- */
-
-
-
-/*
- * 
- * Następne zajęcia:
- * 
- * BINARY SPACE PARTITION (BSP)
- * BAZY DANYCH, GRAFY
- * DRZEWA (RED BLACK, BINARNE), 
- * TABLICA HASZUJĄCA "HASH TABLE, HASHING TABLE", 
- * SŁOWNIKI, MAPY, TABLICE ASOCJACYJNE
- * 
- */

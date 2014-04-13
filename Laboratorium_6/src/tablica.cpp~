@@ -1,36 +1,32 @@
 #include "tablica.h"
 
-/*
-void Tablica::Dodaj(int k, int w)
-{
-   if(ilosc_elementow == 0)
-   {
-      this->Tablica_indeksow = new *Element(0,w);
-   }
-   /*
-   else
-   {
-      Element* Temp = new Element[ilosc_elementow+1];
-      for(int i = 0; i < ilosc_elementow+1; i++)
-	 Temp[i] = this->Tablica_indeksow[i];
-      //Temp[ilosc_elementow+1] = new Element(ilosc_elementow+1, w);
-      
-      delete [] this->Tablica_indeksow;
-      Tablica_indeksow = Temp;
-      
-   }
-   this->ilosc_elementow++;
-}*/
+template<typename K , typename V>
+void Tablica<K,V>::dodaj(para<K,V> para){
+	int pozycja=haszstring(para.key);
+	Tab[pozycja]=para;
+	zmienna ++;
+	}
+template<typename K , typename V>
+void Tablica<K,V>::usun(K key){
+	int pozycja=haszstring(key);
+	Tab[pozycja].wart=NULL;
+	zmienna --;
 
-bool Tablica::CzyPuste()
-{
-   if(ilosc_elementow == 0)
-      return 1;
-   else 
-      return 0;
+}
+template<typename K , typename V>
+V Tablica<K,V>::pobierz(K key){
+	int pozycja=haszstring(key);
+	return *Tab[pozycja].wart;
 }
 
-int Tablica::IleElementow()
-{
-   return this->ilosc_elementow;
+
+template <typename K, typename V>
+V& Tablica<K,V>::operator[]( K key){
+int hash = haszstring(key);
+if (Tab[hash].key == key)
+return *Tab[hash].wart;
+Tab[hash].key = key;
+Tab[hash].wart = new V;
+*Tab[hash].wart = 0;
+return *Tab[hash].wart;
 }
