@@ -3,23 +3,26 @@
 
 PROG=a
 
-OBJ=obj/main.o obj/tablica.o
+OBJ=obj/main.o obj/hash.o 
 
-CPPFLAGS=-Wall -pedantic -Iinc -I/home/krzysztof/Deskopt/PAMSI/Laboratorium_7/inc -c
-LDFLAGS= -Wall -L/home/krzysztof/Deskopt/PAMSI/Laboratorium_7/obj
+CPPFLAGS=-Wall -pedantic -Iinc -I/home/krzysztof/Deskopt/PAMSI/Laboratorium/Laboratorium_7/inc -c
+LDFLAGS= -Wall -L/home/krzysztof/Deskopt/PAMSI/Laboratorium/Laboratorium_7/obj
 
 #obj:
 #	mkdir obj
 
 $(PROG):$(OBJ)
-	g++ ${LDFLAGS} -o $(PROG) $(OBJ) -lrt
+	g++ ${LDFLAGS} -o $(PROG) $(OBJ)
 
 
 obj/main.o: src/main.cpp
-	g++ ${CPPFLAGS} -std=c++0x -o $@ $^
+	g++ ${CPPFLAGS} -o $@ $^
 	
-obj/tablica.o: src/tablica.cpp
-	g++ ${CPPFLAGS} -std=c++0x -o $@ $^
+obj/hash.o: src/hash.cpp
+	g++ ${CPPFLAGS} -o $@ $^
 	
+obj/BST.o: src/BST.cpp
+	g++ ${CPPFLAGS} -o $@ $^
+
 clean:
 	rm -f a obj/*

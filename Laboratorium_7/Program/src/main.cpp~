@@ -1,0 +1,42 @@
+#include <cstdlib>
+#include <iostream>
+#include <string>
+
+#include "hash.h"
+#include "BST.cpp"
+
+using namespace std;
+
+int main()
+{
+   /*
+   hash Hashy;
+   string name = "";
+   
+   Hashy.AddItem("Paul", "A");
+   Hashy.AddItem("Kim", "B");
+   Hashy.AddItem("Emma", "C");
+   Hashy.AddItem("Annie", "D");
+   Hashy.AddItem("Sarah", "E");
+   Hashy.AddItem("Pepper", "F");
+   Hashy.AddItem("Mike", "G");
+   Hashy.AddItem("Steve", "H");
+   Hashy.AddItem("Bill", "I");
+   Hashy.AddItem("Marie", "J");
+   Hashy.AddItem("Susan", "K");
+   Hashy.AddItem("Joe", "L");
+   
+   Hashy.PrintTable();
+   
+   while(name != "exit")
+   {
+      cout << "Remove: ";
+      cin >> name;
+      if(name != "exit")
+	 Hashy.RemoveItem(name);
+   }
+   
+   Hashy.PrintTable();
+   */
+   return 0;
+}
