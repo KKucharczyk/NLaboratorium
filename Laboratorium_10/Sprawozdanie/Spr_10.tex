@@ -1,0 +1,86 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[MeX]{polski}
+\usepackage[polish]{babel}
+\usepackage[latin2]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{subfig}
+
+\begin{document}
+{\raggedleft{}Krzysztof Kucharczyk}\\200401\\Wydział Elektroniki\\Kierunek AiR
+\\PAMSI lab. czw. 10:00-13:15\\\\\\
+\begin{center} 
+	\textbf{Sprawozdanie z laboratorium nr 10\\(Problem plecakowy)}
+\end{center}
+
+\section{Opis zadania}
+
+Zadanie polegało na zaimplementowaniu algorytmu umożliwiającego rozwiązanie problemu plecakowego.
+\section{Realizacja}
+
+Postawiony problem postanowiłem rozwiązać za pomocą dostępnych z podstawowej biblioteki STL obiektów takich jak wektor oraz para. Umożliwiły mi one w prosty sposób poradzenie sobie z problemem. Wszystkie możliwe przedmioty oraz kombinacje optymalnych przedmiotów przechowywane są w wektorach, ze względu na ich uniwersalność i możliwość kustomizacji wedle potrzeb. Same przedmioty zaimplementowałem jako połączenie wagi i wartości.
+
+\section{Testowanie}
+
+Testowanie poprawności programu ograniczyłem do sprawdzenia poprawności dla kilku zestawu danych, np. dla danych zebranych w tabeli poniżej (pojemność plecaka = 10):
+
+\begin{table}[ht] 
+\caption{Dane testowe} 
+\centering 
+\begin{tabular}{|c|c|}
+
+\hline
+\hline
+2 & 3 \\
+\hline
+4 & 1 \\
+\hline
+9 & 5 \\
+\hline
+2 & 4 \\
+\hline
+7 & 1 \\
+\hline
+3 & 4 \\
+\hline
+1 & 0 \\
+\hline
+8 & 3 \\
+\hline
+4 & 1 \\
+\hline
+4 & 6 \\
+\hline \hline
+
+\end{tabular}
+\end{table}
+
+Otrzymane wyniki wyglądają następująco:
+
+\begin{table}[ht] 
+\caption{Wyniki} 
+\centering 
+\begin{tabular}{|c|c|}
+
+\hline
+\hline
+4 & 6 \\
+\hline
+3 & 4 \\
+\hline
+2 & 5 \\
+\hline \hline
+
+\end{tabular}
+\end{table}
+\newpage
+\section{Wnioski}
+
+Otrzymane wyniki wydają się być wiarygodne. Prosta implementacja pomogła uniknąć błędów. Zastosowanie tablicy działajacej na zasadzie postulatów programowania dynamicznego pozwoliło w prosty sposób rozwiązać problem plecakowy. 
+\end{document}
+
+
+

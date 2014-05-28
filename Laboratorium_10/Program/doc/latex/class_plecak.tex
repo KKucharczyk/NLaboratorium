@@ -1,0 +1,125 @@
+\hypertarget{class_plecak}{\section{\-Dokumentacja klasy \-Plecak}
+\label{class_plecak}\index{\-Plecak@{\-Plecak}}
+}
+
+
+\-Modeluje pojęcie plecaka.  
+
+
+
+
+{\ttfamily \#include $<$plecak.\-h$>$}
+
+\subsection*{\-Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_plecak_a480d062c962f629f878170f53abbdc44}{\-Plecak} ()
+\begin{DoxyCompactList}\small\item\em \-Konstruktor podstawowy. \end{DoxyCompactList}\item 
+void \hyperlink{class_plecak_a818e91ff53b7aa01c065a63d907e435f}{\-Algorytm} (vector$<$ pair$<$ int, int $>$ $>$ \-Dane, int \-Granica)
+\begin{DoxyCompactList}\small\item\em \-Metoda wylicza najoptymalniejsza kombinacje przedmiotow. \end{DoxyCompactList}\item 
+int \hyperlink{class_plecak_a9658246efe996f92cd43b3df68301e13}{\-Pokaz} (int licznik)
+\begin{DoxyCompactList}\small\item\em \-Zwraca wartosc przedmiotu. \end{DoxyCompactList}\item 
+vector$<$ pair$<$ int, int $>$ $>$ \hyperlink{class_plecak_adc9fd3bec4a3567db44343883a7b02d6}{\-Wynik} (int licznik)
+\begin{DoxyCompactList}\small\item\em \-Metoda ukazuje wybrane przedmioty. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Atrybuty publiczne}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ pair$<$ int, int $>$ $>$ \hyperlink{class_plecak_a6a828436e4c63a74d8ba19e5788c21eb}{\-Tablica}
+\begin{DoxyCompactList}\small\item\em \-Wektor wagi i wartosci przedmiotow. \end{DoxyCompactList}\item 
+vector$<$ int $>$ \hyperlink{class_plecak_a111cbee0b5ecad45740df74e3c19c596}{\-Pojemnosc}
+\begin{DoxyCompactList}\small\item\em \-Opisuje maksymalna pojemnosc. \end{DoxyCompactList}\item 
+\hypertarget{class_plecak_a880de60d49d0edb90338f1875e5e439b}{vector$<$ int $>$ \hyperlink{class_plecak_a880de60d49d0edb90338f1875e5e439b}{\-Ostatni}}\label{class_plecak_a880de60d49d0edb90338f1875e5e439b}
+
+\begin{DoxyCompactList}\small\item\em \-Zmienna wektor, przechowuje ostatni dodany element. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{\-Opis szczegółowy}
+\-Modeluje pojęcie plecaka. 
+
+\-Klasa ta pozwala umieszczać rzeczy w plecaku oraz optymalizuje elementy 
+
+\subsection{\-Dokumentacja konstruktora i destruktora}
+\hypertarget{class_plecak_a480d062c962f629f878170f53abbdc44}{\index{\-Plecak@{\-Plecak}!\-Plecak@{\-Plecak}}
+\index{\-Plecak@{\-Plecak}!Plecak@{\-Plecak}}
+\subsubsection[{\-Plecak}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Plecak\-::\-Plecak} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_plecak_a480d062c962f629f878170f53abbdc44}
+
+
+\-Konstruktor podstawowy. 
+
+\-Podstawowy konstruktor klasy plecak 
+
+\subsection{\-Dokumentacja funkcji składowych}
+\hypertarget{class_plecak_a818e91ff53b7aa01c065a63d907e435f}{\index{\-Plecak@{\-Plecak}!\-Algorytm@{\-Algorytm}}
+\index{\-Algorytm@{\-Algorytm}!Plecak@{\-Plecak}}
+\subsubsection[{\-Algorytm}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Plecak\-::\-Algorytm} (
+\begin{DoxyParamCaption}
+\item[{vector$<$ pair$<$ int, int $>$ $>$}]{\-Dane, }
+\item[{int}]{\-Granica}
+\end{DoxyParamCaption}
+)}}\label{class_plecak_a818e91ff53b7aa01c065a63d907e435f}
+
+
+\-Metoda wylicza najoptymalniejsza kombinacje przedmiotow. 
+
+\-Metoda pozwala wyznaczyc najoptymalniejsza kombinacje przedmiotow w plecaku 
+\begin{DoxyParams}[1]{\-Parametry}
+\mbox{\tt in}  & {\em wektor} & \-Opisuje wszystkie dostepne przedmioty \\
+\hline
+\mbox{\tt in}  & {\em maksymalna\-\_\-pojemnosc} & \-Okresla maksymalna pojemnosc plecaka \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_plecak_a9658246efe996f92cd43b3df68301e13}{\index{\-Plecak@{\-Plecak}!\-Pokaz@{\-Pokaz}}
+\index{\-Pokaz@{\-Pokaz}!Plecak@{\-Plecak}}
+\subsubsection[{\-Pokaz}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Plecak\-::\-Pokaz} (
+\begin{DoxyParamCaption}
+\item[{int}]{licznik}
+\end{DoxyParamCaption}
+)}}\label{class_plecak_a9658246efe996f92cd43b3df68301e13}
+
+
+\-Zwraca wartosc przedmiotu. 
+
+\-Metoda zwraca wartosc przedmiotu \begin{DoxyReturn}{\-Zwraca}
+\-Wartosc przedmiotu 
+\end{DoxyReturn}
+\hypertarget{class_plecak_adc9fd3bec4a3567db44343883a7b02d6}{\index{\-Plecak@{\-Plecak}!\-Wynik@{\-Wynik}}
+\index{\-Wynik@{\-Wynik}!Plecak@{\-Plecak}}
+\subsubsection[{\-Wynik}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ pair$<$ int, int $>$ $>$ {\bf \-Plecak\-::\-Wynik} (
+\begin{DoxyParamCaption}
+\item[{int}]{licznik}
+\end{DoxyParamCaption}
+)}}\label{class_plecak_adc9fd3bec4a3567db44343883a7b02d6}
+
+
+\-Metoda ukazuje wybrane przedmioty. 
+
+\-Metoda zwraca wybrane przedmioty \begin{DoxyReturn}{\-Zwraca}
+wektor \-Zawiera optymalna kombinacje przedmiotow 
+\end{DoxyReturn}
+
+
+\subsection{\-Dokumentacja atrybutów składowych}
+\hypertarget{class_plecak_a111cbee0b5ecad45740df74e3c19c596}{\index{\-Plecak@{\-Plecak}!\-Pojemnosc@{\-Pojemnosc}}
+\index{\-Pojemnosc@{\-Pojemnosc}!Plecak@{\-Plecak}}
+\subsubsection[{\-Pojemnosc}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$int$>$ {\bf \-Plecak\-::\-Pojemnosc}}}\label{class_plecak_a111cbee0b5ecad45740df74e3c19c596}
+
+
+\-Opisuje maksymalna pojemnosc. 
+
+\-Pole opisuje maksymalna pojemnosc plecaka \hypertarget{class_plecak_a6a828436e4c63a74d8ba19e5788c21eb}{\index{\-Plecak@{\-Plecak}!\-Tablica@{\-Tablica}}
+\index{\-Tablica@{\-Tablica}!Plecak@{\-Plecak}}
+\subsubsection[{\-Tablica}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$pair$<$int,int$>$ $>$ {\bf \-Plecak\-::\-Tablica}}}\label{class_plecak_a6a828436e4c63a74d8ba19e5788c21eb}
+
+
+\-Wektor wagi i wartosci przedmiotow. 
+
+\-Pole opisuje rozwazane przedmioty 
+
+\-Dokumentacja dla tej klasy została wygenerowana z plików\-:\begin{DoxyCompactItemize}
+\item 
+/home/krzysztof/\-Desktop/\-P\-A\-M\-S\-I/\-Laboratorium/\-Laboratorium\-\_\-10/inc/\hyperlink{plecak_8h}{plecak.\-h}\item 
+/home/krzysztof/\-Desktop/\-P\-A\-M\-S\-I/\-Laboratorium/\-Laboratorium\-\_\-10/src/plecak.\-cpp\end{DoxyCompactItemize}
