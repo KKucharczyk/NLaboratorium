@@ -1,35 +1,82 @@
 #include <cstdlib>
 #include <iostream>
 #include <string>
-
+#include <fstream>
+#include <sstream>
+/*!
+ * \file 
+ * 
+ * Zawiera definicję klasy HASH
+ */
 using namespace std;
 
 #ifndef HASH_H
 #define HASH_H
-
-class hash
+/*!
+ * \class hasz
+ * 
+ * \brief Modeluje tablicę haszującą (asocjacyjną)
+ */
+class hasz
 {
 private:
-   static const int tableSize = 3;
-   
+   /*!
+    * \brief Pole określa wielkość tablicy
+    */
+   static const int tableSize = 1000;
+
+   /*!
+    * \brief Pomocnicza struktura definiująca elementy
+    */
    struct item
    {
-      string name;
-      string drink;
+      string value;
       item* next;
    };
-   
+   /*!
+    * \brief tablica przechowująca dane
+    */
    item* HashTable[tableSize];
    
 public:
-   hash();
+   /*!
+    * \brief Konstruktor podstawowy
+    */
+   hasz();
+   /*!
+    * \brief Funkcja haszująca
+    */
    int Hash(string key);
-   void AddItem(string name, string drink);
+   /*!
+    * \brief Dodaje element
+    */
+   void AddItem(string value);
+   /*!
+    * \brief Zwraca ilość elementów w tablicy
+    */
    int NumberOfItemsInIndex(int index);
+   /*!
+    * \brief Drukuje tablicę
+    */
    void PrintTable();
+   /*!
+    * \brief Drukuje żądany element
+    */
    void PrintItemsInIndex(int index);
-   void FindDrink(string name);
-   void RemoveItem(string name);
+   /*!
+    * \brief Znajduje zadaną wartość
+    */
+   void FindValue(string value);
+   /*!
+    * \brief Usuwa daną wartość z tablicy
+    */
+   void RemoveItem(string value);
+   /*!
+    * \brief Ładuje dane z pliku
+    */
+   void LoadData(int amount);
+   string Int_na_string(int liczba);
+
 };
 
 

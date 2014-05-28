@@ -1,0 +1,10 @@
+/*!
+\mainpage BST i tablica haszująca
+\author Krzysztof Kucharczyk
+\date 25.05.2014
+\version 2
+
+Program zawiera implementację dwóch struktur danych: tablicy asocjacyjnej/haszującej oraz drzewa przeszukiwań binarnych.
+
+
+*/

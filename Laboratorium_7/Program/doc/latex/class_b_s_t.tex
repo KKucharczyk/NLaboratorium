@@ -1,0 +1,86 @@
+\hypertarget{class_b_s_t}{\section{\-Dokumentacja klasy \-B\-S\-T}
+\label{class_b_s_t}\index{\-B\-S\-T@{\-B\-S\-T}}
+}
+
+
+\-Modeluje pojęcie drzewa binarnego.  
+
+
+
+
+{\ttfamily \#include $<$\-B\-S\-T.\-h$>$}
+
+\subsection*{\-Komponenty}
+\begin{DoxyCompactItemize}
+\item 
+struct {\bfseries node}
+\begin{DoxyCompactList}\small\item\em \-Węzeł \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_b_s_t_abc17123a0367c3b8ad0382eeb3ad3178}{\hyperlink{class_b_s_t_abc17123a0367c3b8ad0382eeb3ad3178}{\-B\-S\-T} ()}\label{class_b_s_t_abc17123a0367c3b8ad0382eeb3ad3178}
+
+\begin{DoxyCompactList}\small\item\em \-Podstawowy konstruktor. \end{DoxyCompactList}\item 
+\hypertarget{class_b_s_t_ac98b54e3b9fbccce245258a5d6bc16c6}{node $\ast$ \hyperlink{class_b_s_t_ac98b54e3b9fbccce245258a5d6bc16c6}{\-Create\-Leaf} (int key)}\label{class_b_s_t_ac98b54e3b9fbccce245258a5d6bc16c6}
+
+\begin{DoxyCompactList}\small\item\em \-Tworzy węzeł \end{DoxyCompactList}\item 
+\hypertarget{class_b_s_t_a51d7bf8ed788f5d91c64320b37ee3b1d}{void \hyperlink{class_b_s_t_a51d7bf8ed788f5d91c64320b37ee3b1d}{\-Add\-Leaf} (int key)}\label{class_b_s_t_a51d7bf8ed788f5d91c64320b37ee3b1d}
+
+\begin{DoxyCompactList}\small\item\em \-Dodaje gałąź \end{DoxyCompactList}\item 
+\hypertarget{class_b_s_t_ad52d9269768a75944a926ab7b87993a8}{void \hyperlink{class_b_s_t_ad52d9269768a75944a926ab7b87993a8}{\-Print\-In\-Order} ()}\label{class_b_s_t_ad52d9269768a75944a926ab7b87993a8}
+
+\begin{DoxyCompactList}\small\item\em \-Drukuje w kolejności. \end{DoxyCompactList}\item 
+\hypertarget{class_b_s_t_a714306d301f48c3a23dd67e33d72f088}{node $\ast$ \hyperlink{class_b_s_t_a714306d301f48c3a23dd67e33d72f088}{\-Return\-Node} (int key)}\label{class_b_s_t_a714306d301f48c3a23dd67e33d72f088}
+
+\begin{DoxyCompactList}\small\item\em \-Zwraca dany klucz. \end{DoxyCompactList}\item 
+\hypertarget{class_b_s_t_a821d045dd12a823f88cc75f625e0d2e3}{int \hyperlink{class_b_s_t_a821d045dd12a823f88cc75f625e0d2e3}{\-Return\-Root\-Key} ()}\label{class_b_s_t_a821d045dd12a823f88cc75f625e0d2e3}
+
+\begin{DoxyCompactList}\small\item\em \-Zwraca klucz korzenia. \end{DoxyCompactList}\item 
+void \hyperlink{class_b_s_t_afc58989d868996fc3145897c76a773e0}{\-Print\-Children} (int key)
+\begin{DoxyCompactList}\small\item\em \-Drukuje potomków. \end{DoxyCompactList}\item 
+\hypertarget{class_b_s_t_acd20085d8f9cc25853a134a95650e286}{int \hyperlink{class_b_s_t_acd20085d8f9cc25853a134a95650e286}{\-Find\-Smallest} ()}\label{class_b_s_t_acd20085d8f9cc25853a134a95650e286}
+
+\begin{DoxyCompactList}\small\item\em \-Znajduje najmniejszy element. \end{DoxyCompactList}\item 
+\hypertarget{class_b_s_t_a4e9c64a0c0493df544dd62eb759565d0}{void \hyperlink{class_b_s_t_a4e9c64a0c0493df544dd62eb759565d0}{\-Remove\-Node} (int key)}\label{class_b_s_t_a4e9c64a0c0493df544dd62eb759565d0}
+
+\begin{DoxyCompactList}\small\item\em \-Usuwa węzeł \end{DoxyCompactList}\item 
+\hypertarget{class_b_s_t_a0ce14b99d6510b897082c9b2236c669b}{void \hyperlink{class_b_s_t_a0ce14b99d6510b897082c9b2236c669b}{\-Find} (int key)}\label{class_b_s_t_a0ce14b99d6510b897082c9b2236c669b}
+
+\begin{DoxyCompactList}\small\item\em \-Znajduje dany kluczami. \end{DoxyCompactList}\item 
+\hypertarget{class_b_s_t_a9b76ec89b7a782fda39ce48c199d5ce7}{void \hyperlink{class_b_s_t_a9b76ec89b7a782fda39ce48c199d5ce7}{\-Load\-Data} (int \hyperlink{class_b_s_t_aaf840095400a10e8442e38725fcde15c}{amount})}\label{class_b_s_t_a9b76ec89b7a782fda39ce48c199d5ce7}
+
+\begin{DoxyCompactList}\small\item\em Ładuje dane. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Atrybuty publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_b_s_t_a4086dbe04aed7786740a6f0608a24863}{int $\ast$ \hyperlink{class_b_s_t_a4086dbe04aed7786740a6f0608a24863}{\-Tree\-Keys}}\label{class_b_s_t_a4086dbe04aed7786740a6f0608a24863}
+
+\begin{DoxyCompactList}\small\item\em \-Wskaźnik z kluczami. \end{DoxyCompactList}\item 
+\hypertarget{class_b_s_t_aaf840095400a10e8442e38725fcde15c}{int \hyperlink{class_b_s_t_aaf840095400a10e8442e38725fcde15c}{amount}}\label{class_b_s_t_aaf840095400a10e8442e38725fcde15c}
+
+\begin{DoxyCompactList}\small\item\em \-Ilość danych. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{\-Opis szczegółowy}
+\-Modeluje pojęcie drzewa binarnego. 
+
+\-Klasa modeluje pojęcie drzewa przeszukiwań binarnych 
+
+\subsection{\-Dokumentacja funkcji składowych}
+\hypertarget{class_b_s_t_afc58989d868996fc3145897c76a773e0}{\index{\-B\-S\-T@{\-B\-S\-T}!\-Print\-Children@{\-Print\-Children}}
+\index{\-Print\-Children@{\-Print\-Children}!BST@{\-B\-S\-T}}
+\subsubsection[{\-Print\-Children}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-B\-S\-T\-::\-Print\-Children} (
+\begin{DoxyParamCaption}
+\item[{int}]{key}
+\end{DoxyParamCaption}
+)}}\label{class_b_s_t_afc58989d868996fc3145897c76a773e0}
+
+
+\-Drukuje potomków. 
+
+\-Pomocnicza. 
+
+\-Dokumentacja dla tej klasy została wygenerowana z plików\-:\begin{DoxyCompactItemize}
+\item 
+/home/krzysztof/\-Desktop/\-P\-A\-M\-S\-I/\-Laboratorium/\-Laboratorium\-\_\-7/\-Program/inc/\hyperlink{_b_s_t_8h}{\-B\-S\-T.\-h}\item 
+/home/krzysztof/\-Desktop/\-P\-A\-M\-S\-I/\-Laboratorium/\-Laboratorium\-\_\-7/\-Program/src/\-B\-S\-T.\-cpp\end{DoxyCompactItemize}

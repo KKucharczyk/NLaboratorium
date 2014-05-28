@@ -3,38 +3,81 @@
 #include <string>
 #include <fstream>
 #include <sstream>
-
+/*!
+ * \file 
+ * 
+ * Zawiera definicję klasy HASH
+ */
 using namespace std;
 
 #ifndef HASH_H
 #define HASH_H
-
+/*!
+ * \class hasz
+ * 
+ * \brief Modeluje tablicę haszującą (asocjacyjną)
+ */
 class hasz
 {
 private:
+   /*!
+    * \brief Pole określa wielkość tablicy
+    */
    static const int tableSize = 1000;
 
-   
+   /*!
+    * \brief Pomocnicza struktura definiująca elementy
+    */
    struct item
    {
       string value;
       item* next;
    };
-   
+   /*!
+    * \brief tablica przechowująca dane
+    */
    item* HashTable[tableSize];
    
 public:
-   
+   /*!
+    * \brief Konstruktor podstawowy
+    */
    hasz();
-   //hasz(int new_zakres);
+   /*!
+    * \brief Funkcja haszująca
+    */
    int Hash(string key);
+   /*!
+    * \brief Dodaje element
+    */
    void AddItem(string value);
+   /*!
+    * \brief Zwraca ilość elementów w tablicy
+    */
    int NumberOfItemsInIndex(int index);
+   /*!
+    * \brief Drukuje tablicę
+    */
    void PrintTable();
+   /*!
+    * \brief Drukuje żądany element
+    */
    void PrintItemsInIndex(int index);
+   /*!
+    * \brief Znajduje zadaną wartość
+    */
    void FindValue(string value);
+   /*!
+    * \brief Usuwa daną wartość z tablicy
+    */
    void RemoveItem(string value);
+   /*!
+    * \brief Ładuje dane z pliku
+    */
    void LoadData(int amount);
+   /*!
+    * \brief Pomocnicza funkcja do zaminiany liczb na napisy
+    */
    string Int_na_string(int liczba);
 
 };
