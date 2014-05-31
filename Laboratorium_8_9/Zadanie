@@ -1,0 +1,20 @@
+Dwa algorytmy:
+
+- branch&bound (ocena 4)
+- A* - iteracyjne rozwinięcie poprzedniego, też na nim bazuje, ale jest lepszy. (ocena 5)
+
+W sprawozdaniu porównanie efektywności wyszukiwania algorytmów (BFS, DFS, B&B/A*). Trzeba powiedziec przy pomocy jakiej liczby operacji czas wykonania 
+bedzie świadczył o wyższości jednego algorytmu. Trzeba szukać kolejnej wartości.
+
+BFS i DFS są dużo wolniejsze od B&B i A* - w sprawozdaniu mam to udowodnić.
+
+B&B i A* - wyszukują drogę nasjzybszą.
+BFS i DFS znajduja "jakąś" drogę.
+
+Następne zajęcia kartkówka -algorytmy grafowe, przeszukiwanie, sortowanie, 
+
+Miniprojekt na ostatnie zajęcia może tylko pomóc. 
+
+Egzamin z wykładu: 4 czerwca 2014.
+
+Do 29 czerwca szkielet programu - też nieco mięska już.
