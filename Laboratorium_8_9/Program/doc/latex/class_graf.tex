@@ -1,0 +1,233 @@
+\hypertarget{class_graf}{\section{\-Dokumentacja klasy \-Graf}
+\label{class_graf}\index{\-Graf@{\-Graf}}
+}
+
+
+\-Modeluje pojecie grafu.  
+
+
+
+
+{\ttfamily \#include $<$graf.\-h$>$}
+
+\subsection*{\-Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_graf_a05a504069321858769df57555045d808}{\-Graf} ()
+\begin{DoxyCompactList}\small\item\em \-Konstruktor podstawowy. \end{DoxyCompactList}\item 
+\hyperlink{class_graf_a5e4550718d37557ac0f5a49b4fe286da}{\-Graf} (int \-\_\-\-V)
+\begin{DoxyCompactList}\small\item\em \-Konstruktor dodatkowy. \end{DoxyCompactList}\item 
+\hyperlink{class_graf_a4ff3904fd04f367ac0219b52719c567e}{$\sim$\-Graf} ()
+\begin{DoxyCompactList}\small\item\em \-Destruktor. \end{DoxyCompactList}\item 
+bool \hyperlink{class_graf_a230530c155c0a48d97081e4d6802b8f1}{\-Insert\-Edge} (int v1, int v2, int w)
+\begin{DoxyCompactList}\small\item\em \-Metoda dodaje krawędź \end{DoxyCompactList}\item 
+bool \hyperlink{class_graf_ae0639ee8216317ffb4144daadfb28e8b}{\-Delete\-Edge} (int v1, int v2)
+\begin{DoxyCompactList}\small\item\em \-Metoda usuwająca krawędź \end{DoxyCompactList}\item 
+int \hyperlink{class_graf_a687f7efa69596993dd1c37b36d5db0fd}{\-Degree} (int v)
+\begin{DoxyCompactList}\small\item\em \-Metoda zliczająca połączenia wierzchołka. \end{DoxyCompactList}\item 
+bool \hyperlink{class_graf_a605e69bfa76f0bcbb3a7a57f136d5126}{\-Search\-Edge} (int v, int u)
+\begin{DoxyCompactList}\small\item\em \-Metoda szukająca. \end{DoxyCompactList}\item 
+void \hyperlink{class_graf_a551ecf28554a5008310bf8a9acf6bf4d}{\-Show\-Edges} ()
+\begin{DoxyCompactList}\small\item\em \-Metoda ukazująca zależności krawędzi. \end{DoxyCompactList}\item 
+void \hyperlink{class_graf_a7fcf040a31fb1b8e0d0bb238b152e044}{\-Show\-Vertexes} ()
+\begin{DoxyCompactList}\small\item\em \-Metoda ukazuje połączenia węzłów. \end{DoxyCompactList}\item 
+void \hyperlink{class_graf_af4b2325acba38fb7693a1771258f8ed9}{\-Load\-Data} (string \-Nazwa\-\_\-pliku)
+\begin{DoxyCompactList}\small\item\em \-Metoda ładuje dane z pliku. \end{DoxyCompactList}\item 
+void \hyperlink{class_graf_adb1acc2a2caa965e085506625994c19c}{\-B\-F\-S} (int x)
+\begin{DoxyCompactList}\small\item\em \-Metoda przeszukiwania wszerz. \end{DoxyCompactList}\item 
+void \hyperlink{class_graf_ab892023392379799c131a193b148c24d}{\-D\-F\-S} (int x)
+\begin{DoxyCompactList}\small\item\em \-Metoda przeszukiwania wgłąb. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{\-Opis szczegółowy}
+\-Modeluje pojecie grafu. 
+
+\subsection{\-Dokumentacja konstruktora i destruktora}
+\hypertarget{class_graf_a05a504069321858769df57555045d808}{\index{\-Graf@{\-Graf}!\-Graf@{\-Graf}}
+\index{\-Graf@{\-Graf}!Graf@{\-Graf}}
+\subsubsection[{\-Graf}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Graf\-::\-Graf} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_graf_a05a504069321858769df57555045d808}
+
+
+\-Konstruktor podstawowy. 
+
+\-Konstruktor inicjuje graf pusty \hypertarget{class_graf_a5e4550718d37557ac0f5a49b4fe286da}{\index{\-Graf@{\-Graf}!\-Graf@{\-Graf}}
+\index{\-Graf@{\-Graf}!Graf@{\-Graf}}
+\subsubsection[{\-Graf}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Graf\-::\-Graf} (
+\begin{DoxyParamCaption}
+\item[{int}]{\-\_\-\-V}
+\end{DoxyParamCaption}
+)}}\label{class_graf_a5e4550718d37557ac0f5a49b4fe286da}
+
+
+\-Konstruktor dodatkowy. 
+
+\-Konstruktor inicjuje graf poprzez stworzenie macierzy sąsiedztwa o wielkości równej ilości wierzhołków 
+\begin{DoxyParams}[1]{\-Parametry}
+\mbox{\tt in}  & {\em \-\_\-\-V} & \-Ilość wierzchołków \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_graf_a4ff3904fd04f367ac0219b52719c567e}{\index{\-Graf@{\-Graf}!$\sim$\-Graf@{$\sim$\-Graf}}
+\index{$\sim$\-Graf@{$\sim$\-Graf}!Graf@{\-Graf}}
+\subsubsection[{$\sim$\-Graf}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Graf\-::$\sim$\-Graf} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_graf_a4ff3904fd04f367ac0219b52719c567e}
+
+
+\-Destruktor. 
+
+\-Destruktor zwalnia pamięć zajętą przez macierz sąsiedztwa 
+
+\subsection{\-Dokumentacja funkcji składowych}
+\hypertarget{class_graf_adb1acc2a2caa965e085506625994c19c}{\index{\-Graf@{\-Graf}!\-B\-F\-S@{\-B\-F\-S}}
+\index{\-B\-F\-S@{\-B\-F\-S}!Graf@{\-Graf}}
+\subsubsection[{\-B\-F\-S}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Graf\-::\-B\-F\-S} (
+\begin{DoxyParamCaption}
+\item[{int}]{x}
+\end{DoxyParamCaption}
+)}}\label{class_graf_adb1acc2a2caa965e085506625994c19c}
+
+
+\-Metoda przeszukiwania wszerz. 
+
+\-Metoda umożliwia przeszukiwanie grafu w wszerz 
+\begin{DoxyParams}[1]{\-Parametry}
+\mbox{\tt in}  & {\em x} & \-Początkowy węzeł \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_graf_a687f7efa69596993dd1c37b36d5db0fd}{\index{\-Graf@{\-Graf}!\-Degree@{\-Degree}}
+\index{\-Degree@{\-Degree}!Graf@{\-Graf}}
+\subsubsection[{\-Degree}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Graf\-::\-Degree} (
+\begin{DoxyParamCaption}
+\item[{int}]{v}
+\end{DoxyParamCaption}
+)}}\label{class_graf_a687f7efa69596993dd1c37b36d5db0fd}
+
+
+\-Metoda zliczająca połączenia wierzchołka. 
+
+\-Metoda pozwala zliczyć połączenia wierzchołka 
+\begin{DoxyParams}[1]{\-Parametry}
+\mbox{\tt in}  & {\em v1} & \-Pierwszy wierzchołek \\
+\hline
+\mbox{\tt in}  & {\em v2} & \-Drugi wierzchołek \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_graf_ae0639ee8216317ffb4144daadfb28e8b}{\index{\-Graf@{\-Graf}!\-Delete\-Edge@{\-Delete\-Edge}}
+\index{\-Delete\-Edge@{\-Delete\-Edge}!Graf@{\-Graf}}
+\subsubsection[{\-Delete\-Edge}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Graf\-::\-Delete\-Edge} (
+\begin{DoxyParamCaption}
+\item[{int}]{v1, }
+\item[{int}]{v2}
+\end{DoxyParamCaption}
+)}}\label{class_graf_ae0639ee8216317ffb4144daadfb28e8b}
+
+
+\-Metoda usuwająca krawędź 
+
+\-Metoda pozwala usunąć krawędź 
+\begin{DoxyParams}[1]{\-Parametry}
+\mbox{\tt in}  & {\em v1} & \-Pierwszy wierzchołek \\
+\hline
+\mbox{\tt in}  & {\em v2} & \-Drugi wierzchołek \\
+\hline
+\mbox{\tt in}  & {\em w} & \-Wartość wierzchołka \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_graf_ab892023392379799c131a193b148c24d}{\index{\-Graf@{\-Graf}!\-D\-F\-S@{\-D\-F\-S}}
+\index{\-D\-F\-S@{\-D\-F\-S}!Graf@{\-Graf}}
+\subsubsection[{\-D\-F\-S}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Graf\-::\-D\-F\-S} (
+\begin{DoxyParamCaption}
+\item[{int}]{x}
+\end{DoxyParamCaption}
+)}}\label{class_graf_ab892023392379799c131a193b148c24d}
+
+
+\-Metoda przeszukiwania wgłąb. 
+
+\-Metoda umożliwia przeszukiwanie grafu w wgłąb 
+\begin{DoxyParams}[1]{\-Parametry}
+\mbox{\tt in}  & {\em x} & \-Początkowy węzeł \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_graf_a230530c155c0a48d97081e4d6802b8f1}{\index{\-Graf@{\-Graf}!\-Insert\-Edge@{\-Insert\-Edge}}
+\index{\-Insert\-Edge@{\-Insert\-Edge}!Graf@{\-Graf}}
+\subsubsection[{\-Insert\-Edge}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Graf\-::\-Insert\-Edge} (
+\begin{DoxyParamCaption}
+\item[{int}]{v1, }
+\item[{int}]{v2, }
+\item[{int}]{w}
+\end{DoxyParamCaption}
+)}}\label{class_graf_a230530c155c0a48d97081e4d6802b8f1}
+
+
+\-Metoda dodaje krawędź 
+
+\-Metoda pozwala dodać krawędź do grafu \hypertarget{class_graf_af4b2325acba38fb7693a1771258f8ed9}{\index{\-Graf@{\-Graf}!\-Load\-Data@{\-Load\-Data}}
+\index{\-Load\-Data@{\-Load\-Data}!Graf@{\-Graf}}
+\subsubsection[{\-Load\-Data}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Graf\-::\-Load\-Data} (
+\begin{DoxyParamCaption}
+\item[{string}]{\-Nazwa\-\_\-pliku}
+\end{DoxyParamCaption}
+)}}\label{class_graf_af4b2325acba38fb7693a1771258f8ed9}
+
+
+\-Metoda ładuje dane z pliku. 
+
+\-Metoda załadowuje dane z pliku w postaci gotowego grafu. 
+\begin{DoxyParams}[1]{\-Parametry}
+\mbox{\tt in}  & {\em \-Nazwa\-\_\-pliku} & \-Nazwa pliku z danymi \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_graf_a605e69bfa76f0bcbb3a7a57f136d5126}{\index{\-Graf@{\-Graf}!\-Search\-Edge@{\-Search\-Edge}}
+\index{\-Search\-Edge@{\-Search\-Edge}!Graf@{\-Graf}}
+\subsubsection[{\-Search\-Edge}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Graf\-::\-Search\-Edge} (
+\begin{DoxyParamCaption}
+\item[{int}]{v, }
+\item[{int}]{u}
+\end{DoxyParamCaption}
+)}}\label{class_graf_a605e69bfa76f0bcbb3a7a57f136d5126}
+
+
+\-Metoda szukająca. 
+
+\-Metoda pozwala sprawdzić, czy dane połączenie istnieje \hypertarget{class_graf_a551ecf28554a5008310bf8a9acf6bf4d}{\index{\-Graf@{\-Graf}!\-Show\-Edges@{\-Show\-Edges}}
+\index{\-Show\-Edges@{\-Show\-Edges}!Graf@{\-Graf}}
+\subsubsection[{\-Show\-Edges}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Graf\-::\-Show\-Edges} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_graf_a551ecf28554a5008310bf8a9acf6bf4d}
+
+
+\-Metoda ukazująca zależności krawędzi. 
+
+\-Metoda pozwala prześledzić działanie grafu i obserwować zależności zachodzące pomiędzy węzłami 
+\begin{DoxyParams}[1]{\-Parametry}
+\mbox{\tt in}  & {\em v} & \-Pierwszy wezel \\
+\hline
+\mbox{\tt in}  & {\em u} & \-Drugi wezel \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_graf_a7fcf040a31fb1b8e0d0bb238b152e044}{\index{\-Graf@{\-Graf}!\-Show\-Vertexes@{\-Show\-Vertexes}}
+\index{\-Show\-Vertexes@{\-Show\-Vertexes}!Graf@{\-Graf}}
+\subsubsection[{\-Show\-Vertexes}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Graf\-::\-Show\-Vertexes} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_graf_a7fcf040a31fb1b8e0d0bb238b152e044}
+
+
+\-Metoda ukazuje połączenia węzłów. 
+
+\-Metoda pozwala zwizualizować w jaki sposób połączone są konkretne wierzchołki 
+
+\-Dokumentacja dla tej klasy została wygenerowana z plików\-:\begin{DoxyCompactItemize}
+\item 
+/home/krzysztof/\-Desktop/\-P\-A\-M\-S\-I/\-Laboratorium/\-Laboratorium\-\_\-8\-\_\-9/\-Program/inc/\hyperlink{graf_8h}{graf.\-h}\item 
+/home/krzysztof/\-Desktop/\-P\-A\-M\-S\-I/\-Laboratorium/\-Laboratorium\-\_\-8\-\_\-9/\-Program/src/graf.\-cpp\end{DoxyCompactItemize}

@@ -1,0 +1,10 @@
+/*!
+\mainpage Grafy
+\author Krzysztof Kucharczyk
+\date 29.05.2014
+\version 1.12
+
+Program zawiera implementację grafu wraz z przydatnymi metodami oraz dwoma algorytmami przeszukującymi - BFS i DFS.
+
+
+*/

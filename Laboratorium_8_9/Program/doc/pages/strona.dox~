@@ -1,0 +1,15 @@
+/*!
+\mainpage Sortowanie
+
+\author Krzysztof Kucharczyk
+\date 23.03.2014
+\version 3
+
+Program umożlwia sortowanie trzema metodami:\n
+1) Sortowanie szybkie 	     (ang. Quick Sort) \n
+2) Sortowanie kopcowe        (ang. Heap  Sort) \n
+3) Sortowanie przez scalanie (ang. Merge Sort) \n
+
+
+
+*/
