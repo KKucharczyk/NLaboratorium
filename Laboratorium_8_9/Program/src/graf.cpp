@@ -67,8 +67,8 @@ bool Graf::SearchEdge(int v1, int v2)
 
 void Graf::ShowEdges()
 {
-	for(int i = 0; i < MaxPojemnosc; i++)
-		for(int j = 0; j < MaxPojemnosc; j++)
+	for(int i = 0; i < V+E; i++)
+		for(int j = 0; j < V+E; j++)
 			if(Sasiedztwo[i][j] != 0)
 			{
 				cout << "Wierzcholek [" << i << "]: ";
@@ -78,8 +78,8 @@ void Graf::ShowEdges()
 
 void Graf::ShowVertexes()
 {
-	for(int i = 0; i < MaxPojemnosc; i++)
-		for(int j = 0; j < MaxPojemnosc; j++)
+	for(int i = 0; i < V+E; i++)
+		for(int j = 0; j < V+E; j++)
 			if(Sasiedztwo[i][j] != 0)
 			{	
 				cout << "Wierzcholek [" << i << "] ---> ";
@@ -117,3 +117,54 @@ void Graf::LoadData(string Nazwa_pliku)
 	
 	plik.close();
 }
+
+
+void Graf::BFS(int x)
+{
+    bool *Znacznik = new bool[V+E];
+ 	queue<int> Kolejka;
+
+ 	for(int i = 0; i < V+E; i++)
+ 		Znacznik[i] = false;
+ 	Kolejka.push(x);
+
+ 	while(!Kolejka.empty())
+ 	{
+ 		x = Kolejka.front();
+ 		Kolejka.pop();
+
+ 		if(!Znacznik[x])
+ 		{
+ 			Znacznik[x] = true;
+ 			for(int i = 0; i < V+E; i++)
+ 				if(Sasiedztwo[x][i] && !Znacznik[i])
+ 					Kolejka.push(i);
+ 				cout << "Znalezione: " << x << endl;
+ 		}
+ 	}
+ }
+
+ void Graf::DFS(int x)
+{
+    bool *Znacznik = new bool[V+E];
+ 	stack<int> Stos;
+
+ 	for(int i = 0; i < V+E; i++)
+ 		Znacznik[i] = false;
+ 	Stos.push(x);
+
+ 	while(!Stos.empty())
+ 	{
+ 		x = Stos.top();
+ 		Stos.pop();
+
+ 		if(!Znacznik[x])
+ 		{
+ 			Znacznik[x] = true;
+ 			for(int i = V+E; i > 0; i--)
+ 				if(Sasiedztwo[x][i] && !Znacznik[i])
+ 					Stos.push(i);
+ 				cout << "Znalezione: " << x << endl;
+ 		}
+ 	}
+ }

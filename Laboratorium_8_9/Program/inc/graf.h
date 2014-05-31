@@ -4,6 +4,8 @@
 #include <iostream>
 #include <string.h>
 #include <fstream>
+#include <queue>
+#include <stack>
 
 using namespace std;
 
@@ -42,7 +44,7 @@ using namespace std;
  	 * \brief Pole określające maksymalny rozmiar macierzy sąsiedztwa
  	 */
  	const static int MaxPojemnosc = 100;
- 	
+
  public:
  	/*!
  	 * \brief Konstruktor podstawowy
@@ -54,6 +56,7 @@ using namespace std;
  	 * \brief Konstruktor dodatkowy
  	 *
  	 * Konstruktor inicjuje graf poprzez stworzenie macierzy sąsiedztwa o wielkości równej ilości wierzhołków
+ 	 * \param[in] _V Ilość wierzchołków
  	 */
  	Graf(int _V);
  	/*!
@@ -72,12 +75,17 @@ using namespace std;
  	 * \brief Metoda usuwająca krawędź
  	 *
  	 * Metoda pozwala usunąć krawędź
+ 	 * \param[in] v1 Pierwszy wierzchołek
+ 	 * \param[in] v2 Drugi wierzchołek
+ 	 * \param[in] w Wartość wierzchołka
  	 */
  	bool DeleteEdge(int v1, int v2);
  	/*!
  	 * \brief Metoda zliczająca połączenia wierzchołka
  	 *
  	 * Metoda pozwala zliczyć połączenia wierzchołka
+ 	 * \param[in] v1 Pierwszy wierzchołek
+ 	 * \param[in] v2 Drugi wierzchołek
  	 */
  	int Degree(int v);
  	/*!
@@ -90,6 +98,8 @@ using namespace std;
  	 * \brief Metoda ukazująca zależności krawędzi
 	 *
 	 * Metoda pozwala prześledzić działanie grafu i obserwować zależności zachodzące pomiędzy węzłami
+	 * \param[in] v Pierwszy wezel
+	 * \param[in] u Drugi wezel
 	 */
  	void ShowEdges();
  	/*!
@@ -102,8 +112,24 @@ using namespace std;
  	 * \brief Metoda ładuje dane z pliku
  	 *
  	 * Metoda załadowuje dane z pliku w postaci gotowego grafu.
+ 	 * \param[in] Nazwa_pliku Nazwa pliku z danymi
  	 */
  	void LoadData(string Nazwa_pliku);
+ 	/*!
+ 	 * \brief Metoda przeszukiwania wszerz
+ 	 *
+ 	 * Metoda umożliwia przeszukiwanie grafu w wszerz
+ 	 * \param[in] x Początkowy węzeł
+ 	 */
+ 	void BFS(int x);
+	/*!
+ 	 * \brief Metoda przeszukiwania wgłąb
+ 	 *
+ 	 * Metoda umożliwia przeszukiwanie grafu w wgłąb
+ 	 * \param[in] x Początkowy węzeł
+ 	 */
+ 	
+ 	void DFS(int x);
  };
 
 
